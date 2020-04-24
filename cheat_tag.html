@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+</configuration>
+
+<html>
+<head>
+    <title>Cheat Tag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+        body{
+        background-image: url(randomback2.png)
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h1>Cheat Tag</h1>
+        <h2>4 or more people</h2>
+        <p>1. Someone starts as the tagger. They count to 10.<br />
+        2. If the tagger touches the ground, any player can make them go back and count to 10 by yelling "Cheat!" If a player touches the ground, the tagger can also yell "Cheat!", except when they are counting to 10. If this happens, the player who touches the ground is now the tagger, and counts to 10.<br /> 
+        3. If the tagger tags someone, they are now the tagger and have to count to 10. Repeat forever.
+
+
+        </p>
+        <button class="button button"><a href="taghome_outside.html">Back</a></button>
+    </div>
+</body>
+</html>

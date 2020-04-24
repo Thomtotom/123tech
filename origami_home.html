@@ -5,60 +5,44 @@
 <head>
     <style>
 
-        .button1 {
-        border-radius: 60px;
-        float: left;
-        background-color: pink;
+        .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
         cursor: pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
+        margin: 5px;
         }
 
-        .button1:hover {
-        background-color: red;
-        }
-        .button2{
-        border-radius: 60px;
-        float: left;
-        background-color: orange;
-        cursor:pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
-
-
-        }
-        .button2:hover{
-        background-color:orangered;
-
-
-        }
-        .button3 {
-        border-radius: 60px;
-        float: left;
-        background-color: yellow;
+        .button span {
         cursor: pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
         }
 
-        .button3:hover {
-        background-color: darkgoldenrod;
-        }
-        .button4 {
-        border-radius: 60px;
-        float: left;
-        background-color: lime;
-        cursor: pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
         }
 
-        .button4:hover {
-        background-color: green;
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
         }
         body{
         background-image: url(randompurpleback1.png);
@@ -68,10 +52,10 @@
 </head>
 <body>
     <h1><strong>Origami</strong></h1>
-    <button class="button button1"><a href="origami_1.html">1:Make a fortune teller</a></button>
-    <button class="button button2"><a href="origami_2.html">2:Make a paper crane</a></button>
-    <button class="button button3"><a href="origami_3.html">3:Make a throwing star</a></button>
-    <button class="button button4"><a href="arts_2om.html">Back </a></button>
+    <button class="button button"><a href="origami_1.html">Episode 1</a></button>
+    <button class="button button"><a href="origami_2.html">Episode 2</a></button>
+    <button class="button button"><a href="origami_3.html">Episode 3</a></button>
+    <button class="button button"><a href="arts_2om.html">Back </a></button>
 
 </body>
 </html>

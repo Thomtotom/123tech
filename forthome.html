@@ -8,69 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <style>
-        .button1{
-        border-radius: 60px;
-        
-        background-color: orange;
-        cursor:pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
-
-
-        }
-        .button1:hover{
-        background-image: url(teepee.png);
-
-
-        }
-
-        .button3 {
-        border-radius: 60px;
-        
-        background-color: lime;
+        .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
         cursor: pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
+        margin: 5px;
         }
 
-        .button3:hover {
-        background-image: url(uberteepee.png);
-        }
-
-
-
-        .button2 {
-        border-radius: 60px;
-        
-        background-color: lightgrey;
+        .button span {
         cursor: pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
         }
 
-        .button2:hover {
-        background-image: url(chairfort.png);
-        }
-        body{
-        background-image: url(].jpg);
-
-        }
-
-        .button5 {
-        border-radius: 60px;
-     
-        background-color: pink;
-        cursor: pointer;
-        padding: 50px;
-        font-size: 20px;
-        transition-duration: 0.4s;
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
         }
 
-        .button5:hover {
-        background-color: red;
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
         }
     </style>
 </head>
@@ -81,20 +56,20 @@
         <h2>Forts</h2>
         <h3>If you want to build a fort, there are loads of different ways to do it!</h3>
    
-        <button class="button button1"><a href="teepee_forts.html">Teepee fort</a></button>
+        <button class="button button"><a href="teepee_forts.html">Teepee fort</a></button>
         <br />
         <p>Easy-Medium difficulty</p>
-        <button class="button button2"><a href="chairfort_forts.html">Chair fort</a></button>
+        <button class="button button"><a href="chairfort_forts.html">Chair fort</a></button>
 
         
         <br />
         <p>Easy difficulty</p>
-        <button class="button button3"><a href="uberteepee_forts.html">Uberteepee fort</a></button>
+        <button class="button button"><a href="uberteepee_forts.html">Uberteepee fort</a></button>
         
         <br />
         <p>Hard difficulty</p>
         <br />
-        <button class="button button5"><a href="index.html">Back to homepage</a></button>
+        <button class="button button"><a href="index.html">Back to homepage</a></button>
     </div>
 </body>
 </html>
