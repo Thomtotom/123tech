@@ -5,86 +5,60 @@
 <head>
     <title>Art</title>
     <style>
-        .button1 {
-            border-radius: 60px;
-            float: left;
-            background-color: cornflowerblue;
-            cursor: pointer;
-            padding: 50px;
-            font-size: 20px;
-            transition-duration: 0.4s;
+        .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
         }
 
-            .button1:hover {
-                background-color: darkblue;
-            }
-        .button2 {
-            border-radius: 60px;
-            float: left;
-            background-color: orange;
-            cursor: pointer;
-            padding: 50px;
-            font-size: 20px;
-            transition-duration: 0.4s;
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
         }
 
-            .button2:hover {
-                background-color: orangered;
-
-            }
-        .button4 {
-            border-radius: 60px;
-            float: left;
-            background-color: lime;
-            cursor: pointer;
-            padding: 50px;
-            font-size: 20px;
-            transition-duration: 0.4s;
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
         }
 
-            .button4:hover {
-                background-color: green;
-            }
-        .button3 {
-            border-radius: 60px;
-            float: left;
-            background-color: yellow;
-            cursor: pointer;
-            padding: 50px;
-            font-size: 20px;
-            transition-duration: 0.4s;
+        .button:hover span {
+        padding-right: 25px;
         }
 
-            .button3:hover {
-                background-color: darkgoldenrod;
-            }
-        .button5 {
-            border-radius: 60px;
-            background-color: pink;
-            cursor: pointer;
-            padding: 50px;
-            font-size: 20px;
-            transition-duration: 0.4s;
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
         }
+        body{
+        background-image: url(randomback5.png);
 
-            .button5:hover {
-                background-color: red;
-            }
-            body{
-                background-image: url(randomback5.png);
-
-            }
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <h1>Art and crafts</h1>
-    <button class="button button1"><a href="origami_home.html">Origami</a></button>
-    <button class="button button2"><a href="dragon.html">Draw a dragon</a></button>
-    <button class="button button4"><a href="makeyourownboardgame.html">Make your own board game</a></button>
+    <button class="button button"><a href="origami_home.html">Origami</a></button>
+    <button class="button button"><a href="dragon.html">Draw a dragon</a></button>
+    <button class="button button"><a href="makeyourownboardgame.html">Make your own board game</a></button>
     
-    <button class="button button5"><a href="knitting.html">Learn to knit</a></button>
-<button class="button button3"><a href="inside_A.html">Back to previous</a></button></body>
+    <button class="button button"><a href="knitting.html">Learn to knit</a></button>
+<button class="button button"><a href="inside_A.html">Back to previous</a></button></body>
 
 
 
