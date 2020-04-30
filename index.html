@@ -2,8 +2,9 @@
   <!-- nav bar html -->
 
   <ul class = "nav">
+    <img src="logo.png" width="40" height="40" />
 
-    <li><button class="button"><a href='af.html'>Activaty finder </a></button></li>
+    <li><button class="button"><a href='af.html'>Activity finder </a></button></li>
     <li><button class="button"><a href='AU.html'>About us</a></button></li>
     <li><button class="button"><a href='url'>_____something_____</a></button></li>
     <li><button class="button"><a href='url'>_____something_____</a></button></li>
@@ -14,12 +15,13 @@
  <link rel="shortcut icon" type="image/png" href="./logo.png">
  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Allan|Black+Han+Sans|Lemonada&display=swap" rel="stylesheet">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
   <HEADer>
     <dive align="center">
-   <h1>WELCOME TO:</h1>
-   <h1>activity finder</h1>
+   <h1 class="glow">WELCOME TO:</h1>
+   <h1 class="glow">activity finder</h1>
    <img src="logo.png" alt="precill for mortal engines" width="270" height="300">
   </HEADer>
 
@@ -34,15 +36,19 @@
 
   <font color="lime"><center><h1>-________________HELLO________________-</h1></center></font>
   <font color="lime"><center><h1>                                                                                                                                                                                                                                                      </h1></center></font>>
-  <font color="red"><center><h1>welcome to (title)</h1></center></font>>
+  <font color="red"><center><h1>welcome to activity finder or A.F </h1></center></font>>
+
+   <h2>who this website is direacted for:</h2>
+    <h4>we have created this website for poeple like "you", you the person who is stuck indoors surfing the internet for things to do by yourself or with others.<br> well your inluck because this is the website you've been looking for. It has things for groaps of poeple, and activitys for you by yourself so we hope you love this site.</h4>
   <p>
-    Hello and welcome to our website!<br />
+    <h2>what is this website about?<h2>
+    <h4>this website is about finding the funnist activity in the least time. unlike google our website has a seriesof question's that then narrows the activitys that your looking for. <br> we have meny choces but we recomend our tag page it has more then 17 diforent tag games! we can also recomend our card game page.</h2>
     <br />
-    This website is an activity index, which hopes to help people learn many things.<br />
-    Te Reo Maori is one of the courses you can choose from. There are lots of educational <br />
-    games on a range of subjects.  
-    We hope you enjoy it!<br />
-    <br />
+    <H1>we hope at the end of this wesite you'll look like this:</H1>
+    <h1 class="glow">   0             0<br>
+                              o      <br>
+                         \_______/   <h1>
+   
      
     
     
@@ -52,10 +58,7 @@
 
 
   
-    <br>
-    <br>
-    <br>
-    <br>
+   
     
        <font coler="red"><h3>would you like to do a Quick acktivity well try out our acktivity of the week: </h3></font>
        <br>
@@ -103,15 +106,34 @@
         }
 
      
+            .glow {
+      font-size: 80px;
+      color: #fff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
 
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #d7e598, 0 0 30px #d7e599, 0 0 40px #d7e600, 0 0 50px #d7e601, 0 0 60px #d7e602, 0 0 70px #d7e603;
+      }
+      
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #d7e604, 0 0 40px #d7e605, 0 0 50px #d7e606, 0 0 60px #d7e607, 0 0 70px #d7e608, 0 0 80px #d7e69;
+      }
+    }
 
-     
+        
 
 
  
 
 
       header {
+        
+          width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -121,19 +143,12 @@
           background-size: 100%;
           font-family: 'Lobster', cursive;
           background-position-x: center;
+        
         }
 
-      .backgroundText {
-        width: 100%;
-        height: 60%;
-        padding: 200px;
-      }
+     
 
-      body {
-          font-size: 100%;
-
-        } 
-
+   
 
         body {
           background-image: url("1.jpeg");
