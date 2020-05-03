@@ -8,6 +8,53 @@
     <li><button class="button"><a href='AU.html'>About us</a></button></li>
     <li><button class="button"><a href='url'>_____something_____</a></button></li>
     <li><button class="button"><a href='url'>_____something_____</a></button></li>
+    <div id="myclockdisplay"></div>
+    <script type="text/javascript"> 
+    function showtime(){
+
+   
+
+        var date=new Date();
+        h = date.getHours();
+        m = date.getMinutes();
+        s = date.getSeconds();
+        var session = "AM" 
+
+        console.log(h, m, s)
+         
+        if (h == 0){
+            h = 12;
+
+
+        }
+
+        if (h > 12){
+            h = h -12;
+            session = "pm"
+        }
+ 
+        console.log(h)
+        h = (h < 10) ? "0" + h : h;
+
+        
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+        
+        var time = h + ":" + m + ":" + s + ":" + session;
+        console.log("check")
+        console.log (time)
+        document.getElementById("myclockdisplay").innerText = time;
+        document.getElementById("myclockdisplay").textContent = time;
+
+        setTimeout(showtime, 1000)
+
+
+    }
+    
+    showtime();
+    
+    
+    </script>
   </ul>
 <head>
  <title>AF</title>
@@ -23,6 +70,7 @@
    <h1 class="glow">WELCOME TO:</h1>
    <h1 class="glow">activity finder</h1>
    <img src="logo.png" alt="precill for mortal engines" width="270" height="300">
+  
   </HEADer>
 
 
@@ -79,11 +127,34 @@
 
     </div>
 
-  
-    
+ 
     
 </body>
 <style>
+
+  .clock{
+    font-size: 80rem;
+    color: rgb(117, 224, 30);
+
+
+
+  }
+
+
+
+
+    h1{
+      
+      background: linear-gradient(to , rgb(12, 12, 238), rgb(207, 112, 34)));
+
+    }
+
+ a { 
+  color: rgb(117, 224, 30);
+
+ }
+
+
   .button {
         background-color: #56dde9;
         border: none;
@@ -150,7 +221,7 @@
    
 
         body {
-          background-color: #a8d9f5;
+          background-image: url("backg.png");
           background-size: 200%;
           background-repeat: no-repeat;
           background-attachment: fixed;
