@@ -1,59 +1,63 @@
-<html lang="en">
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+</configuration>
+<html>
 <head>
-    
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <title>Outside 1</title>
+    <style>
+
+
+        body {
+            background-image: url(randomorangegreenback1.png);
+        }
+
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 267px;
+            height: 60px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+    </style>
 </head>
 <body>
+    <button class="button button"><a href="kite_outside1.html">Make a kite</a></button>
+    <button class="button button"><a href="garden_outside1.html">Grow a garden</a></button>
+    <button class="button button"><a href="makeaboat_outside1.html">Make a boat</a></button>
 
-    
-    <div id="myclockdisplay"></div>
-    <script type="text/javascript"> 
-    function showtime(){
-
-   
-
-        var date=new Date();
-        h = date.getHours();
-        m = date.getMinutes();
-        s = date.getSeconds();
-        var session = "AM" 
-
-        console.log(h, m, s)
-         
-        if (h == 0){
-            h = 12;
-
-
-        }
-
-        if (h > 12){
-            h = h -12;
-            session = "pm"
-        }
- 
-        console.log(h)
-        h = (h < 10) ? "0" + h : h;
-
-        
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
-        
-        var time = h + ":" + m + ":" + s + ":" + session;
-        console.log("check")
-        console.log (time)
-        document.getElementById("myclockdisplay").innerText = time;
-        document.getElementById("myclockdisplay").textContent = time;
-
-        setTimeout(showtime, 1000)
-
-
-    }
-    
-    showtime();
-    
-    
-    </script>
+    <button class="button button"><a href="singleperson_branch.html">Back</a></button>
 </body>
 </html>
-
-
-
