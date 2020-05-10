@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+</configuration>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <title>Sudoku</title>
+    <style>
+        body{
+        background-image: url(randomorangegreenback1.png);
+
+        }
+        .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learn to do sudoku!</h1>
+    <h2>
+        Rules: Each row, column and 3x3 square must contain one of each number from 1 to 9.
+    </h2>
+    <img src="sudoku1.png" width="400" height="400" />
+    <br />
+
+    <img src="sudoku2.png" width="400" height="400" />
+    <p>
+        Generally, the main tactic is to show that a number can only be in one place in a square, row or column using others of that number to prove this. For example, all the 2s here are highlighted in green. The blue region is where 2s cannot be without violating the rules. Notice that in the bottom right square, there is only one square that is not blue or coloured in, so there must be a 2 there.
+    </p>
+    <img src="sudoku3.png" width="400" height="400" />
+    <p>
+        Now let’s try 4s. Only one position for a 4 in the top-right corner, so we fill one in.
+    </p>
+    <img src="sudoku4.png" width="400" height="400" />
+    <p>In the bottom right corner, there is only one place for a 6. For easier Sudoku, this tactic is generally the only thing you need. However, there are other tactics. </p>
+    <img src="sudoku5.png" width="400" height="400" />
+    <p>Notes: Notes are just writing down whatever numbers can go in a cell. Here, I’ve done the top left corner. Notice that in the bottom-middle cell of this square there is only a single 9, which is the result of another tactic. Look at the intersecting row and column. Between them they contain all the numbers from 1 to 8. The only number that can go there is the 9, because any other possibility breaks the rules.</p>
+    <img src="sudoku6.png" width="400" height="400" />
+    <p>
+        This is an ‘Easy’ sudoku so there are lots of easy-to find notes. Remember to always update your notes after doing something!
+    </p>
+    <img src="sudoku7.png" width="400" height="400" />
+    <p>You can also use notes to check if something has the only number in its square, row or column. This is the first tactic we saw earlier, but this way is easier. The highlighted 8 and the highlighted 2 are the only ones in their square, so they can be filled. There are also several more squares that can only contain one number.</p>
+    <img src="sudoku8.png" width="400" height="400" />
+    <p>This is almost done! There are a whole lot of spaces with only one of something. However, there is one more thing I want to show you. Notice that in the two green cells, there is a pair of 3 9 s. This means that one of these must be a 3 and the other a 9, and that nothing else can be either. That means the blue cell cannot be a 3, so it must be a 6.</p>
+    <img src="sudoku9.png" width="400" height="400" />
+    <p>
+        There are really only one-digit cells left now, and all that is left is to fill them in.
+    </p>
+    <img src="sudoku10.png" width="400" height="400" />
+    <p>Tada! For more sudoku, try out websites like <a href="sudoku.com">sudoku.com</a> or check your newspaper, which usually has several. With both, try the 'Easy' sudoku first, then slowly advance.</p>
+
+    <button class="button button"><a href="logic_puzzle.html">Back</a></button>
+</body>
+</html>
