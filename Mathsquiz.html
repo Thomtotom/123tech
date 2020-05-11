@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+</configuration>
+<html>
+<head>
+    <style>
+
+
+        #panel {
+        display: none;
+        }
+        #answertrue1 {
+        display: none;
+        }
+        #answerfalse1 {
+        display: none;
+        }
+        #answertrue2 {
+        display: none;
+        }
+        #answerfalse3 {
+        display: none;
+        }
+        #answertrue3 {
+        display: none;
+        }
+        #answerfalse4 {
+        display: none;
+        }
+        #answertrue4 {
+        display: none;
+        }
+        #answerfalse5 {
+        display: none;
+        }
+        #answertrue5 {
+        display: none;
+        }
+        #answerfalse2 {
+        display: none;
+        }
+        #answerfalse6 {
+        display: none;
+        }
+        #answertrue6 {
+        display: none;
+        }
+        #answerfalse7 {
+        display: none;
+        }
+        #answertrue7 {
+        display: none;
+        }
+        #answerfalse8 {
+        display: none;
+        }
+        #answertrue8 {
+        display: none;
+        }
+        #answerfalse9 {
+        display: none;
+        }
+        #answertrue9 {
+        display: none;
+        }
+        #answerfalse10 {
+        display: none;
+        }
+        #answertrue10 {
+        display: none;
+        }
+        #answerfalse11 {
+        display: none;
+        }
+        #answertrue11 {
+        display: none;
+        }
+        #answerfalse12 {
+        display: none;
+        }
+        #answertrue12 {
+        display: none;
+        }
+        #answerfalse13 {
+        display: none;
+        }
+        #answertrue13 {
+        display: none;
+        }
+        #answerfalse14 {
+        display: none;
+        }
+        #answertrue14 {
+        display: none;
+        }
+        #answerfalse15 {
+        display: none;
+        }
+        #answertrue15 {
+        display: none;
+        }
+        #answerfalse16 {
+        display: none;
+        }
+        #answertrue16 {
+        display: none;
+        }
+        #answerfalse17 {
+        display: none;
+        }
+        #answertrue17 {
+        display: none;
+        }
+        #answerfalse18 {
+        display: none;
+        }
+        #answertrue18 {
+        display: none;
+        }
+        #answerfalse19 {
+        display: none;
+        }
+        #answertrue19 {
+        display: none;
+        }
+        #answerfalse20 {
+        display: none;
+        }
+        #answertrue20 {
+        display: none;
+        }
+        #q2actual{
+        display:none;
+        }
+        #q3actual{
+        display:none;
+        }
+        #q4actual{
+        display:none;
+        }
+        #q5actual{
+        display:none;
+        }
+        #q6actual{
+        display:none;
+        }
+        #q7actual{
+        display:none;
+        }
+        #q8actual{
+        display:none;
+        }
+        #q9actual{
+        display:none;
+        }
+        #q10actual{
+        display:none;
+        }
+        #q11actual{
+        display:none;
+        }
+        #q12actual{
+        display:none;
+        }
+        #q13actual{
+        display:none;
+        }
+        #q14actual{
+        display:none;
+        }
+        #q15actual{
+        display:none;
+        }
+        #q16actual{
+        display:none;
+        }
+        #q17actual{
+        display:none;
+        }
+        #q18actual{
+        display:none;
+        }
+        #q19actual{
+        display:none;
+        }
+        #q20actual{
+        display:none;
+        }
+        #congrats{
+        display:none;
+        }
+        body{
+        background-image: url(randomorangegreenback1.png);
+
+        }
+        .button {
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="clicktostart" onclick="myFunction()">Click to start!</p>
+
+    <div id="panel">
+        <p>What is 1+1?</p>
+        <p onclick="correctanswer1()">2</p><p onclick="wronganswer1()">3</p><p onclick="wronganswer1()">4</p><p onclick="wronganswer1()">5</p>
+        <p id="answertrue1" onclick="Showquestion2()">Correct! Click for next question</p>
+        <p id="answerfalse1" onclick="Showquestion2()">Wrong, the correct answer is 2. Click for next question</p>
+
+    </div>
+    <div id="q2actual">
+        <p>What is 7 x 6</p>
+        <p onclick="wronganswer2()">47</p><p onclick="correctanswer2()">42</p><p onclick="wronganswer2()">39</p><p onclick="wronganswer2()">54</p>
+        <p id="answertrue2" onclick="Showquestion3()">Correct! Click for next question</p>
+        <p id="answerfalse2" onclick="Showquestion3()">Wrong, the correct answer is 42. Click for next question</p>
+
+    </div>
+    <div id="q3actual">
+        <p>What is 143 ÷ 11</p>
+        <p onclick="correctanswer3()">13</p><p onclick="wronganswer3()">11</p><p onclick="wronganswer3()">9</p><p onclick="wronganswer3()">12</p>
+        <p id="answertrue3" onclick="Showquestion4()">Correct! Click for next question</p>
+        <p id="answerfalse3" onclick="Showquestion4()">Wrong, the correct answer is 11. Click for next question</p>
+
+    </div>
+    <div id="q4actual">
+        <p>What is 92 x 7</p>
+        <p onclick="wronganswer4()">884</p><p onclick="wronganswer4()">684</p><p onclick="correctanswer4()">644</p><p onclick="wronganswer4()">744</p>
+        <p id="answertrue4" onclick="Showquestion5()">Correct! Click for next question</p>
+        <p id="answerfalse4" onclick="Showquestion5()">Wrong, the correct answer is 644. Click for next question</p>
+
+    </div>
+    <div id="q5actual">
+        <p>What is 642 + 659</p>
+        <p onclick="wronganswer5()">1201</p><p onclick="wronganswer5()">1251</p><p onclick="wronganswer5()">1321</p><p onclick="correctanswer5()">1301</p>
+        <p id="answertrue5" onclick="Showquestion6()">Correct! Click for next question</p>
+        <p id="answerfalse5" onclick="Showquestion6()">Wrong, the correct answer is 1301. Click for next question</p>
+
+    </div>
+    <div id="q6actual">
+        <p>What is 6 to the power of 4?</p>
+        <p onclick="wronganswer6()">4096</p><p onclick="correctanswer6()">1296</p><p onclick="wronganswer6()">216</p><p onclick="wronganswer6()">2048</p>
+        <p id="answertrue6" onclick="Showquestion7()">Correct! Click for next question</p>
+        <p id="answerfalse6" onclick="Showquestion7()">Wrong, the correct answer is 1296. Click for next question</p>
+
+    </div>
+    <div id="q7actual">
+        <p>What is 7 factorial?</p>
+        <p onclick="wronganswer7()">120</p><p onclick="wronganswer7()">40320</p><p onclick="wronganswer7()">720</p><p onclick="correctanswer7()">5040</p>
+        <p id="answertrue7" onclick="Showquestion8()">Correct! Click for next question</p>
+        <p id="answerfalse7" onclick="Showquestion8()">Wrong, the correct answer is 5040. Click for next question</p>
+
+    </div>
+    <div id="q8actual">
+        <p>What is the 100th triangle number?</p>
+        <p onclick="correctanswer8()">5050</p><p onclick="wronganswer8()">100</p><p onclick="wronganswer8()">500500</p><p onclick="wronganswer8()">55</p>
+        <p id="answertrue8" onclick="Showquestion9()">Correct! Click for next question</p>
+        <p id="answerfalse8" onclick="Showquestion9()">Wrong, the correct answer is 5050. Click for next question</p>
+
+    </div>
+    <div id="q9actual">
+        <p>What is √(26 squared- 24 squared)</p>
+        <p onclick="wronganswer9()">100</p><p onclick="correctanswer9()">10</p><p onclick="wronganswer9()">35.242020</p><p onclick="wronganswer9()">676</p>
+        <p id="answertrue9" onclick="Showquestion10()">Correct! Click for next question</p>
+        <p id="answerfalse9" onclick="Showquestion10()">Wrong, the correct answer is 10. Click for next question</p>
+
+    </div>
+    <div id="q10actual">
+        <p>What is 64/720 x 45 x 20609431/234 x 0</p>
+        <p onclick="wronganswer10()">352297.965812</p><p onclick="wronganswer10()">1</p><p onclick="correctanswer10()">0</p><p onclick="wronganswer10()">∞</p>
+        <p id="answertrue10" onclick="Showquestion11()">Correct! Click for next question</p>
+        <p id="answerfalse10" onclick="Showquestion11()">Wrong, the correct answer is 0. Click for next question</p>
+
+    </div>
+    <div id="q11actual">
+        <p>What is 434 x 672?</p>
+        <p onclick="correctanswer11()">291648</p><p onclick="wronganswer11()">193752</p><p onclick="wronganswer11()">143262</p><p onclick="wronganswer11()">120376</p>
+        <p id="answertrue11" onclick="Showquestion12()">Correct! Click for next question</p>
+        <p id="answerfalse11" onclick="Showquestion12()">Wrong, the correct answer is 291648. Click for next question</p>
+
+    </div>
+    <div id="q12actual">
+        <p>What is √(5x5x5 + 4x4x4 + 3x3x3 + 2x2x2 + 1x1x1) </p>
+        <p onclick="wronganswer12()">10</p><p onclick="correctanswer12()">15</p><p onclick="wronganswer12()">20</p><p onclick="wronganswer12()">225</p>
+        <p id="answertrue12" onclick="Showquestion13()">Correct! Click for next question</p>
+        <p id="answerfalse12" onclick="Showquestion13()">Wrong, the correct answer is 15. Click for next question</p>
+
+    </div>
+    <div id="q13actual">
+        <p>What is 6782 + 1823</p>
+        <p onclick="wronganswer13()">7425</p><p onclick="wronganswer13()">8425</p><p onclick="wronganswer13()">7605</p><p onclick="correctanswer13()">8605</p>
+        <p id="answertrue13" onclick="Showquestion14()">Correct! Click for next question</p>
+        <p id="answerfalse13" onclick="Showquestion14()">Wrong, the correct answer is 8605. Click for next question</p>
+
+    </div>
+    <div id="q14actual">
+        <p>What is 2025 ÷ 27</p>
+        <p onclick="correctanswer14()">75</p><p onclick="wronganswer14()">25</p><p onclick="wronganswer14()">57</p><p onclick="wronganswer14()">45</p>
+        <p id="answertrue14" onclick="Showquestion15()">Correct! Click for next question</p>
+        <p id="answerfalse14" onclick="Showquestion15()">Wrong, the correct answer is 75. Click for next question</p>
+
+    </div>
+    <div id="q15actual">
+        <p>What is 2982÷42 </p>
+        <p onclick="wronganswer15()">81</p><p onclick="wronganswer15()">86</p><p onclick="correctanswer15()">71</p><p onclick="wronganswer15()">76</p>
+        <p id="answertrue15" onclick="Showquestion16()">Correct! Click for next question</p>
+        <p id="answerfalse15" onclick="Showquestion16()">Wrong, the correct answer is 71. Click for next question</p>
+
+    </div>
+    <div id="q16actual">
+        <p>What is 996 ÷ 83</p>
+        <p onclick="correctanswer16()">12</p><p onclick="wronganswer16()">22</p><p onclick="wronganswer16()">83</p><p onclick="wronganswer16()">14</p>
+        <p id="answertrue16" onclick="Showquestion17()">Correct! Click for next question</p>
+        <p id="answerfalse16" onclick="Showquestion17()">Wrong, the correct answer is 12. Click for next question</p>
+
+    </div>
+    <div id="q17actual">
+        <p>What is √1225 </p>
+        <p onclick="wronganswer17()">40</p><p onclick="wronganswer17()">25</p><p onclick="wronganswer17()">45</p><p onclick="correctanswer17()">35</p>
+        <p id="answertrue17" onclick="Showquestion18()">Correct! Click for next question</p>
+        <p id="answerfalse17" onclick="Showquestion18()">Wrong, the correct answer is 35. Click for next question</p>
+
+    </div>
+    <div id="q18actual">
+        <p>What is halfway between 6.5 and 6.8?</p>
+        <p onclick="correctanswer18()">6.65</p><p onclick="wronganswer18()">6.75</p><p onclick="wronganswer18()">6.55</p><p onclick="wronganswer18()">12.3</p>
+        <p id="answertrue18" onclick="Showquestion19()">Correct! Click for next question</p>
+        <p id="answerfalse18" onclick="Showquestion19()">Wrong, the correct answer is 6.65. Click for next question</p>
+
+    </div>
+    <div id="q19actual">
+        <p>What is the greatest common factor of 120 and 96</p>
+        <p onclick="wronganswer19()">16</p><p onclick="correctanswer19()">24</p><p onclick="wronganswer19()">8</p><p onclick="wronganswer19()">12</p>
+        <p id="answertrue19" onclick="Showquestion20()">Correct! Click for next question</p>
+        <p id="answerfalse19" onclick="Showquestion20()">Wrong, the correct answer is . Click for next question</p>
+
+    </div>
+    <div id="q20actual">
+        <p>What is the least common multiple of 12 and 16?</p>
+        <p onclick="wronganswer20()">192</p><p onclick="wronganswer20()">96</p><p onclick="wronganswer20()">24</p><p onclick="correctanswer20()">48</p>
+        <p id="answertrue20" onclick="Showcongrats()">Correct! Click for next question</p>
+        <p id="answerfalse20" onclick="Showcongrats()">Wrong, the correct answer is . Click for next question</p>
+
+    </div>
+    <p id="congrats">Congratulations!</p>
+    <button class="button button"><a href="maths_puzzle.html">Back</a></button>
+    <script>
+        function Showquestion2(){
+        document.getElementById("q2actual").style.display = "block";
+
+        document.getElementById("panel").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion3(){
+        document.getElementById("q3actual").style.display = "block";
+
+        document.getElementById("q2actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion4(){
+        document.getElementById("q4actual").style.display = "block";
+
+        document.getElementById("q3actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion5(){
+        document.getElementById("q5actual").style.display = "block";
+
+        document.getElementById("q4actual").style.display = "none";
+
+        }
+
+    </script>
+    <script>
+        function Showquestion6(){
+        document.getElementById("q6actual").style.display = "block";
+
+        document.getElementById("q5actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion7(){
+        document.getElementById("q7actual").style.display = "block";
+
+        document.getElementById("q6actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion8(){
+        document.getElementById("q8actual").style.display = "block";
+
+        document.getElementById("q7actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion9(){
+        document.getElementById("q9actual").style.display = "block";
+
+        document.getElementById("q8actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion10(){
+        document.getElementById("q10actual").style.display = "block";
+
+        document.getElementById("q9actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion11(){
+        document.getElementById("q11actual").style.display = "block";
+
+        document.getElementById("q10actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion12(){
+        document.getElementById("q12actual").style.display = "block";
+
+        document.getElementById("q11actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion13(){
+        document.getElementById("q13actual").style.display = "block";
+
+        document.getElementById("q12actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion14(){
+        document.getElementById("q14actual").style.display = "block";
+
+        document.getElementById("q13actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion15(){
+        document.getElementById("q15actual").style.display = "block";
+
+        document.getElementById("q14actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion16(){
+        document.getElementById("q16actual").style.display = "block";
+
+        document.getElementById("q15actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion17(){
+        document.getElementById("q17actual").style.display = "block";
+
+        document.getElementById("q16actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion18(){
+        document.getElementById("q18actual").style.display = "block";
+
+        document.getElementById("q17actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion19(){
+        document.getElementById("q19actual").style.display = "block";
+
+        document.getElementById("q18actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showquestion20(){
+        document.getElementById("q20actual").style.display = "block";
+
+        document.getElementById("q19actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function Showcongrats(){
+        document.getElementById("congrats").style.display = "block";
+
+        document.getElementById("q20actual").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer4(){
+        document.getElementById("answertrue4").style.display = "block";
+        document.getElementById("answerfalse4").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer4(){
+        document.getElementById("answerfalse4").style.display = "block";
+        document.getElementById("answertrue4").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer1(){
+        document.getElementById("answertrue1").style.display = "block";
+        document.getElementById("answerfalse1").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer1(){
+        document.getElementById("answerfalse1").style.display = "block";
+        document.getElementById("answertrue1").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer2(){
+        document.getElementById("answertrue2").style.display = "block";
+        document.getElementById("answerfalse2").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer2(){
+        document.getElementById("answerfalse2").style.display = "block";
+        document.getElementById("answertrue2").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer3(){
+        document.getElementById("answertrue3").style.display = "block";
+        document.getElementById("answerfalse3").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer3(){
+        document.getElementById("answerfalse3").style.display = "block";
+        document.getElementById("answertrue3").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer5(){
+        document.getElementById("answertrue5").style.display = "block";
+        document.getElementById("answerfalse5").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer5(){
+        document.getElementById("answerfalse5").style.display = "block";
+        document.getElementById("answertrue5").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer6(){
+        document.getElementById("answertrue6").style.display = "block";
+        document.getElementById("answerfalse6").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer6(){
+        document.getElementById("answerfalse6").style.display = "block";
+        document.getElementById("answertrue6").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer7(){
+        document.getElementById("answertrue7").style.display = "block";
+        document.getElementById("answerfalse7").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer7(){
+        document.getElementById("answerfalse7").style.display = "block";
+        document.getElementById("answertrue7").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer8(){
+        document.getElementById("answertrue8").style.display = "block";
+        document.getElementById("answerfalse8").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer8(){
+        document.getElementById("answerfalse8").style.display = "block";
+        document.getElementById("answertrue8").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer9(){
+        document.getElementById("answertrue9").style.display = "block";
+        document.getElementById("answerfalse9").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer9(){
+        document.getElementById("answerfalse9").style.display = "block";
+        document.getElementById("answertrue9").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer10(){
+        document.getElementById("answertrue10").style.display = "block";
+        document.getElementById("answerfalse10").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer10(){
+        document.getElementById("answerfalse10").style.display = "block";
+        document.getElementById("answertrue10").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer11(){
+        document.getElementById("answertrue11").style.display = "block";
+        document.getElementById("answerfalse11").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer11(){
+        document.getElementById("answerfalse11").style.display = "block";
+        document.getElementById("answertrue11").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer12(){
+        document.getElementById("answertrue12").style.display = "block";
+        document.getElementById("answerfalse12").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer12(){
+        document.getElementById("answerfalse12").style.display = "block";
+        document.getElementById("answertrue12").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer13(){
+        document.getElementById("answertrue13").style.display = "block";
+        document.getElementById("answerfalse13").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer13(){
+        document.getElementById("answerfalse13").style.display = "block";
+        document.getElementById("answertrue13").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer14(){
+        document.getElementById("answertrue14").style.display = "block";
+        document.getElementById("answerfalse14").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer14(){
+        document.getElementById("answerfalse14").style.display = "block";
+        document.getElementById("answertrue14").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer15(){
+        document.getElementById("answertrue15").style.display = "block";
+        document.getElementById("answerfalse15").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer15(){
+        document.getElementById("answerfalse15").style.display = "block";
+        document.getElementById("answertrue15").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer16(){
+        document.getElementById("answertrue16").style.display = "block";
+        document.getElementById("answerfalse16").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer16(){
+        document.getElementById("answerfalse16").style.display = "block";
+        document.getElementById("answertrue16").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer17(){
+        document.getElementById("answertrue17").style.display = "block";
+        document.getElementById("answerfalse17").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer17(){
+        document.getElementById("answerfalse17").style.display = "block";
+        document.getElementById("answertrue17").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer18(){
+        document.getElementById("answertrue18").style.display = "block";
+        document.getElementById("answerfalse18").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer18(){
+        document.getElementById("answerfalse18").style.display = "block";
+        document.getElementById("answertrue18").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer19(){
+        document.getElementById("answertrue19").style.display = "block";
+        document.getElementById("answerfalse19").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer19(){
+        document.getElementById("answerfalse19").style.display = "block";
+        document.getElementById("answertrue19").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function correctanswer20(){
+        document.getElementById("answertrue20").style.display = "block";
+        document.getElementById("answerfalse20").style.display = "none";
+
+        }
+
+    </script>
+
+    <script>
+        function wronganswer20(){
+        document.getElementById("answerfalse20").style.display = "block";
+        document.getElementById("answertrue20").style.display = "none";
+
+        }
+    </script>
+    <script>
+        function myFunction() {
+        document.getElementById("panel").style.display = "block";
+        document.getElementById("clicktostart").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
