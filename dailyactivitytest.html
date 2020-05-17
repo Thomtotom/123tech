@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+</configuration>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./logo.png" />
+    <title></title>
+    <style>
+        a {
+        color: rgb(172, 124, 13);
+
+        }
+
+
+        .button {
+        border-radius: 4px;
+        background-color: #0b0a53;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+
+
+        body {
+        background-color: #524763;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        }
+
+        h1{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        }
+
+        h2{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+        }
+
+        h3{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+        }
+
+        h4{
+        text-align: left;
+        text-indent: 30%;
+        text-shadow: 2px 2px 5px black;
+
+
+        }
+
+        h5{
+        text-align: left;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+        }
+
+        h6{
+        text-align: left;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+
+        }
+
+        p{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var date = new Date();
+        var day = date.getDate();
+        function banana(){
+        if (day == 1) {
+        document.getElementById("link").href = "canasta.html";
+        }
+
+        if (day == 2) {
+        document.getElementById("link").href = "makeakite_outside1.html";
+        }
+        if (day == 3) {
+        document.getElementById("link").href =  "taghome_outside.html";
+        }
+        if (day == 4) {
+        document.getElementById("link").href = "origami_home.html";
+        }
+        if (day == 5) {
+        document.getElementById("link").href = "anagram.html"
+        }
+        if (day == 6) {
+        document.getElementById("link").href = "garden_outside1.html"
+        }
+        if (day == 7) {
+        document.getElementById("link").href = "dragon.html";
+        }
+        if (day == 8) {
+        document.getElementById("link").href = "makeakite_outside1.html"
+        }
+        if (day == 9) {
+        document.getElementById("link").href = "fill-in.html";
+        }
+        if (day == 10) {
+        document.getElementById("link").href = "makeyourownboardgame.html";
+        }
+        if (day == 11) {
+        document.getElementById("link").href = "origami_home.html"
+        }
+        if (day == 12) {
+        document.getElementById("link").href = "garden_outside1.html";
+        }
+        if (day == 13) {
+        document.getElementById("link").href = "au.html";
+        }
+        if (day == 14) {
+        document.getElementById("link").href = "taghome_outside.html";
+        }
+        if (day == 15) {
+        document.getElementById("link").href = "knitting.html";
+        }
+        if (day == 16) {
+        document.getElementById("link").href = "riddle.html";
+        }
+        if (day == 17) {
+        document.getElementById("link").href = "sudoku.html";
+        }
+        if (day == 18) {
+        document.getElementById("link").href = "interestinglogicpuzzles.html";
+        }
+        if (day == 19) {
+        document.getElementById("link").href = "dragon.html";
+        }
+        if (day == 20) {
+        document.getElementById("link").href = "countdown.html";
+        }
+        if (day == 21) {
+        document.getElementById("link").href = "makeaboat_outside1.html";
+        }
+        if (day == 22) {
+        document.getElementById("link").href = "ginrummy.html";
+        }
+        if (day == 23) {
+        document.getElementById("link").href = "makeyourownboardgame.html";
+        }
+        if (day == 24) {
+        document.getElementById("link").href = "mathsquiz.html";
+        }
+        if (day == 25) {
+        document.getElementById("link").href = "billypuzzle.html";
+        }
+        if (day == 26) {
+        document.getElementById("link").href = "ginrummy.html";
+        }
+        if (day == 27) {
+        document.getElementById("link").href = "lastcard.html";
+        }
+        if (day == 28) {
+        document.getElementById("link").href = "makeaboat_outside1.html"
+        }
+        if (day == 29) {
+        document.getElementById("link").href = "canasta.html";
+        }
+        if (day == 30) {
+        document.getElementById("link").href = "au.html";
+        }
+        if (day == 31) {
+        document.getElementById("link").href = "lastcard.html";
+        }
+        }
+    </script>
+    <button class="button" onclick="banana()">Click to activate</button>
+    <a id="link">Activity of the day</a>
+    <button class="button button"><a href="tbc.html">Back</a></button>
+</body>
+</html>
