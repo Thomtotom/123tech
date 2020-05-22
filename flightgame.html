@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <title>Flight game</title>
+    <style>
+        a {
+    color: rgb(172, 124, 13);
+
+  }
+
+
+.button {
+  border-radius: 4px;
+  background-color: #0b0a53;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 267px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+      body {
+          background-color: #524763;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          margin: 0;
+        }
+
+        h1{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  h2{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h3{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+  h4{
+    text-align: left;
+    text-indent: 30%;
+    text-shadow: 2px 2px 5px black;
+    
+
+  }
+
+  h5{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h6{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+
+  }
+
+  p{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+    </style>
+</head>
+<body onload="startGame()">
+<h1>Flight game</h1>
+<script>
+
+var myGamePiece;
+var myObstacles = [];
+var myScore;
+
+function startGame() {
+    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece.gravity = 0.05;
+    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 480;
+        this.canvas.height = 270;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        updateGameArea();
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    this.score = 0;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;
+    this.gravity = 0;
+    this.gravitySpeed = 0;
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.gravitySpeed += this.gravity;
+        this.x += this.speedX;
+        this.y += this.speedY + this.gravitySpeed;
+        this.hitBottom();
+        this.hitTop();
+    }
+    this.hitBottom = function() {
+        var rockbottom = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+            this.gravitySpeed = 0;
+        }
+    }
+    this.hitTop = function() {
+        
+        if (this.y < 0) {
+            this.y = 0;
+            this.gravitySpeed = 0;
+        }
+    }
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            return;
+        } 
+    }
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].x += -1;
+        myObstacles[i].update();
+    }
+    myScore.text="SCORE: " + Math.floor((myGameArea.frameNo-290)/150);
+    myScore.update();
+    myGamePiece.newPos();
+    myGamePiece.update();
+}
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+function accelerate(n) {
+    if (!myGameArea.interval) {myGameArea.interval = setInterval(updateGameArea, 20);}
+
+    myGamePiece.gravity = n;
+}
+</script>
+<br>
+<button class="button button" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">FLY</button>
+<p>Click the FLY button to start the game</p>
+<p>How long can you stay alive? Use the FLY button to stay in the air..
+<br><br>Note: Reload the page to restart. Ignore the -2 score at the start. </p>
+    <button class="button button"><a href="digitalfun_A.html">Back</a></button>
+    
+</body>
+</html>
