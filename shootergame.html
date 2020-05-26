@@ -12,7 +12,10 @@ canvas {
     color: rgb(172, 124, 13);
 
   }
-
+input{
+color: rgb(172, 124, 13);
+display: inline;
+}
 
 .button {
   border-radius: 4px;
@@ -110,6 +113,7 @@ canvas {
   }
 
   p{
+  display: inline;
     text-align: left;
     text-indent: 30%;
     color: white;
@@ -120,14 +124,11 @@ canvas {
 </style>
 </head>
 <body onload="startGame()">
-<p id="score"></p>
-<p>Angle</p>
-<input type="range" max="90" min="0" id="angle">
-<p id="angletext"></p>
-<p>Speed</p>
-<input type="range" max="1000" min="500" value="50"id="speed">
-<p id="speedtext"></p>
-<button onclick="go()" ontouchstart="go()">Shoot!</button>
+<table><tr><td><p>Angle</p></td><td><p>Speed</p></td><td><p id="score" style="display: block; text-indent: 0px;"></p></td></tr>
+<tr><td><input type="range" max="90" min="0" id="angle"></td><td><input type="range" max="1000" min="500" value="50"id="speed"></td></tr>
+<tr><td><p id="angletext"></p></td><td><p id="speedtext"></p></td><td><button onclick="go()" ontouchstart="go()">Shoot!</button></td></tr>
+</table>
+
 <script>
 var round;
 var score;
@@ -246,6 +247,6 @@ myGamePiece.update();
 </script>
 <h1>Shooter Game</h1>
 <p> Use the controls to shoot the red square into the yellow square.</p>
-
+<a href="index.html"><button class="button button" style="color: rgb(172, 124, 13);">Back</button></a>
 </body>
 </html>
