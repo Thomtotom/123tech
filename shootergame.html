@@ -7,7 +7,8 @@
 canvas {
     border:1px solid #d3d3d3;
     background-color: #f1f1f1;
-}
+    margin-left: 30%;
+} 
  a {
     color: rgb(172, 124, 13);
 
@@ -123,6 +124,7 @@ display: inline;
 
 </style>
 </head>
+<div align="center">
 <body onload="startGame()">
 <table><tr><td><p>Angle</p></td><td><p>Speed</p></td><td><p id="score" style="display: block; text-indent: 0px;"></p></td></tr>
 <tr><td><input type="range" max="90" min="0" id="angle"></td><td><input type="range" max="1000" min="500" value="50"id="speed"></td></tr>
@@ -248,5 +250,6 @@ myGamePiece.update();
 <h1>Shooter Game</h1>
 <p> Use the controls to shoot the red square into the yellow square.</p>
 <a href="index.html"><button class="button button" style="color: rgb(172, 124, 13);">Back</button></a>
+</div>
 </body>
 </html>

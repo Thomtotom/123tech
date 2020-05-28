@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>snale</title>
+<title>snail</title>
 <style type="text/css">
             @import url("https://fonts.googleapis.com/css?family=VT323");
             
@@ -196,10 +196,10 @@
 <body>
 	
 <header class="wrap">
-                <h1>snale</h1>
+                <h1>snail</h1>
                 <p class="score">Score: <span id="score_value">0</span></p>
             </header>
-            <canvas class="wrap" id="snale" width="320" height="320" tabindex="1"></canvas>
+            <canvas class="wrap" id="snail" width="320" height="320" tabindex="1"></canvas>
         
             <!-- Game Over Screen -->
             <div id="gameover">
@@ -236,7 +236,7 @@
         
             <!-- Main Menu Screen -->
             <div id="menu">
-                <h2>snale</h2>
+                <h2>snail</h2>
 
                 <a id="newgame_menu">new game</a>
                 <a href="index.html">back to the first page!</a>
@@ -255,11 +255,11 @@
     var canvas;
     var ctx;
     
-    // snale
-    var snale;
-    var snale_dir;
-   var snale_next_dir;
-    var snale_speed;
+    // snail
+    var snail;
+    var snail_dir;
+   var snail_next_dir;
+    var snail_speed;
     
     // Food
     var food = {x: 0, y: 0};
@@ -271,7 +271,7 @@
     var wall;
     
     // HTML Elements
-    var screen_snale;
+    var screen_snail;
     var screen_menu;
     var screen_setting;
     var screen_gameover;
@@ -296,20 +296,20 @@
 
     var changeDir = function(key){
         
-        if(key == 38 && snale_dir != 2){
-            snale_next_dir = 0;
+        if(key == 38 && snail_dir != 2){
+            snail_next_dir = 0;
         }else{
         
-        if (key == 39 && snale_dir != 3){
-            snale_next_dir = 1;
+        if (key == 39 && snail_dir != 3){
+            snail_next_dir = 1;
         }else{
         
-        if (key == 40 && snale_dir != 0){
-            snale_next_dir = 2;
+        if (key == 40 && snail_dir != 0){
+            snail_next_dir = 2;
         }else{
             
-        if(key == 37 && snale_dir != 1){
-            snale_next_dir = 3;
+        if(key == 37 && snail_dir != 1){
+            snail_next_dir = 3;
         } } } }
         
     }
@@ -319,8 +319,8 @@
     var addFood = function(){
         food.x = Math.floor(Math.random() * ((canvas.width / 10) - 1));
         food.y = Math.floor(Math.random() * ((canvas.height / 10) - 1));
-        for(var i = 0; i < snale.length; i++){
-            if(checkBlock(food.x, food.y, snale[i].x, snale[i].y)){
+        for(var i = 0; i < snail.length; i++){
+            if(checkBlock(food.x, food.y, snail[i].x, snail[i].y)){
                 addFood();
             }
         }
@@ -342,20 +342,20 @@
 
     var mainLoop = function(){
         
-            var _x = snale[0].x;
-            var _y = snale[0].y;
-      snale_dir = snale_next_dir;
+            var _x = snail[0].x;
+            var _y = snail[0].y;
+      snail_dir = snail_next_dir;
 
             // 0 - Up, 1 - Right, 2 - Down, 3 - Left
-            switch(snale_dir){
+            switch(snail_dir){
                 case 0: _y--; break;
                 case 1: _x++; break;
                 case 2: _y++; break;
                 case 3: _x--; break;
             }
 
-            snale.pop();
-            snale.unshift({x: _x, y: _y});
+            snail.pop();
+            snail.unshift({x: _x, y: _y});
 
         
         // --------------------
@@ -364,24 +364,24 @@
         
             if(wall == 1){
             // On
-                if (snale[0].x < 0 || snale[0].x == canvas.width / 10 || snale[0].y < 0 || snale[0].y == canvas.height / 10){
+                if (snail[0].x < 0 || snail[0].x == canvas.width / 10 || snail[0].y < 0 || snail[0].y == canvas.height / 10){
                     showScreen(3);
                     return;
                 }
             }else{
             // Off
-                for(var i = 0, x = snale.length; i < x; i++){
-                    if(snale[i].x < 0){
-                        snale[i].x = snale[i].x + (canvas.width / 10);
+                for(var i = 0, x = snail.length; i < x; i++){
+                    if(snail[i].x < 0){
+                        snail[i].x = snail[i].x + (canvas.width / 10);
                     }
-                    if(snale[i].x == canvas.width / 10){
-                        snale[i].x = snale[i].x - (canvas.width / 10);
+                    if(snail[i].x == canvas.width / 10){
+                        snail[i].x = snail[i].x - (canvas.width / 10);
                     }
-                    if(snale[i].y < 0){
-                        snale[i].y = snale[i].y + (canvas.height / 10);
+                    if(snail[i].y < 0){
+                        snail[i].y = snail[i].y + (canvas.height / 10);
                     }
-                    if(snale[i].y == canvas.height / 10){
-                        snale[i].y = snale[i].y - (canvas.height / 10);
+                    if(snail[i].y == canvas.height / 10){
+                        snail[i].y = snail[i].y - (canvas.height / 10);
                     }
                 }
             }
@@ -389,8 +389,8 @@
         // --------------------
     
         // Autophagy death
-            for(var i = 1; i < snale.length; i++){
-                if (snale[0].x == snale[i].x && snale[0].y == snale[i].y){
+            for(var i = 1; i < snail.length; i++){
+                if (snail[0].x == snail[i].x && snail[0].y == snail[i].y){
                     showScreen(3);
                     return;
                 }
@@ -399,8 +399,8 @@
         // --------------------
         
       // Eat Food
-            if(checkBlock(snale[0].x, snale[0].y, food.x, food.y)){
-                snale[snale.length] = {x: snale[0].x, y: snale[0].y};
+            if(checkBlock(snail[0].x, snail[0].y, food.x, food.y)){
+                snail[snail.length] = {x: snail[0].x, y: snail[0].y};
                 score += 1;
                 altScore(score);
                 addFood();
@@ -415,8 +415,8 @@
         
         // --------------------
 
-            for(var i = 0; i < snale.length; i++){
-                activeDot(snale[i].x, snale[i].y);
+            for(var i = 0; i < snail.length; i++){
+                activeDot(snail[i].x, snail[i].y);
             }
         
         // --------------------
@@ -424,9 +424,9 @@
             activeDot(food.x, food.y);
         
     // Debug
-    //document.getElementById("debug").innerHTML = snale_dir + " " + snale_next_dir + " " + snale[0].x + " " + snale[0].y;    
+    //document.getElementById("debug").innerHTML = snail_dir + " " + snail_next_dir + " " + snail[0].x + " " + snail[0].y;    
 
-            setTimeout(mainLoop, snale_speed);
+            setTimeout(mainLoop, snail_speed);
     }
     
     /////////////////////////////////////////////////////////////
@@ -434,14 +434,14 @@
     var newGame = function(){
         
         showScreen(0);
-        screen_snale.focus();
+        screen_snail.focus();
       
-        snale = [];
+        snail = [];
         for(var i = 4; i >= 0; i--){
-            snale.push({x: i, y: 15});
+            snail.push({x: i, y: 15});
         }
       
-        snale_next_dir = 1;
+        snail_next_dir = 1;
         
         score = 0;
         altScore(score);
@@ -458,18 +458,18 @@
     
     /////////////////////////////////////////////////////////////
     
-    // Change the snale speed...
+    // Change the snail speed...
     // 150 = slow
     // 100 = normal
     // 50 = fast
-    var setsnaleSpeed = function(speed_value){
-        snale_speed = speed_value;
+    var setsnailSpeed = function(speed_value){
+        snail_speed = speed_value;
     }
     
     /////////////////////////////////////////////////////////////
     var setWall = function(wall_value){
         wall = wall_value;
-        if(wall == 0){screen_snale.style.borderColor = "green";}
+        if(wall == 0){screen_snail.style.borderColor = "green";}
        
     }
      
@@ -482,25 +482,25 @@
     var showScreen = function(screen_opt){
         switch(screen_opt){
                 
-            case 0:  screen_snale.style.display = "block";
+            case 0:  screen_snail.style.display = "block";
                      screen_menu.style.display = "none";
                      screen_setting.style.display = "none";
                      screen_gameover.style.display = "none";
                      break;
                 
-            case 1:  screen_snale.style.display = "none";
+            case 1:  screen_snail.style.display = "none";
                      screen_menu.style.display = "block";
                      screen_setting.style.display = "none";
                      screen_gameover.style.display = "none";
                      break;
                 
-            case 2:  screen_snale.style.display = "none";
+            case 2:  screen_snail.style.display = "none";
                      screen_menu.style.display = "none";
                      screen_setting.style.display = "block";
                      screen_gameover.style.display = "none";
                      break;
                 
-            case 3: screen_snale.style.display = "none";
+            case 3: screen_snail.style.display = "none";
                     screen_menu.style.display = "none";
                     screen_setting.style.display = "none";
                     screen_gameover.style.display = "block";
@@ -512,11 +512,11 @@
         
     window.onload = function(){
         
-        canvas = document.getElementById("snale");
+        canvas = document.getElementById("snail");
         ctx = canvas.getContext("2d");
                
             // Screens
-            screen_snale = document.getElementById("snale");
+            screen_snail = document.getElementById("snail");
             screen_menu = document.getElementById("menu");
             screen_gameover = document.getElementById("gameover");
             screen_setting = document.getElementById("setting");
@@ -541,7 +541,7 @@
         button_setting_menu.onclick = function(){showScreen(2);};
         button_setting_gameover.onclick = function(){showScreen(2)};
 
-        setsnaleSpeed(150);
+        setsnailSpeed(150);
         setWall(0);
 
        
@@ -553,7 +553,7 @@
                 speed_setting[i].addEventListener("click", function(){
                     for(var i = 0; i < speed_setting.length; i++){
                         if(speed_setting[i].checked){
-                            setsnaleSpeed(speed_setting[i].value);
+                            setsnailSpeed(speed_setting[i].value);
                         }
                     }
                 });
