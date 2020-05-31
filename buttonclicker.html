@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <title></title>
+    <style>
+        a {
+    color: rgb(172, 124, 13);
+
+  }
+
+
+.button {
+  border-radius: 4px;
+  background-color: #0b0a53;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 267px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+      body {
+          background-color: #524763;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          margin: 0;
+        }
+
+        h1{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  h2{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h3{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+  h4{
+    text-align: left;
+    text-indent: 30%;
+    text-shadow: 2px 2px 5px black;
+    
+
+  }
+
+  h5{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h6{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+
+  }
+
+  p{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+#game{
+display: none;
+
+}
+    </style>
+</head>
+<body>
+
+<h1>Button clicker</h1>
+<h2>Click the button to get money</h2>
+<button onclick="play()" id="playbutton" class="button">Play</button>
+<div id="game" align="center">
+<p style="text-align: center;text-indent: 0%;color: white;text-shadow: none;">Money: <span id="money"></span>, <span id="clickpower"></span>, <span id="autoclicks"></span> </p>
+
+<button onclick="clicked()" class="button">Click for money</button>
+<h2>Manual upgrades</h2>
+
+<table>
+<tr><td><div id="1"onclick="buy1()"> +1 Click Power $25</div></td><td><div id="b1"onclick="buyb1()"> +1 Click Power Buy 1/sec $25K</div></td></tr>
+<tr><td><div id="2"onclick="buy2()"> +10 Click Power $200</div></td><td><div id="b2"onclick="buyb2()"> +10 Click Power Buy 1/sec $200K</div></td></tr>
+<tr><td><div id="3"onclick="buy3()"> +500 Click Power $8K</div></td><td><div id="b3"onclick="buyb3()"> +500 Click Power Buy 1/sec $8M</div></td></tr>
+<tr><td><div id="4"onclick="buy4()"> +3K Click Power $46.2K</div></td><td><div id="b4"onclick="buyb4()"> +3K Click Power Buy 1/sec $46.2M</div></td></tr>
+<tr><td><div id="5"onclick="buy5()"> +100K Click Power $1.28M</div></td><td><div id="b5"onclick="buyb5()"> +100K Click Power Buy 1/sec $1.28B</div></td></tr>
+<tr><td><div id="6"onclick="buy6()"> +3M Click Power $36M</div></td><td><div
+id="b6" onclick="buyb6()"> +3M Click Power Buy 1/sec $36B</div></td></tr>
+<tr><td><div id="7"onclick="buy7()"> +1B Click Power $11.6B</div></td></tr>
+<tr><td><div id="8"onclick="buy8()"> +20B Click Power $232B</div></td></tr>
+<tr><td><div id="9"onclick="buy9()"> +700B Click Power $7.98T</div></td></tr>
+<tr><td><div id="10"onclick="buy10()"> +10T Click Power $112T</div></td></tr>
+<tr><td><div id="11"onclick="buy11()"> +400T Click Power $4.5Qa</div></td></tr>
+<tr><td><div id="12"onclick="buy12()"> +6Qa Click Power $64.8Qa</div></td></tr>
+</table>
+<h2>Auto upgrades</h2>
+<table>
+<tr><td><div id="a1"onclick="buya1()"> +1 Click Per Second $100</div></td><td>
+<div id="ab1"onclick="buyab1()"> +1 Click Per Second Buy 1/sec  $100M</div></td></tr>
+<tr><td><div id="a2"onclick="buya2()"> +10 Clicks Per Second $900</div></td><td><div id="ab2"onclick="buyab2()"> +10 Clicks Per Second Buy 1/sec $900M</div></td></tr>
+<tr><td><div id="a3"onclick="buya3()"> +150 Clicks Per Second $12K</div></td><td>
+<div id="ab3"onclick="buyab3()"> +150 Clicks Per Second Buy 1/second $12B</div></td></tr>
+<tr><td><div id="a4"onclick="buya4()"> +3K Clicks Per Second $220K</div></td><td><div id="ab4"onclick="buyab4()"> +3K Click Per Second Buy 1/sec $220B</div></td></tr>
+<tr><td><div id="a5"onclick="buya5()"> +100K Clicks Per Second $6.6M</div></td><td><div id="ab5"onclick="buya1()"> +100K Clicks Per Second buy 1/sec $6.6T</div></td></tr>
+<tr><td><div id="a6"onclick="buya6()"> +2M Clicks Per Second $130M</div></td><td><div id="ab6"onclick="buya1()"> +2M Clicks Per Second buy 1/sec $130T</div></td></tr>
+<tr><td><div id="a7"onclick="buya7()"> +150M Clicks Per Second  $9.45B</div></td></tr>
+<tr><td><div id="a8"onclick="buya8()"> +1B Clicks Per Second  $61B</div></td></tr>
+<tr><td><div id="a9"onclick="buya9()"> +30B Clicks Per Second  $1.8T</div></td></tr>
+<tr><td><div id="a10"onclick="buya10()"> +600B Clicks Per Second  $35.4T</div></td></tr>
+<tr><td><div id="a11"onclick="buya11()"> +8T Clicks Per Second  $464T</div></td></tr>
+<tr><td><div id="a12"onclick="buya12()"> +500T Clicks Per Second  $28.5Qa</div></td></tr>
+
+</table>
+</div>
+    <button class="button button"><a href="tbc.html">Back</a></button>
+
+<script>
+var money = 0;
+var clickpower = 1;
+var autoclicks = 0;
+setInterval(addmoney, 1000);
+setInterval(checkavail, 50);
+function clicked(){
+money += clickpower;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+// play function
+function play(){
+document.getElementById("game").style.display = "block";
+document.getElementById("playbutton").style.display = "none";
+}
+// all buy functions # is sequence, a is auto, b is buy, ab is buy auto
+function buyb1(){
+if (money >= 25000){
+money -= 25000;
+setInterval(buy1, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyb2(){
+if (money >= 200000){
+money -= 200000;
+setInterval(buy2, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyb3(){
+if (money >= 8000000){
+money -= 8000000;
+setInterval(buy3, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyb4(){
+if (money >= 46200000){
+money -= 46200000;
+setInterval(buy4, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyb5(){
+if (money >= 1280000000){
+money -= 1280000000;
+setInterval(buy5, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyb6(){
+if (money >= 36000000000){
+money -= 36000000000;
+setInterval(buy6, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyab1(){
+if (money >= 100000000){
+money -= 100000000;
+setInterval(buya1, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyab2(){
+if (money >= 900000000){
+money -= 900000000;
+setInterval(buya2, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyab3(){
+if (money >= 12000000000){
+money -= 12000000000;
+setInterval(buya3, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyab4(){
+if (money >= 220000000000){
+money -= 220000000000;
+setInterval(buya4, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyab5(){
+if (money >= 6600000000000){
+money -= 6600000000000;
+setInterval(buya5, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buyab6(){
+if (money >= 130000000000000){
+money -= 130000000000000;
+setInterval(buya6, 1000);
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+
+}
+}
+function buy1(){
+if (money >= 25){
+money -= 25;
+clickpower += 1;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy5(){
+if (money >= 1280000){
+money -= 1280000;
+clickpower += 100000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy6(){
+if (money >= 36000000){
+money -= 36000000;
+clickpower += 3000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy7(){
+if (money >= 11600000000){
+money -= 11600000000;
+clickpower += 1000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy8(){
+if (money >= 232000000000){
+money -= 232000000000;
+clickpower += 20000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy9(){
+if (money >= 7980000000000){
+money -= 7980000000000;
+clickpower += 700000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy10(){
+if (money >= 112000000000000){
+money -= 112000000000000;
+clickpower += 10000000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy11(){
+if (money >= 4500000000000000){
+money -= 4500000000000000;
+clickpower += 400000000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy12(){
+if (money >= 64800000000000000){
+money -= 64800000000000000;
+clickpower += 6000000000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buya1(){
+if (money >= 100){
+money -= 100;
+autoclicks += 1;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya2(){
+if (money >= 900){
+money -= 900;
+autoclicks += 10;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya3(){
+if (money >= 12000){
+money -= 12000;
+autoclicks += 150;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya4(){
+if (money >= 220000){
+money -= 220000;
+autoclicks += 3000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya5(){
+if (money >= 6600000){
+money -= 6600000;
+autoclicks += 100000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya6(){
+if (money >= 130000000){
+money -= 130000000;
+autoclicks += 2000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya7(){
+if (money >= 9450000000){
+money -= 9450000000;
+autoclicks += 150000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya8(){
+if (money >= 61000000000){
+money -= 61000000000;
+autoclicks += 1000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya9(){
+if (money >= 1800000000000){
+money -= 1800000000000;
+autoclicks += 30000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya10(){
+if (money >= 35400000000000){
+money -= 35400000000000;
+autoclicks += 600000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya11(){
+if (money >= 464000000000000){
+money -= 464000000000000;
+autoclicks += 8000000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buya12(){
+if (money >= 28500000000000000){
+money -= 28500000000000000;
+autoclicks += 500000000000000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+}
+}
+function buy2(){
+if (money >= 200){
+money -= 200;
+clickpower += 10;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy4(){
+if (money >= 46200){
+money -= 46200;
+clickpower += 3000;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+function buy3(){
+if (money >= 8000){
+money -= 8000;
+clickpower += 500;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+}
+}
+//Run autoclicks
+function addmoney(){
+money += autoclicks;
+document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+}
+// round number function - goes up to undecatillions
+function precisenum(x){
+if ((Math.log(x)/Math.log(10)) >= 3 && (Math.log(x)/Math.log(10)) < 6) {
+return Math.floor(x/10)/100 + "K"
+} 
+if ((Math.log(x)/Math.log(10)) >= 6 && (Math.log(x)/Math.log(10)) < 9) {
+return Math.floor(x/10000)/100 + "M"
+}
+if ((Math.log(x)/Math.log(10)) >= 9 && (Math.log(x)/Math.log(10)) < 12) {
+return Math.floor(x/10000000)/100 + "B"
+}
+if ((Math.log(x)/Math.log(10)) >= 12 && (Math.log(x)/Math.log(10)) < 15) {
+return Math.floor(x/10000000000)/100 + "T"
+}
+if ((Math.log(x)/Math.log(10)) >= 15 && (Math.log(x)/Math.log(10)) < 18) {
+return Math.floor(x/10000000000000)/100 + "Qa"
+}
+if ((Math.log(x)/Math.log(10)) >= 18 && (Math.log(x)/Math.log(10)) < 21) {
+return Math.floor(x/10000000000000000)/100 + "Qi"
+}
+if ((Math.log(x)/Math.log(10)) >= 21 && (Math.log(x)/Math.log(10)) < 24) {
+return Math.floor(x/10000000000000000000)/100 + "Sx"
+}
+if ((Math.log(x)/Math.log(10)) >= 24 && (Math.log(x)/Math.log(10)) < 27) {
+return Math.floor(x/10000000000000000000000)/100 + "Se"
+}
+if ((Math.log(x)/Math.log(10)) >= 27 && (Math.log(x)/Math.log(10)) < 30) {
+return Math.floor(x/10000000000000000000000000)/100 + "Oc"
+}
+if ((Math.log(x)/Math.log(10)) >= 30 && (Math.log(x)/Math.log(10)) < 33) {
+return Math.floor(x/10000000000000000000000000000)/100 + "No"
+}
+if ((Math.log(x)/Math.log(10)) >= 33 && (Math.log(x)/Math.log(10)) < 36) {
+return Math.floor(x/10000000000000000000000000000000)/100 + "De"
+}
+if ((Math.log(x)/Math.log(10)) >= 36 && (Math.log(x)/Math.log(10)) < 39) {
+return Math.floor(x/10000000000000000000000000000000000)/100 + "Un"
+}
+if ((Math.log(x)/Math.log(10)) >= 0 && (Math.log(x)/Math.log(10)) < 3) {
+return x;
+}
+if (x == 0){
+return 0;
+}
+}
+//update red/green
+function checkavail(){
+
+if (money >= 25) {
+document.getElementById("1").style.backgroundColor = "green";
+} else {
+document.getElementById("1").style.backgroundColor = "red";
+}
+
+if (money >= 100) {
+document.getElementById("a1").style.backgroundColor = "green";
+} else {
+document.getElementById("a1").style.backgroundColor = "red";
+}
+
+if (money >= 200) {
+document.getElementById("2").style.backgroundColor = "green";
+} else {
+document.getElementById("2").style.backgroundColor = "red";
+}
+
+if (money >= 46200) {
+document.getElementById("4").style.backgroundColor = "green";
+} else {
+document.getElementById("4").style.backgroundColor = "red";
+}
+
+if (money >= 1280000) {
+document.getElementById("5").style.backgroundColor = "green";
+} else {
+document.getElementById("5").style.backgroundColor = "red";
+}
+
+if (money >= 36000000) {
+document.getElementById("6").style.backgroundColor = "green";
+} else {
+document.getElementById("6").style.backgroundColor = "red";
+}
+
+if (money >= 11600000000) {
+document.getElementById("7").style.backgroundColor = "green";
+} else {
+document.getElementById("7").style.backgroundColor = "red";
+}
+
+if (money >= 232000000000) {
+document.getElementById("8").style.backgroundColor = "green";
+} else {
+document.getElementById("8").style.backgroundColor = "red";
+}
+
+if (money >= 7980000000000) {
+document.getElementById("9").style.backgroundColor = "green";
+} else {
+document.getElementById("9").style.backgroundColor = "red";
+}
+
+if (money >= 112000000000000) {
+document.getElementById("10").style.backgroundColor = "green";
+} else {
+document.getElementById("10").style.backgroundColor = "red";
+}
+
+if (money >= 4500000000000000) {
+document.getElementById("11").style.backgroundColor = "green";
+} else {
+document.getElementById("11").style.backgroundColor = "red";
+}
+
+if (money >= 64800000000000000) {
+document.getElementById("12").style.backgroundColor = "green";
+} else {
+document.getElementById("12").style.backgroundColor = "red";
+}
+
+if (money >= 8000) {
+document.getElementById("3").style.backgroundColor = "green";
+} else {
+document.getElementById("3").style.backgroundColor = "red";
+}
+
+if (money >= 12000) {
+document.getElementById("a3").style.backgroundColor = "green";
+} else {
+document.getElementById("a3").style.backgroundColor = "red";
+}
+
+if (money >= 900) {
+document.getElementById("a2").style.backgroundColor = "green";
+} else {
+document.getElementById("a2").style.backgroundColor = "red";
+}
+
+if (money >= 220000) {
+document.getElementById("a4").style.backgroundColor = "green";
+} else {
+document.getElementById("a4").style.backgroundColor = "red";
+}
+
+if (money >= 6600000) {
+document.getElementById("a5").style.backgroundColor = "green";
+} else {
+document.getElementById("a5").style.backgroundColor = "red";
+}
+
+if (money >= 130000000) {
+document.getElementById("a6").style.backgroundColor = "green";
+} else {
+document.getElementById("a6").style.backgroundColor = "red";
+}
+
+if (money >= 9450000000) {
+document.getElementById("a7").style.backgroundColor = "green";
+} else {
+document.getElementById("a7").style.backgroundColor = "red";
+}
+
+if (money >= 61000000000) {
+document.getElementById("a8").style.backgroundColor = "green";
+} else {
+document.getElementById("a8").style.backgroundColor = "red";
+}
+
+if (money >= 1800000000000) {
+document.getElementById("a9").style.backgroundColor = "green";
+} else {
+document.getElementById("a9").style.backgroundColor = "red";
+}
+
+if (money >= 35400000000000) {
+document.getElementById("a10").style.backgroundColor = "green";
+} else {
+document.getElementById("a10").style.backgroundColor = "red";
+}
+
+if (money >= 464000000000000) {
+document.getElementById("a11").style.backgroundColor = "green";
+} else {
+document.getElementById("a11").style.backgroundColor = "red";
+}
+
+if (money >= 28500000000000000) {
+document.getElementById("a12").style.backgroundColor = "green";
+} else {
+document.getElementById("a12").style.backgroundColor = "red";
+}
+
+if (money >= 25000) {
+document.getElementById("b1").style.backgroundColor = "green";
+} else {
+document.getElementById("b1").style.backgroundColor = "red";
+}
+
+if (money >= 200000) {
+document.getElementById("b2").style.backgroundColor = "green";
+} else {
+document.getElementById("b2").style.backgroundColor = "red";
+}
+
+if (money >= 8000000) {
+document.getElementById("b3").style.backgroundColor = "green";
+} else {
+document.getElementById("b3").style.backgroundColor = "red";
+}
+
+if (money >= 46200000) {
+document.getElementById("b4").style.backgroundColor = "green";
+} else {
+document.getElementById("b4").style.backgroundColor = "red";
+}
+
+if (money >= 1280000000) {
+document.getElementById("b5").style.backgroundColor = "green";
+} else {
+document.getElementById("b5").style.backgroundColor = "red";
+}
+
+if (money >= 36000000000) {
+document.getElementById("b6").style.backgroundColor = "green";
+} else {
+document.getElementById("b6").style.backgroundColor = "red";
+}
+
+if (money >= 100000000) {
+document.getElementById("ab1").style.backgroundColor = "green";
+} else {
+document.getElementById("ab1").style.backgroundColor = "red";
+}
+
+if (money >= 900000000) {
+document.getElementById("ab2").style.backgroundColor = "green";
+} else {
+document.getElementById("ab2").style.backgroundColor = "red";
+}
+
+if (money >= 12000000000) {
+document.getElementById("ab3").style.backgroundColor = "green";
+} else {
+document.getElementById("ab3").style.backgroundColor = "red";
+}
+
+if (money >= 220000000000) {
+document.getElementById("ab4").style.backgroundColor = "green";
+} else {
+document.getElementById("ab4").style.backgroundColor = "red";
+}
+
+if (money >= 6600000000000) {
+document.getElementById("ab5").style.backgroundColor = "green";
+} else {
+document.getElementById("ab5").style.backgroundColor = "red";
+}
+
+if (money >= 130000000000000) {
+document.getElementById("ab6").style.backgroundColor = "green";
+} else {
+document.getElementById("ab6").style.backgroundColor = "red";
+}
+}
+
+</script>
+</body>
+</html>

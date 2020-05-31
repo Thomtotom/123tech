@@ -94,6 +94,9 @@ function botVoice(message) {
       if (message.includes('tell me another joke')) {
         speech.text = "nock nock... whos there? oh right im not an interactive chatbot how sad... boh ho boo hoooooooooo";
       }
+      if (message.includes('tell me a shakespere quote')) {
+        speech.text = "out of my sight thou dost infect my eyes! - shakespere";
+      }
     
 
     speech.volume = 3;
