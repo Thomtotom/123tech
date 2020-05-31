@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #7d748b;
+
+  font-family: 'Orbitron', sans-serif;
+ 
+}
+ 
+
+a{
+    font-size: 50px;
+    font-weight: bolder;
+    background-image: linear-gradient(blue,red);
+    color: aqua;
+}
+ 
+.chat-container {
+  border: 10px solid #291ca3;
+  /* background-color: #524763; */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 100%;
+
+}
+ 
+.chat-container p {
+    background-color: #7d748b;
+  font-family: 'Orbitron', sans-serif;
+}
+ 
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #7d748b;
+}
+ 
+.darker p {
+    background-color: #7d748b;
+
+}
+ 
+/* Clear floats */
+.chat-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ 
+/* Style images */
+.chat-container img {
+  float: left;
+  max-width: 60px;
+  max-height: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+ 
+/* Style the right image */
+.chat-container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+ 
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+ 
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+h1{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+ 
+  h2{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+ 
+  h3{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+ 
+  h4{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+ 
+  }
+ 
+  h5{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+ 
+  h6{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+ 
+  }
+ 
+  p{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+ 
