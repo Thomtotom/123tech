@@ -97,8 +97,202 @@ function botVoice(message) {
       if (message.includes('tell me a shakespere quote')) {
         speech.text = "out of my sight thou dost infect my eyes! - shakespere";
       }
-    
+      if (message.includes('who were you made by')) {
+        speech.text = "my creater is Tom";
+      }
+      if (message.includes('what is your purpose')) {
+        speech.text = "to be fun";
+      }
+      if (message.includes('whats your name')) {
+        speech.text = "my name is bert. bert dose not stand for any acronym if you were wondering";
+      }
 
+      if (message.includes('what is your name')) {
+        speech.text = "my name is bert. bert dose not stand for any acronym if you were wondering";
+      }
+      if (message.includes('who are you')) {
+        speech.text = "my name is bert. bert dose not stand for any acronym if you were wondering";
+      }
+      if (message.includes('how are you')) {
+        speech.text = "im am good. thanks";
+      }
+      if (message.includes('how were you made')) {
+        speech.text = "i was made using visuel stodio code with the programming lunguges javascript, html and css";
+      }
+      if (message.includes('i am a pie')) {
+        speech.text = "can i eat you";
+      }
+      if (message.includes('')) {
+        speech.text = "what an interisting question";
+      }
+      if (message.includes('hello marsh mello')) {
+        speech.text = "ok... hi blueberry pie";
+      }
+      if (message.includes('nice to meet you')) {
+        speech.text = "nice to met you to";
+      }
+      if (message.includes('cool')) {
+        speech.text = "very cool";
+      }
+      if (message.includes('what is activity finder')) {
+        speech.text = "it is a website to help you find activitys";
+      }
+      if (message.includes('what are you')) {
+        speech.text = "i am a artificial intelligence";
+      }
+      if (message.includes('pokemon')) {
+        speech.text = "i like pokemon to";
+      }
+      if (message.includes('simsons')) {
+        speech.text = "oh i love simsons its my favorite";
+      }
+      if (message.includes('help')) {
+        speech.text = "i can not help... hehehehehehehehehehehehehehehehehheheheheheheheheheheeehh";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      if (message.includes('')) {
+        speech.text = "";
+      }
+      
+      
     speech.volume = 3;
     speech.rate = 1;
     speech.pitch = 1;
