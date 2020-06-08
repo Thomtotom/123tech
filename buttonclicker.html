@@ -1,746 +1,1645 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
+
     <meta name="viewport" content="width=device-width,initial-size=1.0" />
-    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <link rel="shortcut icon" type="image/png" href="./logo.png" />
     <title></title>
     <style>
         a {
-    color: rgb(172, 124, 13);
+        color: rgb(172, 124, 13);
 
-  }
-
-
-.button {
-  border-radius: 4px;
-  background-color: #0b0a53;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 267px;
-  height: 60px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+        }
 
 
-      body {
-          background-color: #524763;
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          margin: 0;
+        .button {
+        border-radius: 4px;
+        background-color: #0b0a53;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 267px;
+        height: 60px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+
+
+        body {
+        background-color: #524763;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
         }
 
         h1{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-  }
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        }
 
-  h2{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
+        h2{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
 
-  h3{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
+        }
 
-  h4{
-    text-align: left;
-    text-indent: 30%;
-    text-shadow: 2px 2px 5px black;
-    
+        h3{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
 
-  }
+        }
 
-  h5{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
+        h4{
+        text-align: left;
+        text-indent: 30%;
+        text-shadow: 2px 2px 5px black;
 
-  h6{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
 
-  }
+        }
 
-  p{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-#game{
-display: none;
+        h5{
+        text-align: left;
+        color: white;
+        text-shadow: 2px 2px 5px black;
 
-}
+        }
+
+        h6{
+        text-align: left;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+
+        }
+
+        p{
+        text-align: left;
+        text-indent: 30%;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+
+        }
+        #game{
+        display: none;
+
+        }
+    </style>
+    <style>
+        * {box-sizing: border-box}
+        .mySlides1, .mySlides2 {display: none}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+        .prev {
+        left: 0;
+        }
+        /* On hover, add a grey background color */
+        .prev:hover, .next:hover {
+        background-color: #f1f1f1;
+        color: black;
+        }
+        #exp, #custom{
+        display: none;
+        }
+
     </style>
 </head>
 <body>
 
-<h1>Button clicker</h1>
-<h2>Click the button to get money</h2>
-<button onclick="play()" id="playbutton" class="button">Play</button>
-<div id="game" align="center">
-<p style="text-align: center;text-indent: 0%;color: white;text-shadow: none;">Money: <span id="money"></span>, <span id="clickpower"></span>, <span id="autoclicks"></span> </p>
+    <h1>Button clicker</h1>
+    <p>Click the button to get money. Buy upgrades and get as much as you can. </p>
+    <button onclick="play()" id="playbutton" class="button">Play</button>
+    <div id="game" align="center">
+        <p style="text-align: center;text-indent: 0%;color: white;text-shadow: none;">Money: <span id="money"></span>, <span id="clickpower"></span>, <span id="autoclicks"></span> </p>
 
-<button onclick="clicked()" class="button">Click for money</button>
-<h2>Manual upgrades</h2>
+        <img onclick="clicked()" src="button.png" id="image" width="400">
+        <p onclick="toggleinput()">Customise</p>
+        <div id="custom">
+            <p>Paste an image url into this box to change money button:</p>
+            <input id="iniimg" />
+            <button onclick="change()">Click to change</button>
+            <p>Change Background Color</p>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            <button onclick="red()">Change</button>
+            <script>function red() {
+                    var x = document.getElementById("favcolor");
+                    document.body.style.backgroundColor = x.value;
+                }</script>
+            <br />
+            <p>Change all text color except buttons/upgrades</p>
+            <input type="color" id="ie">
+            <button onclick="myFunction()">Change</button>
+            
+            <script>function myFunction() {
+                    var y = document.getElementById("ie");
+                    var x = document.getElementsByTagName("P");
 
-<table>
-<tr><td><div id="1"onclick="buy1()"> +1 Click Power $25</div></td><td><div id="b1"onclick="buyb1()"> +1 Click Power Buy 1/sec $25K</div></td></tr>
-<tr><td><div id="2"onclick="buy2()"> +10 Click Power $200</div></td><td><div id="b2"onclick="buyb2()"> +10 Click Power Buy 1/sec $200K</div></td></tr>
-<tr><td><div id="3"onclick="buy3()"> +500 Click Power $8K</div></td><td><div id="b3"onclick="buyb3()"> +500 Click Power Buy 1/sec $8M</div></td></tr>
-<tr><td><div id="4"onclick="buy4()"> +3K Click Power $46.2K</div></td><td><div id="b4"onclick="buyb4()"> +3K Click Power Buy 1/sec $46.2M</div></td></tr>
-<tr><td><div id="5"onclick="buy5()"> +100K Click Power $1.28M</div></td><td><div id="b5"onclick="buyb5()"> +100K Click Power Buy 1/sec $1.28B</div></td></tr>
-<tr><td><div id="6"onclick="buy6()"> +3M Click Power $36M</div></td><td><div
-id="b6" onclick="buyb6()"> +3M Click Power Buy 1/sec $36B</div></td></tr>
-<tr><td><div id="7"onclick="buy7()"> +1B Click Power $11.6B</div></td></tr>
-<tr><td><div id="8"onclick="buy8()"> +20B Click Power $232B</div></td></tr>
-<tr><td><div id="9"onclick="buy9()"> +700B Click Power $7.98T</div></td></tr>
-<tr><td><div id="10"onclick="buy10()"> +10T Click Power $112T</div></td></tr>
-<tr><td><div id="11"onclick="buy11()"> +400T Click Power $4.5Qa</div></td></tr>
-<tr><td><div id="12"onclick="buy12()"> +6Qa Click Power $64.8Qa</div></td></tr>
-</table>
-<h2>Auto upgrades</h2>
-<table>
-<tr><td><div id="a1"onclick="buya1()"> +1 Click Per Second $100</div></td><td>
-<div id="ab1"onclick="buyab1()"> +1 Click Per Second Buy 1/sec  $100M</div></td></tr>
-<tr><td><div id="a2"onclick="buya2()"> +10 Clicks Per Second $900</div></td><td><div id="ab2"onclick="buyab2()"> +10 Clicks Per Second Buy 1/sec $900M</div></td></tr>
-<tr><td><div id="a3"onclick="buya3()"> +150 Clicks Per Second $12K</div></td><td>
-<div id="ab3"onclick="buyab3()"> +150 Clicks Per Second Buy 1/second $12B</div></td></tr>
-<tr><td><div id="a4"onclick="buya4()"> +3K Clicks Per Second $220K</div></td><td><div id="ab4"onclick="buyab4()"> +3K Click Per Second Buy 1/sec $220B</div></td></tr>
-<tr><td><div id="a5"onclick="buya5()"> +100K Clicks Per Second $6.6M</div></td><td><div id="ab5"onclick="buya1()"> +100K Clicks Per Second buy 1/sec $6.6T</div></td></tr>
-<tr><td><div id="a6"onclick="buya6()"> +2M Clicks Per Second $130M</div></td><td><div id="ab6"onclick="buya1()"> +2M Clicks Per Second buy 1/sec $130T</div></td></tr>
-<tr><td><div id="a7"onclick="buya7()"> +150M Clicks Per Second  $9.45B</div></td></tr>
-<tr><td><div id="a8"onclick="buya8()"> +1B Clicks Per Second  $61B</div></td></tr>
-<tr><td><div id="a9"onclick="buya9()"> +30B Clicks Per Second  $1.8T</div></td></tr>
-<tr><td><div id="a10"onclick="buya10()"> +600B Clicks Per Second  $35.4T</div></td></tr>
-<tr><td><div id="a11"onclick="buya11()"> +8T Clicks Per Second  $464T</div></td></tr>
-<tr><td><div id="a12"onclick="buya12()"> +500T Clicks Per Second  $28.5Qa</div></td></tr>
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
+                    x = document.getElementsByTagName("H1");
 
-</table>
-</div>
-    <button class="button button"><a href="tbc.html">Back</a></button>
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
+                    x = document.getElementsByTagName("H2");
 
-<script>
-var money = 0;
-var clickpower = 1;
-var autoclicks = 0;
-setInterval(addmoney, 1000);
-setInterval(checkavail, 50);
-function clicked(){
-money += clickpower;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
+                    x = document.getElementsByTagName("H3");
 
-}
-// play function
-function play(){
-document.getElementById("game").style.display = "block";
-document.getElementById("playbutton").style.display = "none";
-}
-// all buy functions # is sequence, a is auto, b is buy, ab is buy auto
-function buyb1(){
-if (money >= 25000){
-money -= 25000;
-setInterval(buy1, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
+                    x = document.getElementsByTagName("H4");
 
-}
-}
-function buyb2(){
-if (money >= 200000){
-money -= 200000;
-setInterval(buy2, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
+                    x = document.getElementsByTagName("H5");
 
-}
-}
-function buyb3(){
-if (money >= 8000000){
-money -= 8000000;
-setInterval(buy3, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
+                    x = document.getElementsByTagName("H6");
 
-}
-}
-function buyb4(){
-if (money >= 46200000){
-money -= 46200000;
-setInterval(buy4, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.color = y.value;
+                    }
 
-}
-}
-function buyb5(){
-if (money >= 1280000000){
-money -= 1280000000;
-setInterval(buy5, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+                }</script>
+        </div>
+        <h2>Manual upgrades</h2>
+        <div class="slideshow-container">
+            <div class="mySlides1">
+                <table align="center">
+                    <tr><td><div id="1" onclick="buy1()"> +1 Click Power $25</div></td></tr>
+                    <tr><td><div id="2" onclick="buy2()"> +10 Click Power $200</div></td></tr>
+                    <tr><td><div id="3" onclick="buy3()"> +500 Click Power $8K</div></td></tr>
+                    <tr><td><div id="4" onclick="buy4()"> +3K Click Power $46.2K</div></td></tr>
+                    <tr><td><div id="5" onclick="buy5()"> +100K Click Power $1.28M</div></td></tr>
+                    <tr><td><div id="6" onclick="buy6()"> +3M Click Power $36M</div></td><td></td></tr>
+                </table>
+            </div>
 
-}
-}
-function buyb6(){
-if (money >= 36000000000){
-money -= 36000000000;
-setInterval(buy6, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+            <div class="mySlides1">
+                <table align="center">
+                    <tr><td><div id="7" onclick="buy7()"> +1B Click Power $11.6B</div></td></tr>
+                    <tr><td><div id="8" onclick="buy8()"> +20B Click Power $232B</div></td></tr>
+                    <tr><td><div id="9" onclick="buy9()"> +700B Click Power $7.98T</div></td></tr>
+                    <tr><td><div id="10" onclick="buy10()"> +10T Click Power $112T</div></td></tr>
+                    <tr><td><div id="11" onclick="buy11()"> +400T Click Power $4.5Qa</div></td></tr>
+                    <tr><td><div id="12" onclick="buy12()"> +6Qa Click Power $64.8Qa</div></td></tr>
+                </table>
+            </div>
 
-}
-}
-function buyab1(){
-if (money >= 100000000){
-money -= 100000000;
-setInterval(buya1, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="13" onclick="buy13()">+200Qa Click Power $2.14Qi</div></td></tr>
+                    <tr><td><div id="14" onclick="buy14()">+5Qi Click Power $53Qi</div></td></tr>
+                    <tr><td><div id="15" onclick="buy15()">+160Qi Click Power $1.69Sx</div></td></tr>
+                    <tr><td><div id="16" onclick="buy16()">+7Sx Click Power $73.5Sx</div></td></tr>
+                    <tr><td><div id="17" onclick="buy17()">+230Sx Click Power $2.41Se</div></td></tr>
+                    <tr><td><div id="18" onclick="buy18()">+8Se Click Power $83.68Se</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="19" onclick="buy19()">+300Se Click Power $3.12Oc</div></td></tr>
+                    <tr><td><div id="20" onclick="buy20()">+10Oc Click Power $103.8Oc</div></td></tr>
+                    <tr><td><div id="21" onclick="buy21()">+280Oc Click Power $2.91No</div></td></tr>
+                    <tr><td><div id="22" onclick="buy22()">+8No Click Power $82.72 No</div></td></tr>
+                    <tr><td><div id="23" onclick="buy23()">+250No Click Power $2.58De</div></td></tr>
+                    <tr><td><div id="24" onclick="buy24()">+6De Click Power $61.8De</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="25" onclick="buy25()">+400De Click Power $4.12(4.112)Un</div></td></tr>
+                    <tr><td><div id="26" onclick="buy26()">+11Un Click Power $112.86Un</div></td></tr>
+                    <tr><td><div id="27" onclick="buy27()">+500Un Click Power $5.12Dd</div></td></tr>
+                    <tr><td><div id="28" onclick="buy28()">+14Dd Click Power $143.08Dd</div></td></tr>
+                    <tr><td><div id="29" onclick="buy29()">+550Dd Click Power $5.61Td</div></td></tr>
+                    <tr><td><div id="30" onclick="buy30()">+16Td Click Power $162.88Td</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="31" onclick="buy31()">+600Td Click Power $6.1(6.096)Qad</div></td></tr>
+                    <tr><td><div id="32" onclick="buy32()">+20Qad Click Power $202.8Qad</div></td></tr>
+                    <tr><td><div id="33" onclick="buy33()">+700Qad Click Power $7.09(7.084)Qid</div></td></tr>
+                    <tr><td><div id="34" onclick="buy34()">+25Qid Click Power $252.5Qid</div></td></tr>
+                    <tr><td><div id="35" onclick="buy35()">+800Qid Click Power $8.07(8.064)Sxd</div></td></tr>
+                    <tr><td><div id="36" onclick="buy36()">+30Sxd Click Power $301.8Sxd</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="37" onclick="buy37()">+900Sxd Click Power $9.04(9.036)Sed</div></td></tr>
+                    <tr><td><div id="38" onclick="buy38()">+35Sed Click Power $350.7Sed</div></td></tr>
+                    <tr><td><div id="39" onclick="buy39()">+1Ocd Click Power $10Ocd</div></td></tr>
+                    <tr><td><div id="40" onclick="buy40()">+36Ocd Click Power $359.28Ocd</div></td></tr>
+                    <tr><td><div id="41" onclick="buy41()">+1.3Nod Click Power $12.95(12.948)Nod</div></td></tr>
+                    <tr><td><div id="42" onclick="buy42()">+39Nod Click Power $387.66Nod</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="43" onclick="buy43()">+1.5Vt Click Power $14.88Vt</div></td></tr>
+                    <tr><td><div id="44" onclick="buy44()">+41Vt Click Power $405.9Vt</div></td></tr>
+                    <tr><td><div id="45" onclick="buy45()">+1.7Uvt Click Power $16.8(16.796)Uvt</div></td></tr>
+                    <tr><td><div id="46" onclick="buy46()">+44Uvt Click Power $433.84Uvt</div></td></tr>
+                    <tr><td><div id="47" onclick="buy47()">+2Dvt Click Power $19.68Dvt</div></td></tr>
+                    <tr><td><div id="48" onclick="buy48()">+60Dvt Click Power $589.2Dvt</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="49" onclick="buy49()">+3Tvt Click Power $29.4Tvt</div></td></tr>
+                    <tr><td><div id="50" onclick="buy50()">+100Tvt Click Power $978Tvt</div></td></tr>
+                    <tr><td><div id="51" onclick="buy51()">+4Qavt Click Power $39.04Qavt</div></td></tr>
+                    <tr><td><div id="52" onclick="buy52()">+120Qavt Click Power $1.17(1.1688)Qivt</div></td></tr>
+                    <tr><td><div id="53" onclick="buy53()">+5Qivt Click Power $48.6Qivt</div></td></tr>
+                    <tr><td><div id="54" onclick="buy54()">+170Qivt Click Power $1.65(1.649)Sxvt</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="55" onclick="buy55()">+6Sxvt Click Power $58.08Sxvt</div></td></tr>
+                    <tr><td><div id="56" onclick="buy56()">+200Sxvt Click Power $1.94(1.932)Sevt</div></td></tr>
+                    <tr><td><div id="57" onclick="buy57()">+8Sevt Click Power $77.12Sevt</div></td></tr>
+                    <tr><td><div id="58" onclick="buy58()">+300Sevt Click Power $2.89(2.886)Ocvt</div></td></tr>
+                    <tr><td><div id="59" onclick="buy59()">+10Ocvt Click Power $96Ocvt</div></td></tr>
+                    <tr><td><div id="60" onclick="buy60()">+400Ocvt Click Power $3.84(3.832)Novt</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides1">
+                <table>
+                    <tr><td><div id="61" onclick="buy61()">+13Novt Click Power $124.28Novt</div></td></tr>
+                    <tr><td><div id="62" onclick="buy62()">+450Novt Click Power $4.3(4.293)Tt</div></td></tr>
+                    <tr><td><div id="63" onclick="buy63()">+17Tt Click Power $161.84Tt</div></td></tr>
+                    <tr><td><div id="64" onclick="buy64()">+550Tt Click Power $5.23(5.225)Utt</div></td></tr>
+                    <tr><td><div id="65" onclick="buy65()">+20Utt Click Power $189.6Utt</div></td></tr>
+                    <tr><td><div id="66" onclick="buy66()">+650Utt Click Power $6149Utt</div></td></tr>
+                </table>
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
 
-}
-}
-function buyab2(){
-if (money >= 900000000){
-money -= 900000000;
-setInterval(buya2, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        <h2>Auto upgrades</h2>
+        <div class="slideshow-container">
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div id="a1" onclick="buya1()"> +1 Click Per Second $100</div></td></tr>
+                    <tr><td><div id="a2" onclick="buya2()"> +10 Clicks Per Second $900</div></td></tr>
+                    <tr><td><div id="a3" onclick="buya3()"> +150 Clicks Per Second $12K</div></td></tr>
+                    <tr><td><div id="a4" onclick="buya4()"> +3K Clicks Per Second $220K</div></td></tr>
+                    <tr><td><div id="a5" onclick="buya5()"> +100K Clicks Per Second $6.6M</div></td></tr>
+                    <tr><td><div id="a6" onclick="buya6()"> +2M Clicks Per Second $130M</div></td></tr>
+                </table>
+            </div>
 
-}
-}
-function buyab3(){
-if (money >= 12000000000){
-money -= 12000000000;
-setInterval(buya3, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+            
 
-}
-}
-function buyab4(){
-if (money >= 220000000000){
-money -= 220000000000;
-setInterval(buya4, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div id="a7" onclick="buya7()"> +150M Clicks Per Second  $9.45B</div></td></tr>
+                    <tr><td><div id="a8" onclick="buya8()"> +1B Clicks Per Second  $61B</div></td></tr>
+                    <tr><td><div id="a9" onclick="buya9()"> +30B Clicks Per Second  $1.8T</div></td></tr>
+                    <tr><td><div id="a10" onclick="buya10()"> +600B Clicks Per Second  $35.4T</div></td></tr>
+                    <tr><td><div id="a11" onclick="buya11()"> +8T Clicks Per Second  $464T</div></td></tr>
+                    <tr><td><div id="a12" onclick="buya12()"> +500T Clicks Per Second  $28.5Qa</div></td></tr>
+                </table>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+        <p onclick="toggleexp()">What do all these letters mean?</p>
+        <p id="exp">
+            Each row shows the abbreviation, the actual word and the number of 0s. they are in order of smallest to biggest.
+            <br />
+            K thousand 3 0s<br />
+            M million  6 0s<br />
+            B billion  9 0s<br />
+            T trillion 12 0s <br />
+            Qa quadrillion 15 0s<br />
+            Qi quintillion 18 0s<br />
+            Sx sextillion 21 0s<br />
+            Se septillion 24 0s<br />
+            Oc octillion  27 0s<br />
+            No nontillion 30 0s<br />
+            De decillion 33 0s<br />
+            Un undecillion 36 0s<br />
+            Dd duodecillion 39 0s<br />
+            Td tredecillion 42 0s<br />
+            Qad quattrodecillion 45 0s<br />
+            Qid quindecillion 48 0s<br />
+            Sxd sexdecillion 51 0s<br />
+            Sed septendecillion 54 0s<br />
+            Ocd octodecillion 57 0s<br />
+            Nod novemdecillion 60 0s <br />
+            Vt  vigintillion 63 0s<br />
+            Uvt unvigintillioon 66 0s<br />
+            Dvt duovigintillion 69 0s<br />
+            Tvt trevigintillion 72 0s<br />
+            Qavt quattrovigintillion 75 0s<br />
+            Qivt quinvigintillion 78 0s<br />
+            Sxvt sexvigintillion 81 0s<br />
+            Sevt septenvigintillion 84 0s<br />
+            Ocvt octovigintillion 87 0s<br />
+            Novt novemvigintillion 90 0s<br />
+            Tt   trigintillion 93 0s<br />
+            Utt  untrigintillion 96 0s<br />
+            <br />
+            And finally, Gg googol 100 0s. If you get this much money you have beaten the game.
+        </p>
+    </div>
+    <script>
+        function toggleinput() {
+            var x = document.getElementById("custom");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        
+        function change() {
+            var y = document.getElementById("iniimg");
+            document.getElementById("image").src = y.value;
+        }
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
 
-}
-}
-function buyab5(){
-if (money >= 6600000000000){
-money -= 6600000000000;
-setInterval(buya5, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+        }
 
-}
-}
-function buyab6(){
-if (money >= 130000000000000){
-money -= 130000000000000;
-setInterval(buya6, 1000);
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        function showSlides(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        x[slideIndex[no]-1].style.display = "block";
+        }
+    </script>
+    <script>
+        var exp = document.getElementById("exp");
+        function toggleexp(){
+        if (exp.style.display == "none"){
+        exp.style.display = "block";
+        } else {
+        exp.style.display = "none";
+        }
+        }
+        var money = 0;
+        var clickpower = 1;
+        var autoclicks = 0;
+        setInterval(addmoney, 1000);
+        setInterval(checkavail, 50);
+        function clicked(){
+        money += clickpower;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
 
-}
-}
-function buy1(){
-if (money >= 25){
-money -= 25;
-clickpower += 1;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy5(){
-if (money >= 1280000){
-money -= 1280000;
-clickpower += 100000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy6(){
-if (money >= 36000000){
-money -= 36000000;
-clickpower += 3000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy7(){
-if (money >= 11600000000){
-money -= 11600000000;
-clickpower += 1000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy8(){
-if (money >= 232000000000){
-money -= 232000000000;
-clickpower += 20000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy9(){
-if (money >= 7980000000000){
-money -= 7980000000000;
-clickpower += 700000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy10(){
-if (money >= 112000000000000){
-money -= 112000000000000;
-clickpower += 10000000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy11(){
-if (money >= 4500000000000000){
-money -= 4500000000000000;
-clickpower += 400000000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy12(){
-if (money >= 64800000000000000){
-money -= 64800000000000000;
-clickpower += 6000000000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buya1(){
-if (money >= 100){
-money -= 100;
-autoclicks += 1;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya2(){
-if (money >= 900){
-money -= 900;
-autoclicks += 10;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya3(){
-if (money >= 12000){
-money -= 12000;
-autoclicks += 150;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya4(){
-if (money >= 220000){
-money -= 220000;
-autoclicks += 3000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya5(){
-if (money >= 6600000){
-money -= 6600000;
-autoclicks += 100000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya6(){
-if (money >= 130000000){
-money -= 130000000;
-autoclicks += 2000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya7(){
-if (money >= 9450000000){
-money -= 9450000000;
-autoclicks += 150000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya8(){
-if (money >= 61000000000){
-money -= 61000000000;
-autoclicks += 1000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya9(){
-if (money >= 1800000000000){
-money -= 1800000000000;
-autoclicks += 30000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya10(){
-if (money >= 35400000000000){
-money -= 35400000000000;
-autoclicks += 600000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya11(){
-if (money >= 464000000000000){
-money -= 464000000000000;
-autoclicks += 8000000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buya12(){
-if (money >= 28500000000000000){
-money -= 28500000000000000;
-autoclicks += 500000000000000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
-}
-}
-function buy2(){
-if (money >= 200){
-money -= 200;
-clickpower += 10;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy4(){
-if (money >= 46200){
-money -= 46200;
-clickpower += 3000;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-function buy3(){
-if (money >= 8000){
-money -= 8000;
-clickpower += 500;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
-}
-}
-//Run autoclicks
-function addmoney(){
-money += autoclicks;
-document.getElementById("money").innerHTML = '$' + precisenum(money) ;
-}
-// round number function - goes up to undecatillions
-function precisenum(x){
-if ((Math.log(x)/Math.log(10)) >= 3 && (Math.log(x)/Math.log(10)) < 6) {
-return Math.floor(x/10)/100 + "K"
-} 
-if ((Math.log(x)/Math.log(10)) >= 6 && (Math.log(x)/Math.log(10)) < 9) {
-return Math.floor(x/10000)/100 + "M"
-}
-if ((Math.log(x)/Math.log(10)) >= 9 && (Math.log(x)/Math.log(10)) < 12) {
-return Math.floor(x/10000000)/100 + "B"
-}
-if ((Math.log(x)/Math.log(10)) >= 12 && (Math.log(x)/Math.log(10)) < 15) {
-return Math.floor(x/10000000000)/100 + "T"
-}
-if ((Math.log(x)/Math.log(10)) >= 15 && (Math.log(x)/Math.log(10)) < 18) {
-return Math.floor(x/10000000000000)/100 + "Qa"
-}
-if ((Math.log(x)/Math.log(10)) >= 18 && (Math.log(x)/Math.log(10)) < 21) {
-return Math.floor(x/10000000000000000)/100 + "Qi"
-}
-if ((Math.log(x)/Math.log(10)) >= 21 && (Math.log(x)/Math.log(10)) < 24) {
-return Math.floor(x/10000000000000000000)/100 + "Sx"
-}
-if ((Math.log(x)/Math.log(10)) >= 24 && (Math.log(x)/Math.log(10)) < 27) {
-return Math.floor(x/10000000000000000000000)/100 + "Se"
-}
-if ((Math.log(x)/Math.log(10)) >= 27 && (Math.log(x)/Math.log(10)) < 30) {
-return Math.floor(x/10000000000000000000000000)/100 + "Oc"
-}
-if ((Math.log(x)/Math.log(10)) >= 30 && (Math.log(x)/Math.log(10)) < 33) {
-return Math.floor(x/10000000000000000000000000000)/100 + "No"
-}
-if ((Math.log(x)/Math.log(10)) >= 33 && (Math.log(x)/Math.log(10)) < 36) {
-return Math.floor(x/10000000000000000000000000000000)/100 + "De"
-}
-if ((Math.log(x)/Math.log(10)) >= 36 && (Math.log(x)/Math.log(10)) < 39) {
-return Math.floor(x/10000000000000000000000000000000000)/100 + "Un"
-}
-if ((Math.log(x)/Math.log(10)) >= 0 && (Math.log(x)/Math.log(10)) < 3) {
-return x;
-}
-if (x == 0){
-return 0;
-}
-}
-//update red/green
-function checkavail(){
+        }
+        // play function
+        function play(){
+        document.getElementById("game").style.display = "block";
+        document.getElementById("playbutton").style.display = "none";
+        }
+        // all buy functions # is sequence, a is auto, b is buy, ab is buy auto
 
-if (money >= 25) {
-document.getElementById("1").style.backgroundColor = "green";
-} else {
-document.getElementById("1").style.backgroundColor = "red";
-}
+        function buy1(){
+        if (money >= 25){
+        money -= 25;
+        clickpower += 1;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy5(){
+        if (money >= 1280000){
+        money -= 1280000;
+        clickpower += 100000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy6(){
+        if (money >= 36000000){
+        money -= 36000000;
+        clickpower += 3000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy7(){
+        if (money >= 11600000000){
+        money -= 11600000000;
+        clickpower += 1000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy8(){
+        if (money >= 232000000000){
+        money -= 232000000000;
+        clickpower += 20000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy9(){
+        if (money >= 7980000000000){
+        money -= 7980000000000;
+        clickpower += 700000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy10(){
+        if (money >= 112000000000000){
+        money -= 112000000000000;
+        clickpower += 10000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy11(){
+        if (money >= 4500000000000000){
+        money -= 4500000000000000;
+        clickpower += 400000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy12(){
+        if (money >= 64800000000000000){
+        money -= 64800000000000000;
+        clickpower += 6000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy13(){
+        if (money >= 2140000000000000000){
+        money -= 2140000000000000000;
+        clickpower += 200000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy14(){
+        if (money >= 53000000000000000000){
+        money -= 53000000000000000000;
+        clickpower += 5000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy15(){
+        if (money >= 1686400000000000000000){
+        money -= 1686400000000000000000;
+        clickpower += 160000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy16(){
+        if (money >= 73500000000000000000000){
+        money -= 73500000000000000000000;
+        clickpower += 7000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy17(){
+        if (money >= 2405800000000000000000000){
+        money -= 2405800000000000000000000;
+        clickpower += 230000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy18(){
+        if (money >= 83680000000000000000000000){
+        money -= 83680000000000000000000000;
+        clickpower += 8000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy19(){
+        if (money >= 3120000000000000000000000000){
+        money -= 3120000000000000000000000000;
+        clickpower += 300000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy20(){
+        if (money >= 103800000000000000000000000000){
+        money -= 103800000000000000000000000000;
+        clickpower += 10000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy21(){
+        if (money >= 2900800000000000000000000000000){
+        money -= 2900800000000000000000000000000;
+        clickpower += 280000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy22(){
+        if (money >= 82720000000000000000000000000000){
+        money -= 82720000000000000000000000000000;
+        clickpower += 8000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy23(){
+        if (money >= 2580000000000000000000000000000000){
+        money -= 2580000000000000000000000000000000;
+        clickpower += 250000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy24(){
+        if (money >= 61800000000000000000000000000000000){
+        money -= 61800000000000000000000000000000000;
+        clickpower += 6000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy25(){
+        if (money >= 4112000000000000000000000000000000000){
+        money -= 4112000000000000000000000000000000000;
+        clickpower += 400000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy26(){
+        if (money >= 112860000000000000000000000000000000000){
+        money -= 112860000000000000000000000000000000000;
+        clickpower += 11000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy27(){
+        if (money >= 5120000000000000000000000000000000000000){
+        money -= 5120000000000000000000000000000000000000;
+        clickpower += 500000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy28(){
+        if (money >= 143080000000000000000000000000000000000000){
+        money -= 143080000000000000000000000000000000000000;
+        clickpower += 14000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy29(){
+        if (money >= 5610000000000000000000000000000000000000000){
+        money -= 5610000000000000000000000000000000000000000;
+        clickpower += 550000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy30(){
+        if (money >= 162880000000000000000000000000000000000000000){
+        money -= 162880000000000000000000000000000000000000000;
+        clickpower += 16000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy31(){
+        if (money >= 6096000000000000000000000000000000000000000000){
+        money -= 6096000000000000000000000000000000000000000000;
+        clickpower += 600000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy32(){
+        if (money >= 202800000000000000000000000000000000000000000000){
+        money -= 202800000000000000000000000000000000000000000000;
+        clickpower += 6000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy33(){
+        if (money >= 7084000000000000000000000000000000000000000000000){
+        money -= 7084000000000000000000000000000000000000000000000;
+        clickpower += 700000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy34(){
+        if (money >= 252500000000000000000000000000000000000000000000000){
+        money -= 252500000000000000000000000000000000000000000000000;
+        clickpower += 25000000000000000000000000000000000000000000000000 ;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy35(){
+        if (money >= 8064000000000000000000000000000000000000000000000000){
+        money -= 8064000000000000000000000000000000000000000000000000;
+        clickpower += 800000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy36(){
+        if (money >= 301800000000000000000000000000000000000000000000000000){
+        money -= 301800000000000000000000000000000000000000000000000000;
+        clickpower += 30000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy37(){
+        if (money >= 9036000000000000000000000000000000000000000000000000000){
+        money -= 9036000000000000000000000000000000000000000000000000000;
+        clickpower += 900000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy38(){
+        if (money >= 350700000000000000000000000000000000000000000000000000000){
+        money -= 350700000000000000000000000000000000000000000000000000000;
+        clickpower += 35000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy39(){
+        if (money >= 10000000000000000000000000000000000000000000000000000000000){
+        money -= 10000000000000000000000000000000000000000000000000000000000;
+        clickpower += 1000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy40(){
+        if (money >= 359280000000000000000000000000000000000000000000000000000000){
+        money -= 359280000000000000000000000000000000000000000000000000000000;
+        clickpower += 36000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy41(){
+        if (money >= 12948000000000000000000000000000000000000000000000000000000000){
+        money -= 12948000000000000000000000000000000000000000000000000000000000;
+        clickpower += 1300000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy42(){
+        if (money >= 387660000000000000000000000000000000000000000000000000000000000){
+        money -= 387660000000000000000000000000000000000000000000000000000000000;
+        clickpower += 39000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy43(){
+        if (money >= 14880000000000000000000000000000000000000000000000000000000000000){
+        money -= 14880000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 1500000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy44(){
+        if (money >= 405900000000000000000000000000000000000000000000000000000000000000){
+        money -= 405900000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 41000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy45(){
+        if (money >= 16796000000000000000000000000000000000000000000000000000000000000000){
+        money -= 16796000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 1700000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy46(){
+        if (money >= 433840000000000000000000000000000000000000000000000000000000000000000){
+        money -= 433840000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 44000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy47(){
+        if (money >= 19680000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 19680000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 2000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy48(){
+        if (money >= 589200000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 589200000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 60000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy49(){
+        if (money >= 29400000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 29400000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 3000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy50(){
+        if (money >= 978000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 978000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 100000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy51(){
+        if (money >= 39040000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 39040000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 4000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy52(){
+        if (money >= 1168800000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 1168800000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 120000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy53(){
+        if (money >= 48600000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 48600000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 5000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy54(){
+        if (money >= 1649000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 1649000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 170000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy55(){
+        if (money >= 58080000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 58080000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 6000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy56(){
+        if (money >= 1932000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 1932000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 200000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy57(){
+        if (money >= 77120000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 77120000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 8000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy58(){
+        if (money >= 2886000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 2886000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 300000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy59(){
+        if (money >= 96000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 96000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy60(){
+        if (money >= 3832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 3832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy61(){
+        if (money >= 124280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 124280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 13000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy62(){
+        if (money >= 4293000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 4293000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy63(){
+        if (money >= 161840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 161840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 17000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy64(){
+        if (money >= 5225000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 5225000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy65(){
+        if (money >= 189600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 189600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy66(){
+        if (money >= 6149000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000){
+        money -= 6149000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        clickpower += 650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buya1(){
+        if (money >= 100){
+        money -= 100;
+        autoclicks += 1;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya2(){
+        if (money >= 900){
+        money -= 900;
+        autoclicks += 10;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya3(){
+        if (money >= 12000){
+        money -= 12000;
+        autoclicks += 150;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya4(){
+        if (money >= 220000){
+        money -= 220000;
+        autoclicks += 3000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya5(){
+        if (money >= 6600000){
+        money -= 6600000;
+        autoclicks += 100000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya6(){
+        if (money >= 130000000){
+        money -= 130000000;
+        autoclicks += 2000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya7(){
+        if (money >= 9450000000){
+        money -= 9450000000;
+        autoclicks += 150000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya8(){
+        if (money >= 61000000000){
+        money -= 61000000000;
+        autoclicks += 1000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya9(){
+        if (money >= 1800000000000){
+        money -= 1800000000000;
+        autoclicks += 30000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya10(){
+        if (money >= 35400000000000){
+        money -= 35400000000000;
+        autoclicks += 600000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya11(){
+        if (money >= 464000000000000){
+        money -= 464000000000000;
+        autoclicks += 8000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya12(){
+        if (money >= 28500000000000000){
+        money -= 28500000000000000;
+        autoclicks += 500000000000000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buy2(){
+        if (money >= 200){
+        money -= 200;
+        clickpower += 10;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy4(){
+        if (money >= 46200){
+        money -= 46200;
+        clickpower += 3000;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        function buy3(){
+        if (money >= 8000){
+        money -= 8000;
+        clickpower += 500;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        document.getElementById("clickpower").innerHTML = precisenum(clickpower) + " $ per click";
+        }
+        }
+        //Run autoclicks
+        function addmoney(){
+        money += autoclicks;
+        document.getElementById("money").innerHTML = '$' + precisenum(money) ;
+        }
+        // round number function - goes up to googol
+        function precisenum(x){
+        if ((Math.log(x)/Math.log(10)) >= 3 && (Math.log(x)/Math.log(10)) < 6) {
+        return Math.floor(x/10)/100 + "K"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 6 && (Math.log(x)/Math.log(10)) < 9) {
+        return Math.floor(x/10000)/100 + "M"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 9 && (Math.log(x)/Math.log(10)) < 12) {
+        return Math.floor(x/10000000)/100 + "B"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 12 && (Math.log(x)/Math.log(10)) < 15) {
+        return Math.floor(x/10000000000)/100 + "T"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 15 && (Math.log(x)/Math.log(10)) < 18) {
+        return Math.floor(x/10000000000000)/100 + "Qa"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 18 && (Math.log(x)/Math.log(10)) < 21) {
+        return Math.floor(x/10000000000000000)/100 + "Qi"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 21 && (Math.log(x)/Math.log(10)) < 24) {
+        return Math.floor(x/10000000000000000000)/100 + "Sx"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 24 && (Math.log(x)/Math.log(10)) < 27) {
+        return Math.floor(x/10000000000000000000000)/100 + "Se"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 27 && (Math.log(x)/Math.log(10)) < 30) {
+        return Math.floor(x/10000000000000000000000000)/100 + "Oc"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 30 && (Math.log(x)/Math.log(10)) < 33) {
+        return Math.floor(x/10000000000000000000000000000)/100 + "No"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 33 && (Math.log(x)/Math.log(10)) < 36) {
+        return Math.floor(x/10000000000000000000000000000000)/100 + "De"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 36 && (Math.log(x)/Math.log(10)) < 39) {
+        return Math.floor(x/10000000000000000000000000000000000)/100 + "Un"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 39 && (Math.log(x)/Math.log(10)) < 42) {
+        return Math.floor(x/10000000000000000000000000000000000000)/100 + "Dd"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 42 && (Math.log(x)/Math.log(10)) < 45) {
+        return Math.floor(x/10000000000000000000000000000000000000000)/100 + "Td"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 45 && (Math.log(x)/Math.log(10)) < 48) {
+        return Math.floor(x/10000000000000000000000000000000000000000000)/100 + "Qad"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 48 && (Math.log(x)/Math.log(10)) < 51) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000)/100 + "Qid"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 51 && (Math.log(x)/Math.log(10)) < 54) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000)/100 + "Sxd"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 54 && (Math.log(x)/Math.log(10)) < 57) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000)/100 + "Sed"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 57 && (Math.log(x)/Math.log(10)) < 60) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000)/100 + "Ocd"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 60 && (Math.log(x)/Math.log(10)) < 63) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000)/100 + "Nod"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 63 && (Math.log(x)/Math.log(10)) < 66) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000)/100 + "Vt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 66 && (Math.log(x)/Math.log(10)) < 69) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000)/100 + "Uvt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 69 && (Math.log(x)/Math.log(10)) < 72) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000)/100 + "Dvt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 72 && (Math.log(x)/Math.log(10)) < 75) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Tvt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 75 && (Math.log(x)/Math.log(10)) < 78) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Qavt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 78 && (Math.log(x)/Math.log(10)) < 81) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Qivt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 81 && (Math.log(x)/Math.log(10)) < 84) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Sxvt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 84 && (Math.log(x)/Math.log(10)) < 87) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Sevt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 87 && (Math.log(x)/Math.log(10)) < 90) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Ocvt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 90 && (Math.log(x)/Math.log(10)) < 93) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Novt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 93 && (Math.log(x)/Math.log(10)) < 96) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Tt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 96 && (Math.log(x)/Math.log(10)) < 100) {
+        return Math.floor(x/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Utt"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 100) {
+        return Math.floor(x/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)/100 + "Gg"
+        }
+        if ((Math.log(x)/Math.log(10)) >= 0 && (Math.log(x)/Math.log(10)) < 3) {
+        return x;
+        }
+        if (x == 0){
+        return 0;
+        }
+        }
+        //update red/green
+        function checkavail(){
 
-if (money >= 100) {
-document.getElementById("a1").style.backgroundColor = "green";
-} else {
-document.getElementById("a1").style.backgroundColor = "red";
-}
+        if (money >= 25) {
+        document.getElementById("1").style.backgroundColor = "green";
+        } else {
+        document.getElementById("1").style.backgroundColor = "red";
+        }
 
-if (money >= 200) {
-document.getElementById("2").style.backgroundColor = "green";
-} else {
-document.getElementById("2").style.backgroundColor = "red";
-}
+        if (money >= 100) {
+        document.getElementById("a1").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a1").style.backgroundColor = "red";
+        }
 
-if (money >= 46200) {
-document.getElementById("4").style.backgroundColor = "green";
-} else {
-document.getElementById("4").style.backgroundColor = "red";
-}
+        if (money >= 200) {
+        document.getElementById("2").style.backgroundColor = "green";
+        } else {
+        document.getElementById("2").style.backgroundColor = "red";
+        }
 
-if (money >= 1280000) {
-document.getElementById("5").style.backgroundColor = "green";
-} else {
-document.getElementById("5").style.backgroundColor = "red";
-}
+        if (money >= 46200) {
+        document.getElementById("4").style.backgroundColor = "green";
+        } else {
+        document.getElementById("4").style.backgroundColor = "red";
+        }
 
-if (money >= 36000000) {
-document.getElementById("6").style.backgroundColor = "green";
-} else {
-document.getElementById("6").style.backgroundColor = "red";
-}
+        if (money >= 1280000) {
+        document.getElementById("5").style.backgroundColor = "green";
+        } else {
+        document.getElementById("5").style.backgroundColor = "red";
+        }
 
-if (money >= 11600000000) {
-document.getElementById("7").style.backgroundColor = "green";
-} else {
-document.getElementById("7").style.backgroundColor = "red";
-}
+        if (money >= 36000000) {
+        document.getElementById("6").style.backgroundColor = "green";
+        } else {
+        document.getElementById("6").style.backgroundColor = "red";
+        }
 
-if (money >= 232000000000) {
-document.getElementById("8").style.backgroundColor = "green";
-} else {
-document.getElementById("8").style.backgroundColor = "red";
-}
+        if (money >= 11600000000) {
+        document.getElementById("7").style.backgroundColor = "green";
+        } else {
+        document.getElementById("7").style.backgroundColor = "red";
+        }
 
-if (money >= 7980000000000) {
-document.getElementById("9").style.backgroundColor = "green";
-} else {
-document.getElementById("9").style.backgroundColor = "red";
-}
+        if (money >= 232000000000) {
+        document.getElementById("8").style.backgroundColor = "green";
+        } else {
+        document.getElementById("8").style.backgroundColor = "red";
+        }
 
-if (money >= 112000000000000) {
-document.getElementById("10").style.backgroundColor = "green";
-} else {
-document.getElementById("10").style.backgroundColor = "red";
-}
+        if (money >= 7980000000000) {
+        document.getElementById("9").style.backgroundColor = "green";
+        } else {
+        document.getElementById("9").style.backgroundColor = "red";
+        }
 
-if (money >= 4500000000000000) {
-document.getElementById("11").style.backgroundColor = "green";
-} else {
-document.getElementById("11").style.backgroundColor = "red";
-}
+        if (money >= 112000000000000) {
+        document.getElementById("10").style.backgroundColor = "green";
+        } else {
+        document.getElementById("10").style.backgroundColor = "red";
+        }
 
-if (money >= 64800000000000000) {
-document.getElementById("12").style.backgroundColor = "green";
-} else {
-document.getElementById("12").style.backgroundColor = "red";
-}
+        if (money >= 4500000000000000) {
+        document.getElementById("11").style.backgroundColor = "green";
+        } else {
+        document.getElementById("11").style.backgroundColor = "red";
+        }
 
-if (money >= 8000) {
-document.getElementById("3").style.backgroundColor = "green";
-} else {
-document.getElementById("3").style.backgroundColor = "red";
-}
+        if (money >= 64800000000000000) {
+        document.getElementById("12").style.backgroundColor = "green";
+        } else {
+        document.getElementById("12").style.backgroundColor = "red";
+        }
+        if (money >= 2140000000000000000) {
+        document.getElementById("13").style.backgroundColor = "green";
+        } else {
+        document.getElementById("13").style.backgroundColor = "red";
+        }
+        if (money >= 53000000000000000000) {
+        document.getElementById("14").style.backgroundColor = "green";
+        } else {
+        document.getElementById("14").style.backgroundColor = "red";
+        }
+        if (money >= 1686400000000000000000) {
+        document.getElementById("15").style.backgroundColor = "green";
+        } else {
+        document.getElementById("15").style.backgroundColor = "red";
+        }
+        if (money >= 73500000000000000000000) {
+        document.getElementById("16").style.backgroundColor = "green";
+        } else {
+        document.getElementById("16").style.backgroundColor = "red";
+        }
+        if (money >= 2405800000000000000000000) {
+        document.getElementById("17").style.backgroundColor = "green";
+        } else {
+        document.getElementById("17").style.backgroundColor = "red";
+        }
+        if (money >= 83680000000000000000000000) {
+        document.getElementById("18").style.backgroundColor = "green";
+        } else {
+        document.getElementById("18").style.backgroundColor = "red";
+        }
+        if (money >= 3120000000000000000000000000) {
+        document.getElementById("19").style.backgroundColor = "green";
+        } else {
+        document.getElementById("19").style.backgroundColor = "red";
+        }
+        if (money >= 103800000000000000000000000000) {
+        document.getElementById("20").style.backgroundColor = "green";
+        } else {
+        document.getElementById("20").style.backgroundColor = "red";
+        }
+        if (money >= 2900800000000000000000000000000) {
+        document.getElementById("21").style.backgroundColor = "green";
+        } else {
+        document.getElementById("21").style.backgroundColor = "red";
+        }
+        if (money >= 82720000000000000000000000000000) {
+        document.getElementById("22").style.backgroundColor = "green";
+        } else {
+        document.getElementById("22").style.backgroundColor = "red";
+        }
+        if (money >= 2580000000000000000000000000000000) {
+        document.getElementById("23").style.backgroundColor = "green";
+        } else {
+        document.getElementById("23").style.backgroundColor = "red";
+        }
+        if (money >= 61800000000000000000000000000000000) {
+        document.getElementById("24").style.backgroundColor = "green";
+        } else {
+        document.getElementById("24").style.backgroundColor = "red";
+            }
+            if (money >= 4112000000000000000000000000000000000) {
+                document.getElementById("25").style.backgroundColor = "green";
+            } else {
+                document.getElementById("25").style.backgroundColor = "red";
+            }
+            if (money >= 112860000000000000000000000000000000000) {
+                document.getElementById("26").style.backgroundColor = "green";
+            } else {
+                document.getElementById("26").style.backgroundColor = "red";
+            }
+            if (money >= 5120000000000000000000000000000000000000) {
+                document.getElementById("27").style.backgroundColor = "green";
+            } else {
+                document.getElementById("27").style.backgroundColor = "red";
+            }
+            if (money >= 143080000000000000000000000000000000000000) {
+                document.getElementById("28").style.backgroundColor = "green";
+            } else {
+                document.getElementById("28").style.backgroundColor = "red";
+            }
+            if (money >= 5610000000000000000000000000000000000000000) {
+                document.getElementById("29").style.backgroundColor = "green";
+            } else {
+                document.getElementById("29").style.backgroundColor = "red";
+            }
+            if (money >= 162880000000000000000000000000000000000000000) {
+                document.getElementById("30").style.backgroundColor = "green";
+            } else {
+                document.getElementById("30").style.backgroundColor = "red";
+            }
+            if (money >= 6096000000000000000000000000000000000000000000) {
+                document.getElementById("31").style.backgroundColor = "green";
+            } else {
+                document.getElementById("31").style.backgroundColor = "red";
+            }
+            if (money >= 202800000000000000000000000000000000000000000000) {
+                document.getElementById("32").style.backgroundColor = "green";
+            } else {
+                document.getElementById("32").style.backgroundColor = "red";
+            }
+            if (money >= 7084000000000000000000000000000000000000000000000) {
+                document.getElementById("33").style.backgroundColor = "green";
+            } else {
+                document.getElementById("33").style.backgroundColor = "red";
+            }
+            if (money >= 252500000000000000000000000000000000000000000000000) {
+                document.getElementById("34").style.backgroundColor = "green";
+            } else {
+                document.getElementById("34").style.backgroundColor = "red";
+            }
+            if (money >= 8064000000000000000000000000000000000000000000000000) {
+                document.getElementById("35").style.backgroundColor = "green";
+            } else {
+                document.getElementById("35").style.backgroundColor = "red";
+            }
+            if (money >= 301800000000000000000000000000000000000000000000000000) {
+                document.getElementById("36").style.backgroundColor = "green";
+            } else {
+                document.getElementById("36").style.backgroundColor = "red";
+            }
+            if (money >= 9036000000000000000000000000000000000000000000000000000) {
+                document.getElementById("37").style.backgroundColor = "green";
+            } else {
+                document.getElementById("37").style.backgroundColor = "red";
+            }
+            if (money >= 350700000000000000000000000000000000000000000000000000000) {
+                document.getElementById("38").style.backgroundColor = "green";
+            } else {
+                document.getElementById("38").style.backgroundColor = "red";
+            }
+            if (money >= 10000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("39").style.backgroundColor = "green";
+            } else {
+                document.getElementById("39").style.backgroundColor = "red";
+            }
+            if (money >= 359280000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("40").style.backgroundColor = "green";
+            } else {
+                document.getElementById("40").style.backgroundColor = "red";
+            }
+            if (money >= 12948000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("41").style.backgroundColor = "green";
+            } else {
+                document.getElementById("41").style.backgroundColor = "red";
+            }
+            if (money >= 387660000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("42").style.backgroundColor = "green";
+            } else {
+                document.getElementById("42").style.backgroundColor = "red";
+            }
+            if (money >= 14880000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("43").style.backgroundColor = "green";
+            } else {
+                document.getElementById("43").style.backgroundColor = "red";
+            }
+            if (money >= 405900000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("44").style.backgroundColor = "green";
+            } else {
+                document.getElementById("44").style.backgroundColor = "red";
+            }
+            if (money >= 16796000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("45").style.backgroundColor = "green";
+            } else {
+                document.getElementById("45").style.backgroundColor = "red";
+            }
+            if (money >= 433840000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("46").style.backgroundColor = "green";
+            } else {
+                document.getElementById("46").style.backgroundColor = "red";
+            }
+            if (money >= 19680000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("47").style.backgroundColor = "green";
+            } else {
+                document.getElementById("47").style.backgroundColor = "red";
+            }
+            if (money >= 589200000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("48").style.backgroundColor = "green";
+            } else {
+                document.getElementById("48").style.backgroundColor = "red";
+            }
+            if (money >= 29400000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("49").style.backgroundColor = "green";
+            } else {
+                document.getElementById("49").style.backgroundColor = "red";
+            }
+            if (money >= 978000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("50").style.backgroundColor = "green";
+            } else {
+                document.getElementById("50").style.backgroundColor = "red";
+            }
+            if (money >= 39040000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("51").style.backgroundColor = "green";
+            } else {
+                document.getElementById("51").style.backgroundColor = "red";
+            }
+            if (money >= 1168800000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("52").style.backgroundColor = "green";
+            } else {
+                document.getElementById("52").style.backgroundColor = "red";
+            }
+            if (money >= 48600000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("53").style.backgroundColor = "green";
+            } else {
+                document.getElementById("53").style.backgroundColor = "red";
+            }
+            if (money >= 1649000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("54").style.backgroundColor = "green";
+            } else {
+                document.getElementById("54").style.backgroundColor = "red";
+            }
+            if (money >= 58080000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("55").style.backgroundColor = "green";
+            } else {
+                document.getElementById("55").style.backgroundColor = "red";
+            }
+            if (money >= 1932000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("56").style.backgroundColor = "green";
+            } else {
+                document.getElementById("56").style.backgroundColor = "red";
+            }
+            if (money >= 77120000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("57").style.backgroundColor = "green";
+            } else {
+                document.getElementById("57").style.backgroundColor = "red";
+            }
+            if (money >= 2886000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("58").style.backgroundColor = "green";
+            } else {
+                document.getElementById("58").style.backgroundColor = "red";
+            }
+            if (money >= 96000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("59").style.backgroundColor = "green";
+            } else {
+                document.getElementById("59").style.backgroundColor = "red";
+            }
+            if (money >= 3832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("60").style.backgroundColor = "green";
+            } else {
+                document.getElementById("60").style.backgroundColor = "red";
+            }
+            if (money >= 124280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("61").style.backgroundColor = "green";
+            } else {
+                document.getElementById("61").style.backgroundColor = "red";
+            }
+            if (money >= 4293000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("62").style.backgroundColor = "green";
+            } else {
+                document.getElementById("62").style.backgroundColor = "red";
+            }
+            if (money >= 161840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("63").style.backgroundColor = "green";
+            } else {
+                document.getElementById("63").style.backgroundColor = "red";
+            }
+            if (money >= 5225000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("64").style.backgroundColor = "green";
+            } else {
+                document.getElementById("64").style.backgroundColor = "red";
+            }
+            if (money >= 189600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("65").style.backgroundColor = "green";
+            } else {
+                document.getElementById("65").style.backgroundColor = "red";
+            }
+            if (money >= 6149000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+                document.getElementById("66").style.backgroundColor = "green";
+            } else {
+                document.getElementById("66").style.backgroundColor = "red";
+            }
+            if (money >= 61800000000000000000000000000000000) {
+                document.getElementById("24").style.backgroundColor = "green";
+            } else {
+                document.getElementById("24").style.backgroundColor = "red";
+            }
+        if (money >= 8000) {
+        document.getElementById("3").style.backgroundColor = "green";
+        } else {
+        document.getElementById("3").style.backgroundColor = "red";
+        }
 
-if (money >= 12000) {
-document.getElementById("a3").style.backgroundColor = "green";
-} else {
-document.getElementById("a3").style.backgroundColor = "red";
-}
+        if (money >= 12000) {
+        document.getElementById("a3").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a3").style.backgroundColor = "red";
+        }
 
-if (money >= 900) {
-document.getElementById("a2").style.backgroundColor = "green";
-} else {
-document.getElementById("a2").style.backgroundColor = "red";
-}
+        if (money >= 900) {
+        document.getElementById("a2").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a2").style.backgroundColor = "red";
+        }
 
-if (money >= 220000) {
-document.getElementById("a4").style.backgroundColor = "green";
-} else {
-document.getElementById("a4").style.backgroundColor = "red";
-}
+        if (money >= 220000) {
+        document.getElementById("a4").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a4").style.backgroundColor = "red";
+        }
 
-if (money >= 6600000) {
-document.getElementById("a5").style.backgroundColor = "green";
-} else {
-document.getElementById("a5").style.backgroundColor = "red";
-}
+        if (money >= 6600000) {
+        document.getElementById("a5").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a5").style.backgroundColor = "red";
+        }
 
-if (money >= 130000000) {
-document.getElementById("a6").style.backgroundColor = "green";
-} else {
-document.getElementById("a6").style.backgroundColor = "red";
-}
+        if (money >= 130000000) {
+        document.getElementById("a6").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a6").style.backgroundColor = "red";
+        }
 
-if (money >= 9450000000) {
-document.getElementById("a7").style.backgroundColor = "green";
-} else {
-document.getElementById("a7").style.backgroundColor = "red";
-}
+        if (money >= 9450000000) {
+        document.getElementById("a7").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a7").style.backgroundColor = "red";
+        }
 
-if (money >= 61000000000) {
-document.getElementById("a8").style.backgroundColor = "green";
-} else {
-document.getElementById("a8").style.backgroundColor = "red";
-}
+        if (money >= 61000000000) {
+        document.getElementById("a8").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a8").style.backgroundColor = "red";
+        }
 
-if (money >= 1800000000000) {
-document.getElementById("a9").style.backgroundColor = "green";
-} else {
-document.getElementById("a9").style.backgroundColor = "red";
-}
+        if (money >= 1800000000000) {
+        document.getElementById("a9").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a9").style.backgroundColor = "red";
+        }
 
-if (money >= 35400000000000) {
-document.getElementById("a10").style.backgroundColor = "green";
-} else {
-document.getElementById("a10").style.backgroundColor = "red";
-}
+        if (money >= 35400000000000) {
+        document.getElementById("a10").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a10").style.backgroundColor = "red";
+        }
 
-if (money >= 464000000000000) {
-document.getElementById("a11").style.backgroundColor = "green";
-} else {
-document.getElementById("a11").style.backgroundColor = "red";
-}
+        if (money >= 464000000000000) {
+        document.getElementById("a11").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a11").style.backgroundColor = "red";
+        }
 
-if (money >= 28500000000000000) {
-document.getElementById("a12").style.backgroundColor = "green";
-} else {
-document.getElementById("a12").style.backgroundColor = "red";
-}
+        if (money >= 28500000000000000) {
+        document.getElementById("a12").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a12").style.backgroundColor = "red";
+        }
 
-if (money >= 25000) {
-document.getElementById("b1").style.backgroundColor = "green";
-} else {
-document.getElementById("b1").style.backgroundColor = "red";
-}
 
-if (money >= 200000) {
-document.getElementById("b2").style.backgroundColor = "green";
-} else {
-document.getElementById("b2").style.backgroundColor = "red";
-}
+        }
 
-if (money >= 8000000) {
-document.getElementById("b3").style.backgroundColor = "green";
-} else {
-document.getElementById("b3").style.backgroundColor = "red";
-}
-
-if (money >= 46200000) {
-document.getElementById("b4").style.backgroundColor = "green";
-} else {
-document.getElementById("b4").style.backgroundColor = "red";
-}
-
-if (money >= 1280000000) {
-document.getElementById("b5").style.backgroundColor = "green";
-} else {
-document.getElementById("b5").style.backgroundColor = "red";
-}
-
-if (money >= 36000000000) {
-document.getElementById("b6").style.backgroundColor = "green";
-} else {
-document.getElementById("b6").style.backgroundColor = "red";
-}
-
-if (money >= 100000000) {
-document.getElementById("ab1").style.backgroundColor = "green";
-} else {
-document.getElementById("ab1").style.backgroundColor = "red";
-}
-
-if (money >= 900000000) {
-document.getElementById("ab2").style.backgroundColor = "green";
-} else {
-document.getElementById("ab2").style.backgroundColor = "red";
-}
-
-if (money >= 12000000000) {
-document.getElementById("ab3").style.backgroundColor = "green";
-} else {
-document.getElementById("ab3").style.backgroundColor = "red";
-}
-
-if (money >= 220000000000) {
-document.getElementById("ab4").style.backgroundColor = "green";
-} else {
-document.getElementById("ab4").style.backgroundColor = "red";
-}
-
-if (money >= 6600000000000) {
-document.getElementById("ab5").style.backgroundColor = "green";
-} else {
-document.getElementById("ab5").style.backgroundColor = "red";
-}
-
-if (money >= 130000000000000) {
-document.getElementById("ab6").style.backgroundColor = "green";
-} else {
-document.getElementById("ab6").style.backgroundColor = "red";
-}
-}
-
-</script>
+    </script>
 </body>
 </html>
