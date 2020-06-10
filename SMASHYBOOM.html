@@ -126,6 +126,7 @@ canvas {
 <script>
 var score = 0;
 var myGamePiece;
+var hscore = 0;
 var poop;
 function startGame() {
     myGameArea.start();
@@ -145,7 +146,6 @@ var myGameArea = {
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        poop = setInterval(updateGameArea, 20);
         window.addEventListener('keydown', function (e) {
             myGameArea.key = e.keyCode;
         })
@@ -176,7 +176,21 @@ function component(width, height, color, x, y) {
         this.y += this.speedY;        
     }
 }
-
+function play(){
+score = 0;
+        poop = setInterval(updateGameArea, 20);
+        myObstacle1.x = 0;
+         myObstacle2.x = 0;
+          myObstacle3.x = 0;
+           myObstacle4.x = 0;
+            myObstacle5.x = 0;
+             myObstacle1.y = 0;
+              myObstacle2.y = 0;
+               myObstacle3.y = 0;
+                myObstacle4.y = 0;
+ myObstacle5.y = 0;
+ myGamearea.canvas.focus;
+}
 function updateGameArea() {
     myGameArea.clear();
     myGamePiece.speedX = 0;
@@ -186,27 +200,27 @@ function updateGameArea() {
     
     if (myObstacle1.y >= 230) {
     myObstacle1.x = (Math.random() * 450);
-    myObstacle1.y = -30;
+    myObstacle1.y = (Math.random() * 60) - 30;
     }
     myObstacle2.y += (Math.random() * 3) + 1 + score/100;
     if (myObstacle2.y >= 230) {
     myObstacle2.x = (Math.random() * 450);
-    myObstacle2.y = -60;
+    myObstacle2.y = (Math.random() * 60) - 30;
     }
     myObstacle3.y += (Math.random() * 3) + 1 + score/100;
     if (myObstacle3.y >= 230) {
     myObstacle3.x = (Math.random() * 450);
-    myObstacle3.y = 30;
+    myObstacle3.y = (Math.random() * 60) - 30;
     }
     myObstacle4.y += (Math.random() * 3) + 1 + score/100;
     if (myObstacle4.y >= 230) {
     myObstacle4.x = (Math.random() * 450);
-    myObstacle4.y = 60;
+    myObstacle4.y = (Math.random() * 60) - 30;
     }
     myObstacle5.y += (Math.random() * 3) + 1 + score/100;
     if (myObstacle5.y >= 230) {
     myObstacle5.x = (Math.random() * 450);
-    myObstacle5.y = 0;
+    myObstacle5.y = (Math.random() * 60) - 30;
     }
     myObstacle1.y += (Math.random() * 3) + 1 + score/100;
     if (Math.abs(myGamePiece.x - myObstacle1.x) <= 30){
@@ -258,11 +272,14 @@ myGameArea.clear();
    }
     myGamePiece.update();
     score += 0.1;
-    document.getElementById("score").innerHTML = "Score: " + Math.floor(score);
+    if (score > hscore){
+hscore = score;
+}
+    document.getElementById("score").innerHTML = "Score: " + Math.floor(score) + " High score: " + Math.floor(hscore);
 }
 
-</script>
+</script><button onclick="play()">PLAY</button>
 <p id="score"></p>
-<p>Make sure this window has focus, then you can use the arrow keys on you keyboard to move the red square.</p>
+<p>Use the arrow keys to move the red block and dodge everything falling from the sky!</p>
 </body>
 </html>
