@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Trigger Button Click on Enter</h3>
+<p>Press the "Enter" key inside the input field to trigger the button.</p>
+
+<input id="myInput" value="Some text..">
+<button id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
+
+<script>
+var inputlist = "";
+var input = document.getElementById("myInput");
+var q = "Theo's Guess Game Enter a number and guess! (must be between one and onehundred) Click To Play! Back";
+var r = "first page Activity finder About us book review mortal engines welcome to game page! to obtain your pure intertainment we have conjurd some basic html ,javasricpt and css games for you also one chat bot (poor lonely bert ('_') ), we have spent a while looking at the licening for some of our games like snail and they are happily royalty free (hazah!) snail: Qries snake the original arcade game made by Tom the unnoable using: html5, css3, javascript 1.5 we hope u enjoy! Theos shooter game Qries ajust the angles and speed to collect coins and get a high score! made with magic (and html5, css3, javascript 1.5 ) yep totally magic toms bert chat bot Qries bert is not an acronym the name just sounds cool by the way. so far bert only replys to about twinty qustions... yes bert is very polite and smart it was made using js, html5 and css3 and those are acronyms so bert must be smart.... nope theos guessing game Qries guss a number 1 to one hundred!! toms awsome ping pong game Qries did someone do a fart in here? because it sure dose PONG! the PONG really dose PING in your nose theos button cliker Qries see if you can get every power up theos sky fall game Qries try to a score over 50 - bet you cant";
+var s = "KO 12 or more people, half as many people minus 1 chairs, a stopwatch 1. Line up the chairs in a row, direction alternating between one side and the other. Divide the players into two teams. If there is an odd number of people, one person will run for both teams. 2. One team chooses a person to be the tagger for the first round, who goes to one end of the chairs. The rest of that team sit on the chairs. 3. The other team lines up at the other end of the chairs. 4. Someone starts the timer, the first person in the line and the tagger start running. 5. The person who was in line can run between the chairs, the tagger can only run around the ends. 6. The tagger can tag the back of a chair, and then the person in that chair is the new tagger, and the tagger sits in that chair. 7. As soon as the first person in line is tagged, they are out, and the second person starts running. 8. When the last person is tagged, the stopwatch is stopped. 9. The teams swap places and repeat. 10. The team who took the longest time wins.";
+var u = "about this website this website is made for people who are bored stuck inside, actually, we've written this website in lockdown(clarification: coronavirus lockdown 2020), that’s part of the reason we built this in fact so that we can spread ideas to people who have nothing else to do and needs something fun, creative and something  that you can play by yourself or with others. We are competing in a competition called 123tech. 123tech is about young coders and problem-solvers having the opportunity to make an app or a website. If you were to join, you would contribute to solving a problem in your community by using digital technology. about us we are based in wellington, New Zealand, This website was coded by Tom and Theo. The writing was done by the whole team but mainly elenor billy plus a bit of theo. The ideas were created by Billy, Eleanor and Theo.infact This page was written by tom who is righting in third person.how was this website made? This website was coded mainly using html5 css3 and javascript. We use visual studios as our web editor. We have twopeople working with visual studios. We use branches to share each other's work with github you can visit us now@gihub 123tech. How did we put this website on the web? well we use a software called surge, surge is a front endstatic website publisher visit surge here if you look slightly up in our url you can see that the domainis surge.sh that is the default domain for surge (if we were to get another it would cost money if you are interesteda url like .com would cost round 20-30$ nz cash)."
+var v = " PLAY Use the arrow keys to move the red block and dodge everything falling from the sky!"
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   inputlist = "";
+if (r.includes(input.value)) {
+  inputlist += "<a href='DigitalGamePage.html'>welcome to game page!...</a><br>";
+  
+}
+ if (q.includes(input.value)) {
+  inputlist += "<a href='Guessgame.html'>Theo's guess game Enter a number and guess! (...</a><br>";
+  
+}   
+ if (s.includes(input.value)) {
+  inputlist += "<a href='KO_tag.html'>KO 12 or more people, half as ...</a><br>";
+  
+}
+if (u.includes(input.value)) {
+  inputlist += "<a href='AU.html'>about this website this website is made for people....</a><br>";
+  
+}
+if (v.includes(input.value)) {
+  inputlist += "<a href='SMASHYBOOM.html'>Use the arrow keys to move the...</a><br>";
+  
+}
+if (inputlist == ""){
+  inputlist = "no results";
+  
+}
+    document.getElementById("t").innerHTML = inputlist;
+  }
+});
+</script>
+<p id="t"></p>
+</body>
+</html>
