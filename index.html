@@ -18,56 +18,11 @@
     <li><button class="button"><a href='af.html'>Activity finder</a></button></li>
     <li><button class="button"><a href='AU.html'>About us</a></button></li>
     <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
-
+   
     
     <li><button class="button"><a href='DigitalGamePage.html'>gamepage</a></button></li>
     <div id="myclockdisplay" class="clock"></div>
-    <script type="text/javascript"> 
-    function showtime(){
- 
-   
- 
-        var date=new Date();
-        h = date.getHours();
-        m = date.getMinutes();
-        s = date.getSeconds();
-        var session = "AM" 
- 
-        console.log(h, m, s)
-         
-        if (h == 0){
-            h = 12;
- 
- 
-        }
- 
-        if (h > 12){
-            h = h -12;
-            session = "pm"
-        }
- 
-        console.log(h)
-        h = (h < 10) ? "0" + h : h;
- 
-        
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
-        
-        var time = h + ":" + m + ":" + s + ":" + session;
-        console.log("check")
-        console.log (time)
-        document.getElementById("myclockdisplay").innerText = time;
-        document.getElementById("myclockdisplay").textContent = time;
- 
-        setTimeout(showtime, 1000)
- 
- 
-    }
     
-    showtime();
-    
-    
-    </script>
   </ul>
  
  
@@ -89,6 +44,7 @@
 <br>
 <br>
 <br>
+
 <br>
 <br>
 <br>
@@ -101,6 +57,7 @@
 <br>
 <br>
 <br>
+
 <br>
 <br>
 <br>
@@ -280,7 +237,7 @@
  
  
   .clock{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(224, 195, 30);
  
  
@@ -294,7 +251,7 @@
  a { 
   color: rgb(224, 195, 30);
   text-decoration: none;
- 
+  
  }
  
  
@@ -304,14 +261,9 @@
         font-family: 'Allan', cursive;
         font-size: 27px;
         text-decoration: none;
-      
- 
-        width: 267px;
+        width: 150px;
         height: 40px;
-        
-     
-        
- 
+      
       }
       .button:hover{
             background-color: rgb(27, 12, 51);
@@ -321,25 +273,7 @@
      
             
  
-        .glow {
-      font-size: 4rem;
-      color: #fff;
-      text-align: center;
-      -webkit-animation: glow 1s ease-in-out infinite alternate;
-      -moz-animation: glow 1s ease-in-out infinite alternate;
-      animation: glow 1s ease-in-out infinite alternate;
-    }
- 
-    @-webkit-keyframes glow {
-      from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #d7e598, 0 0 30px #c8a01a, 0 0 40px #c8a02a, 0 0 50px #c8a03a, 0 0 60px #c8a04a, 0 0 70px #c8a05a;
-      }
-      
-      to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #c8a06a, 0 0 40px #c8a07a, 0 0 50px #c8a08a, 0 0 60px #c8a09a, 0 0 70px #c8a10a, 0 0 80px #c8a11a;
-      }
-    }
- 
+     
    
  
  
@@ -401,8 +335,50 @@
  
     </style>
  
-    <script>
-     var c = ("cheese");
+ <script type="text/javascript"> 
+   function showtime(){
+ 
+   
+ 
+ var date=new Date();
+ h = date.getHours();
+ m = date.getMinutes();
+ s = date.getSeconds();
+ var session = "AM" 
+
+ console.log(h, m, s)
+  
+ if (h == 0){
+     h = 12;
+
+
+ }
+
+ if (h > 12){
+     h = h -12;
+     session = "pm"
+ }
+
+ console.log(h)
+ h = (h < 10) ? "0" + h : h;
+
+ 
+ m = (m < 10) ? "0" + m : m;
+ s = (s < 10) ? "0" + s : s;
+ 
+ var time = h + ":" + m + ":" + s + ":" + session;
+ console.log("check")
+ console.log (time)
+ document.getElementById("myclockdisplay").innerText = time;
+ document.getElementById("myclockdisplay").textContent = time;
+
+ setTimeout(showtime, 1000)
+
+
+}
+
+showtime();
+
      
   
     </script>
