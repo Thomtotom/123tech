@@ -1,33 +1,17 @@
 <!DOCTYPE html>
+<html>
 <head>
-
-  <link rel="shortcut icon" type="image/png" href="./logo.png">
-  
-</head>
-
-
-<body>
- <div align="center">
-    <h2>Third question</h2>
-    <p>previouse : inside</p>
-
-
-    <button class="button"><a href='gamepage.html'><span>games</span></a>
-    
-        <button class="button"><a href='arts_2om.html'><span>art and craft</span></a>
-
-        <button class="button"><a href='ping.html'><span>Pong</span></a>
-
-                   <button class="button"><a href='other_a1.html'><span>Other</span></a>
-
-      
-        <button class="button"><a href='index.html'><span> to the first page</span></a>
-        </div>
-</body>
-
 <style>
-    
-    a {
+#answers{display: none;}
+</style>
+<title>Page Title</title>
+</head>
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <title></title>
+    <style>
+        a {
     color: rgb(172, 124, 13);
 
   }
@@ -136,5 +120,42 @@
    
   }
 
-  
-</style>
+    </style>
+</head>
+<body>
+
+<img src="rebus1.png"><img src="rebus2.png">
+<br>
+<button onclick="show()">Show answers</button>
+<script>
+function show(){ 
+document.getElementById("answers").style.display = "block";
+}
+</script>
+<p id="answers">
+1. Three blind mice<br>
+2.Waterfall<br>
+3.Circle of life<br>
+4.All for one and one for all<br>
+5.Up to no good<br>
+6.Too vast to notice<br>
+7.Ace in the hole<br>
+8.Think outside the box<br>
+9.Once in a blue moon<br>
+10.For instance<br>
+11.Walk in the park<br>
+12.Crossroads<br>
+13.Man overboard<br>
+14.Sail over seven seas<br>
+15.Green eggs and ham<br>
+16.Water<br>
+17.Broken heart<br>
+18.Piece of pie<br>
+19.Tricycle<br>
+20.Jack-in-the-box<br>
+
+</p>
+    <button class="button button"><a href="logic_puzzle.html">Back</a></button>
+
+</body>
+</html>
