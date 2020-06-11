@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#answers{display: none;}
+</style>
+<title>Page Title</title>
+</head>
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <title></title>
+    <style>
+        a {
+    color: rgb(172, 124, 13);
+
+  }
+
+
+.button {
+  border-radius: 4px;
+  background-color: #0b0a53;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 267px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+      body {
+          background-color: #524763;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          margin: 0;
+        }
+
+        h1{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  h2{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h3{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+  h4{
+    text-align: left;
+    text-indent: 30%;
+    text-shadow: 2px 2px 5px black;
+    
+
+  }
+
+  h5{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h6{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+
+  }
+
+  p{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+    </style>
+</head>
+<body>
+
+<img src="rebus1.png"><img src="rebus2.png">
+<br>
+<button onclick="show()">Show answers</button>
+<script>
+function show(){ 
+document.getElementById("answers").style.display = "block";
+}
+</script>
+<p id="answers">
+1. Three blind mice<br>
+2.Waterfall<br>
+3.Circle of life<br>
+4.All for one and one for all<br>
+5.Up to no good<br>
+6.Too vast to notice<br>
+7.Ace in the hole<br>
+8.Think outside the box<br>
+9.Once in a blue moon<br>
+10.For instance<br>
+11.Walk in the park<br>
+12.Crossroads<br>
+13.Man overboard<br>
+14.Sail over seven seas<br>
+15.Green eggs and ham<br>
+16.Water<br>
+17.Broken heart<br>
+18.Piece of pie<br>
+19.Tricycle<br>
+20.Jack-in-the-box<br>
+
+</p>
+    <button class="button button"><a href="logicpuzzle.html">Back</a></button>
+
+</body>
+</html>
