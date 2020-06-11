@@ -14,16 +14,14 @@
  
   <ul class = "nav">
     
- 
+  
     <li><button class="button"><a href='af.html'>Activity finder</a></button></li>
     <li><button class="button"><a href='AU.html'>About us</a></button></li>
     <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
-   
-    
     <li><button class="button"><a href='DigitalGamePage.html'>gamepage</a></button></li>
-    <h1>activity <h1>
-      <h1> finder<h1>
-      
+    <li><input value="Some text.."><li>
+      <a href="AU.html"> <img alt="logo" src="acty.png"  width="270px" height="40"></a>
+    
 
 
 
@@ -87,30 +85,30 @@
   </div>
  
    <h1>who this website is directed for:</h1>
-    <h3> we have created this website for people like "you",</h3>
-    <h3> 
+    <p> we have created this website for people like "you",</p>
+    <p> 
       you the person who is stuck indoors surfing the internet
-      for things </h3>
-      <h3>to do </h3>
-      <h3>by yourself or with others.
-      Well you're in luck because this is the website you've been looking for.</h3>
-      <h3> 
-      we have things for groups of </h3>
-      <h3>people, and activities for you by yourself.
-       So we hope you love this site.</h3>
+      for things </p>
+      <p>to do </p>
+      <p>by yourself or with others.
+      Well you're in luck because this is the website you've been looking for.</p>
+      <p> 
+      we have things for groups of </p>
+      <p>people, and activities for you by yourself.
+       So we hope you love this site.</p>
       <br>
       <br>
       <br>
  
     <h1 >what is this website about?</h1>
-    <h3>This website is about finding the best activity in the least time.</h3>
-    <h3>
-       Unlike google our website has a series of questions that then </h3>
+    <p>This website is about finding the best activity in the least time.</p>
+    <p>
+       Unlike google our website has a series of questions that then </p>
        
-       <h3>narrows the activities that you're looking for.
-        We have many choices but we recommend</h3><h3> our tag page it has more than 17 different<h3>
-        <h3> tag games! 
-        We can also recommend our card game page.</h3>
+       <p>narrows the activities that you're looking for.
+        We have many choices but we recommend</p><p> our tag page it has more than 17 different<p>
+        <p> tag games! 
+        We can also recommend our card game page.</p>
     <br>
     
 
@@ -136,7 +134,7 @@
   
    
       
-       <h3>Would you like to do a random activity, well you're in luck try out our activity of the day: </h3>
+       <p>Would you like to do a random activity, well you're in luck try out our activity of the day: </p>
           <a href="dailyactivitytest.html">Daily activity</a>
        
        
@@ -265,10 +263,10 @@
         background-color: #5c4e4e;
         border: none;
         font-family: 'Allan', cursive;
-        font-size: 27px;
+        font-size: 20px;
         text-decoration: none;
-        width: 150px;
-        height: 40px;
+        width: 140px;
+        height: 50px;
       
       }
       .button:hover{
@@ -276,7 +274,16 @@
  
         }
  
-     
+     input{
+       width: 500px;
+       height: 50px;
+       background-image: linear-gradient(rgb(27, 12, 51), black);
+       font-weight: bolder;
+       color: cornsilk;
+       border-radius: 20px, 20px, 20px;
+       border-color: cyan;
+       text-decoration: cyan;
+     }
             
  
      
@@ -311,11 +318,9 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
         background-color: #5c4e4e;
         background-attachment: fixed;
-        display: flex;
-        height: 38px;
+        height: 50px;
         width: 100%;
  
         
@@ -323,7 +328,7 @@
       }
  
       li {
-        float: left;
+        float: right;
       }
  
       li a {
@@ -342,50 +347,7 @@
     </style>
  
  <script type="text/javascript"> 
-   function showtime(){
- 
-   
- 
- var date=new Date();
- h = date.getHours();
- m = date.getMinutes();
- s = date.getSeconds();
- var session = "AM" 
-
- console.log(h, m, s)
   
- if (h == 0){
-     h = 12;
-
-
- }
-
- if (h > 12){
-     h = h -12;
-     session = "pm"
- }
-
- console.log(h)
- h = (h < 10) ? "0" + h : h;
-
- 
- m = (m < 10) ? "0" + m : m;
- s = (s < 10) ? "0" + s : s;
- 
- var time = h + ":" + m + ":" + s + ":" + session;
- console.log("check")
- console.log (time)
- document.getElementById("myclockdisplay").innerText = time;
- document.getElementById("myclockdisplay").textContent = time;
-
- setTimeout(showtime, 1000)
-
-
-}
-
-showtime();
-
-
 
   
     </script>
