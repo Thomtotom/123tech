@@ -1,7 +1,7 @@
-<html lang="en">
-<head>
-    <style>
-           a {
+<html>
+    <head>
+        <style>
+                    a {
     color: rgb(172, 124, 13);
 
   }
@@ -110,19 +110,41 @@
    
   }
 
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+        </style>
+    </head>
 <body>
+<input id="input" value="jiasifj">
 
-    <h1>Digital fun:<h1>
-        <button class="button"><a href='.html'><span>html css first lesson!</span></a>
+<p id="w"></p>
+<script>
+    var input = document.getElementById("Input");
+
+    input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   output = "";
+    output = "nothing came up with that sorry."
+    if (input.includes('game')) {
+      output += "<a href='DigitalGamePage.html'>To the game page!</a><br> oiwhdoihfaoih";
+    }
+    if (input.includes("activity finder")) {
+        output += "<a href='af.html'>to activity finder!</a><br>"
+    }
     
-            <button class="button"><a href='outside_2om.html'><span>coming soon</span></a>
-          
-            <button class="button"><a href='index.html'><span>coming soon</span></a>
 
+
+    // if (input.includes('')) {
+    //   output = "";
+    // }
+    
+    
+    
+    document.getElementById("w").innerHTML = output;
+}
+});
+
+</script>
+
+   
 </body>
 </html>

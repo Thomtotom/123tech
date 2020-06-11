@@ -29,6 +29,7 @@ function addBotText(text) {
  
 function botVoice(message) {
     const speech = new SpeechSynthesisUtterance();
+    
     speech.text = "Sorry, i dont know that one try again maybe";
  
     if (message.includes('how are you')) {

@@ -1,5 +1,118 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+              a {
+    color: rgb(172, 124, 13);
+
+  }
+
+
+.button {
+  border-radius: 4px;
+  background-color: #0b0a53;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 267px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+      body {
+          background-color: #524763;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          margin: 0;
+        }
+
+        h1{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  h2{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h3{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+  h4{
+    text-align: left;
+    text-indent: 30%;
+    text-shadow: 2px 2px 5px black;
+    
+
+  }
+
+  h5{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+
+  h6{
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+
+  }
+
+  p{
+    text-align: left;
+    text-indent: 30%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+   
+  }
+
+      </style>
+    <head>
 <body>
 
 <h3>Trigger Button Click on Enter</h3>
@@ -16,6 +129,7 @@ var r = "first page Activity finder About us book review mortal engines welcome 
 var s = "KO 12 or more people, half as many people minus 1 chairs, a stopwatch 1. Line up the chairs in a row, direction alternating between one side and the other. Divide the players into two teams. If there is an odd number of people, one person will run for both teams. 2. One team chooses a person to be the tagger for the first round, who goes to one end of the chairs. The rest of that team sit on the chairs. 3. The other team lines up at the other end of the chairs. 4. Someone starts the timer, the first person in the line and the tagger start running. 5. The person who was in line can run between the chairs, the tagger can only run around the ends. 6. The tagger can tag the back of a chair, and then the person in that chair is the new tagger, and the tagger sits in that chair. 7. As soon as the first person in line is tagged, they are out, and the second person starts running. 8. When the last person is tagged, the stopwatch is stopped. 9. The teams swap places and repeat. 10. The team who took the longest time wins.";
 var u = "about this website this website is made for people who are bored stuck inside, actually, we've written this website in lockdown(clarification: coronavirus lockdown 2020), that’s part of the reason we built this in fact so that we can spread ideas to people who have nothing else to do and needs something fun, creative and something  that you can play by yourself or with others. We are competing in a competition called 123tech. 123tech is about young coders and problem-solvers having the opportunity to make an app or a website. If you were to join, you would contribute to solving a problem in your community by using digital technology. about us we are based in wellington, New Zealand, This website was coded by Tom and Theo. The writing was done by the whole team but mainly elenor billy plus a bit of theo. The ideas were created by Billy, Eleanor and Theo.infact This page was written by tom who is righting in third person.how was this website made? This website was coded mainly using html5 css3 and javascript. We use visual studios as our web editor. We have twopeople working with visual studios. We use branches to share each other's work with github you can visit us now@gihub 123tech. How did we put this website on the web? well we use a software called surge, surge is a front endstatic website publisher visit surge here if you look slightly up in our url you can see that the domainis surge.sh that is the default domain for surge (if we were to get another it would cost money if you are interesteda url like .com would cost round 20-30$ nz cash)."
 var v = " PLAY Use the arrow keys to move the red block and dodge everything falling from the sky!"
+
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
@@ -44,10 +158,10 @@ if (inputlist == ""){
   inputlist = "no results";
   
 }
-    document.getElementById("t").innerHTML = inputlist;
+    document.getElementById("but").innerHTML = inputlist;
   }
 });
 </script>
-<p id="t"></p>
+<p id="but"></p>
 </body>
 </html>
