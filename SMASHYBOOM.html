@@ -123,13 +123,26 @@ canvas {
 <meta name="viewport" content="width=device-width,initial-size=1.0" />
     <link rel="shortcut icon" type="image/png" href="./logo.png"></head>
 <body onload="startGame()">
+<H1>Skyfall</H1>
 <script>
 var ic = 1;
 var score = 0;
 var myGamePiece;
 var hscore = 0;
 var poop;
+function end(){
+
+alert("We know this game is addictive, so we have created this to stop you. Your highscore will be kept, and the game will return in ten minutes. Try finding something else on this website, there are things a load more interesting than this. ");
+document.body.style.display = "none";
+setTimeout(start, 600000);
+}
+function start(){
+document.body.style.display = "block";
+alert("Welcome back.");
+setTimeout(end, 600000);
+}
 function startGame() {
+setTimeout(end, 600000)
     myGameArea.start();
     myGamePiece = new component(30, 30, "red", 210, 230);
     myObstacle1 = new component(30, 30, "green",0, 0);
@@ -307,6 +320,6 @@ hscore = score;
 
 </script><button onclick="play()">PLAY</button>
 <p id="score"></p>
-<p>Use the arrow keys to move the red block and dodge everything falling from the sky!</p>
+<p>Use the arrow keys to move the red block and dodge the green blocks falling from the sky. the yellow one will give you points. </p>
 </body>
 </html>
