@@ -464,14 +464,14 @@
         }
         function end(){
 
-alert("We know this game is addictive, so we have created this to stop you. Your highscore will be kept, and the game will return in ten minutes. Try finding something else on this website, there are things a load more interesting than this. ");
+alert("We know this game is addictive, so we have created this to stop you. Your highscore will be kept, and the game will return in twenty minutes. Try finding something else on this website, there are things a load more interesting than this. ");
 document.body.style.display = "none";
-setTimeout(start, 600000);
+setTimeout(start, 1200000);
 }
 function start(){
 document.body.style.display = "block";
 alert("Welcome back.");
-setTimeout(end, 600000);
+setTimeout(end, 1200000);
 }
         var money = 0;
         var clickpower = 1;
@@ -485,7 +485,7 @@ setTimeout(end, 600000);
         }
         // play function
         function play(){
-            setTimeout(end, 600000);
+            setTimeout(end, 1200000);
         document.getElementById("game").style.display = "block";
         document.getElementById("playbutton").style.display = "none";
         }
