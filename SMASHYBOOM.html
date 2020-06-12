@@ -124,6 +124,7 @@ canvas {
     <link rel="shortcut icon" type="image/png" href="./logo.png"></head>
 <body onload="startGame()">
 <script>
+var ic = 1;
 var score = 0;
 var myGamePiece;
 var hscore = 0;
@@ -131,11 +132,14 @@ var poop;
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(30, 30, "red", 210, 230);
-    myObstacle1 = new component(30, 30, "blue",0, 0);
+    myObstacle1 = new component(30, 30, "green",0, 0);
         myObstacle2 = new component(30, 30, "green",0, 0);
-    myObstacle3 = new component(30, 30, "yellow",0, 0);
-    myObstacle4 = new component(30, 30, "brown",0, 0);
+    myObstacle3 = new component(30, 30, "green",0, 0);
+    myObstacle4 = new component(30, 30, "green",0, 0);
     myObstacle5 = new component(30, 30, "green",0, 0);
+    
+        myCoin  = new component(30, 30, "yellow",0, 0);
+
    myGround = new component(480, 10, "black", 0, 260);
 }
 
@@ -178,7 +182,10 @@ function component(width, height, color, x, y) {
 }
 function play(){
 score = 0;
+        if (ic == 1){
+        clearInterval(poop);
         poop = setInterval(updateGameArea, 20);
+        }
         myObstacle1.x = 0;
          myObstacle2.x = 0;
           myObstacle3.x = 0;
@@ -189,7 +196,10 @@ score = 0;
                myObstacle3.y = 0;
                 myObstacle4.y = 0;
  myObstacle5.y = 0;
+ myCoin.x = 0;
+ myCoin.y = 0;
  myGamearea.canvas.focus;
+ ic = 0;
 }
 function updateGameArea() {
     myGameArea.clear();
@@ -222,10 +232,17 @@ function updateGameArea() {
     myObstacle5.x = (Math.random() * 450);
     myObstacle5.y = (Math.random() * 60) - 30;
     }
+    if (myCoin.y >= 230) {
+    myCoin.x = (Math.random() * 450);
+    myCoin.y = (Math.random() * 60) - 30;
+    }
+        myCoin.y += (Math.random() * 3) + 1 + score/100;
+
     myObstacle1.y += (Math.random() * 3) + 1 + score/100;
     if (Math.abs(myGamePiece.x - myObstacle1.x) <= 30){
     if (Math.abs(myGamePiece.y - myObstacle1.y) <= 30){
         myGameArea.clear();
+        ic=1;
     clearInterval(poop);
 
     }
@@ -234,34 +251,44 @@ function updateGameArea() {
     if (Math.abs(myGamePiece.y - myObstacle3.y) <= 30){
    myGameArea.clear();
  clearInterval(poop);
+ ic=1;
     }
     }
     if (Math.abs(myGamePiece.x - myObstacle2.x) <= 30){
     if (Math.abs(myGamePiece.y - myObstacle2.y) <= 30){
         myGameArea.clear();
  clearInterval(poop);
-
+ic=1;
     }
     }
     if (Math.abs(myGamePiece.x - myObstacle4.x) <= 30){
     if (Math.abs(myGamePiece.y - myObstacle4.y) <= 30){
 myGameArea.clear();
  clearInterval(poop);
-
+ic=1;
     }
     }
     if (Math.abs(myGamePiece.x - myObstacle5.x) <= 30){
     if (Math.abs(myGamePiece.y - myObstacle5.y) <= 30){
     myGameArea.clear();
  clearInterval(poop);
+    ic=1;
     }
     }
+    if (Math.abs(myGamePiece.x - myCoin.x) <= 30){
+    if (Math.abs(myGamePiece.y - myCoin.y) <= 30){
+ myCoin.x = (Math.random() * 450);
+    myCoin.y = (Math.random() * 60) - 30;    
+score += 10 + score/10;
     
+    }
+    }
     myObstacle1.update();
       myObstacle2.update();  
       myObstacle3.update();
         myObstacle4.update();
           myObstacle5.update();
+          myCoin.update();
           myGround.update();
     myGamePiece.newPos();    
    if (myGamePiece.x <= 0) {
