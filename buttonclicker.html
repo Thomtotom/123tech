@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+</configuration>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -174,63 +177,67 @@
     <div id="game" align="center">
         <p style="text-align: center;text-indent: 0%;color: white;text-shadow: none;">Money: <span id="money"></span>, <span id="clickpower"></span>, <span id="autoclicks"></span> </p>
 
-        <img onclick="clicked()" src="button.png" id="image" width="400">
+        <img onclick="clicked()" src="button.png" id="image" width="400" />
         <p onclick="toggleinput()">Customise</p>
         <div id="custom">
             <p>Paste an image url into this box to change money button:</p>
             <input id="iniimg" />
             <button onclick="change()">Click to change</button>
             <p>Change Background Color</p>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
             <button onclick="red()">Change</button>
-            <script>function red() {
-                    var x = document.getElementById("favcolor");
-                    document.body.style.backgroundColor = x.value;
-                }</script>
+            <script>
+                function red() {
+                var x = document.getElementById("favcolor");
+                document.body.style.backgroundColor = x.value;
+                }
+            </script>
             <br />
             <p>Change all text color except buttons/upgrades</p>
-            <input type="color" id="ie">
+            <input type="color" id="ie" />
             <button onclick="myFunction()">Change</button>
-            
-            <script>function myFunction() {
-                    var y = document.getElementById("ie");
-                    var x = document.getElementsByTagName("P");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
-                    x = document.getElementsByTagName("H1");
+            <script>
+                function myFunction() {
+                var y = document.getElementById("ie");
+                var x = document.getElementsByTagName("P");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
-                    x = document.getElementsByTagName("H2");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+                x = document.getElementsByTagName("H1");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
-                    x = document.getElementsByTagName("H3");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+                x = document.getElementsByTagName("H2");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
-                    x = document.getElementsByTagName("H4");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+                x = document.getElementsByTagName("H3");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
-                    x = document.getElementsByTagName("H5");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+                x = document.getElementsByTagName("H4");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
-                    x = document.getElementsByTagName("H6");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+                x = document.getElementsByTagName("H5");
 
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.color = y.value;
-                    }
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+                x = document.getElementsByTagName("H6");
 
-                }</script>
+                for (i = 0; i < x.length; i++) {
+                x[i].style.color = y.value;
+                }
+
+                }
+            </script>
         </div>
         <h2>Manual upgrades</h2>
         <div class="slideshow-container">
@@ -375,161 +382,164 @@
                     <tr><td><div id="a12" onclick="buya12()"> +500T Clicks Per Second  $28.5Qa</div></td></tr>
                 </table>
             </div>
-            <div class=”mySlides2”>
+            <div class="mySlides2">
                 <table>
-                    <tr><td><div onclick=”buya13()” id=”a13”>+16Qa Clicks per second $912Qa</div></td></tr>
-                    <tr><td><div onclick=”buya14()” id=”a14”>+600Qa Clicks per second $33.9Q</div></td></tr>
-                    <tr><td><div onclick=”buya15()” id=”a15”>+20Qi Clicks per second $1.12Sx</div></td></tr>
-                    <tr><td><div onclick=”buya16()” id=”a16”>+700Qi Clicks per second $38.99Sx</div></td></tr>
-                    <tr><td><div onclick=”buya17()” id=”a17”>+25Sx Clicks per second $1.39(1.385)Se</div></td></tr>
-                    <tr><td><div onclick=”buya18()” id=”a18”>+800Sx Clicks per second $44.16Se</div></td></tr>
+                    <tr><td><div id="a13" onclick="buya13()"> +16Qa Clicks per second $912Qa</div></td></tr>
+                    <tr><td><div id="a14" onclick="buya14()"> +600Qa Clicks per second $33.9Qi </div></td></tr>
+                    <tr><td><div id="a15" onclick="buya15()"> +20Qi Clicks per second $1.12Sx</div></td></tr>
+                    <tr><td><div id="a16" onclick="buya16()"> +700Qi Clicks per second $38.99Sx</div></td></tr>
+                    <tr><td><div id="a17" onclick="buya17()"> +25Sx Clicks per second $1.39Se</div></td></tr>
+                    <tr><td><div id="a18" onclick="buya18()"> +800Sx Clicks per second $44.16Se</div></td></tr>
                 </table>
-            </div><div class=”mySlides2”>
-                <table>
-                    <tr><td><div onclick=”buya19()” id=”a19”>+30Se Clicks per second $1.65Oc</div></td></tr>
-                    <tr><td><div onclick=”buya20()” id=”a20”>+900Se Clicks per second $49.32Oc</div></td></tr>
-                    <tr><td><div onclick=”buya21()” id=”a21”>+35Oc Clicks per second $1.92(1.911)No</div></td></tr>
-                    <tr><td><div onclick=”buya22()” id=”a22”>+1No Clicks per second $54.4No</div></td></tr>
-                    <tr><td><div onclick=”buya23()” id=”a23”>+40No Clicks per second $2.17(2.168)De</div></td></tr>
-                    <tr><td><div onclick=”buya24()” id=”a24”>+1.2De Clicks per second $64.8De</div></td></tr>
-                    </table>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya25()” id=”a25”>+45De Clicks per second $2.43(2.4255)Un</div></td></tr>
-                            <tr><td><div onclick=”buya26()” id=”a26”>+1.4Un Clicks per second $75.32Un</div></td></tr>
-                            <tr><td><div onclick=”buya27()” id=”a27”>+50Un Clicks per second $2.69(2.685)Dd</div></td></tr>
-                            <tr><td><div onclick=”buya28()” id=”a28”>+1.7Dd  Clicks per second $91.12Dd</div></td></tr>
-                            <tr><td><div onclick=”buya29()” id=”a29”>+55Dd Clicks per second $2.95(2.9425)Td</div></td></tr>
-                            <tr><td><div onclick=”buya30()” id=”a30”>+2Td Clicks per second $106.8Td</div></td></tr>
-                        </table>
-                    </div>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya31()” id=”a31”>+60Td Clicks per second $3.2(3.198)Qad</div></td></tr>
-                            <tr>
-                                <td>
-                                    <div onclick=”buya32()” id=”a32”>
-                                        +2.4Qad Clicks per second $127.68Qad
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr><td><div onclick=”buya33()” id=”a33”>+70Qad Clicks per second $3.72(3.717)Qid</div></td></tr>
-                            <tr><td><div onclick=”buya34()” id=”a34”>+2.8Qid Clicks per second $148.4Qi</div></td></tr>
-                            <tr><td><div onclick=”buya35()” id=”a35”>+80Qid Clicks per second $4.24(4.232)Sxd</div></td></tr>
-                            <tr><td><div onclick=”buya36()” id=”a36”>+3Sxd Clicks per second $158.4Sxd</div></td></tr>
-                        </table>
-                    </div>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya37()” id=”a37”>+100Sxd Clicks per second $5.27Sed</div></td></tr>
-                            <tr><td><div onclick=”buya38()” id=”a38”>+4Sed Clicks per second $210.4Sed</div></td></tr>
-                            <tr><td><div onclick=”buya39()” id=”a39”>+130Sed Clicks per second $6.83(6.825)Ocd</div></td></tr>
-                            <tr><td><div onclick=”buya40()” id=”a40”>+5Ocd Clicks per second $262Ocd</div></td></tr>
-                            <tr><td><div onclick=”buya41()” id=”a41”>+170Ocd Clicks per second $8.9(8.891)Nod</div></td></tr>
-                            <tr><td><div onclick=”buya42()” id=”a42”>+6Nod Clicks per second $313.2Nod</div></td></tr>
-
-
-                        </table>
-                    </div>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya43()” id=”a43”>+200Nod Clicks per second $10.42Vt</div></td></tr>
-
-                            <tr><td><div onclick=”buya44()” id=”a44”>+7Vt Clicks per second $364Vt</div></td></tr>
-                            <tr><td><div onclick=”buya45()” id=”a45”>+250Vt Clicks per second $12.98(12.975)Uvt</div></td></tr>
-                            <tr><td><div onclick=”buya46()” id=”a46”>+9Uvt Clicks per second $466.2Uvt</div></td></tr>
-                            <tr><td><div onclick=”buya47()” id=”a47”>+300Uvt Clicks per second $15.51Dvt</div></td></tr>
-                            <tr><td><div onclick=”buya48()” id=”a48”>+11Dvt Clicks per second $567.6Dvt</div></td></tr>
-
-                        </table>
-                    </div>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya49()” id=”a49”>+350Dvt Clicks per second $18.03(18.025)Tvt</div></td></tr>
-                            <tr><td><div onclick=”buya50()” id=”a50”>+14Tvt Clicks per second $719.6Tvt</div></td></tr>
-                            <tr><td><div onclick=”buya51()” id=”a51”>+400Tvt Clicks per second $20.52Qav</div></td></tr>
-                            <tr><td><div onclick=”buya52()” id=”a52”>+17Qavt Clicks per second $870.4Qavt</div></td></tr>
-                            <tr><td><div onclick=”buya53()” id=”a53”>+550Qavt Clicks per second $28.11(28.105)Qivt</div></td></tr>
-                            <tr><td><div onclick=”buya54()” id=”a54”>+20Qivt Clicks per second $1.02Sxvt</div></td></tr>
-                        </table>
-                    </div>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya55()” id=”a55”>+650Qivt Clicks per second $33.09(33.085)Sxvt</div></td></tr>
-                            <tr><td><div onclick=”buya56()” id=”a56”>+25Sxvt Clicks per second $1.27Sevt</div></td></tr>
-                            <tr><td><div onclick=”buya57()” id=”a57”>+750Sxvt Clicks per second $38.03(38.025)Sevt</div></td></tr>
-                            <tr><td><div onclick=”buya58()” id=”a58”>+30Sevt Clicks per second $1.52(1.518)Ocvt</div></td></tr>
-                            <tr><td><div onclick=”buya59()” id=”a59”>+900Sevt Clicks per second $45.45Ocvt</div></td></tr>
-                            <tr><td><div onclick=”buya60()” id=”a60”>+35Ocvt Clicks per second $1.77(1.764)Novt</div></td></tr>
-                        </table>
-                    </div>
-                    <div class=”mySlides2”>
-                        <table>
-                            <tr><td><div onclick=”buya61()” id=”a61”>+1Novt Clicks per second $50.3Novt</div></td></tr>
-                            <tr><td><div onclick=”buya62()” id=”a62”>+40Novt Clicks per second $2.01(2.008)Tt</div></td></tr>
-                            <tr><td><div onclick=”buya63()” id=”a63”>+1.2Tt Clicks per second $60.12Tt</div></td></tr>
-                            <tr><td><div onclick=”buya64()” id=”a64”>+45Tt Clicks per second $2.25Utt</div></td></tr>
-                            <tr><td><div onclick=”buya65()” id=”a65”>+1.6Utt Clicks per second $79.84Utt</div></td></tr>
-                            <tr><td><div onclick=”buya66()” id=”a66”>+50Utt Clicks per second $2490Utt</div></td></tr>
-                        </table>
-                    </div>
-
-                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
-            <p onclick="toggleexp()">What do all these letters mean?</p>
-            <p id="exp">
-                Each row shows the abbreviation, the actual word and the number of 0s. they are in order of smallest to biggest.
-                <br />
-                K thousand 3 0s<br />
-                M million  6 0s<br />
-                B billion  9 0s<br />
-                T trillion 12 0s <br />
-                Qa quadrillion 15 0s<br />
-                Qi quintillion 18 0s<br />
-                Sx sextillion 21 0s<br />
-                Se septillion 24 0s<br />
-                Oc octillion  27 0s<br />
-                No nontillion 30 0s<br />
-                De decillion 33 0s<br />
-                Un undecillion 36 0s<br />
-                Dd duodecillion 39 0s<br />
-                Td tredecillion 42 0s<br />
-                Qad quattrodecillion 45 0s<br />
-                Qid quindecillion 48 0s<br />
-                Sxd sexdecillion 51 0s<br />
-                Sed septendecillion 54 0s<br />
-                Ocd octodecillion 57 0s<br />
-                Nod novemdecillion 60 0s <br />
-                Vt  vigintillion 63 0s<br />
-                Uvt unvigintillioon 66 0s<br />
-                Dvt duovigintillion 69 0s<br />
-                Tvt trevigintillion 72 0s<br />
-                Qavt quattrovigintillion 75 0s<br />
-                Qivt quinvigintillion 78 0s<br />
-                Sxvt sexvigintillion 81 0s<br />
-                Sevt septenvigintillion 84 0s<br />
-                Ocvt octovigintillion 87 0s<br />
-                Novt novemvigintillion 90 0s<br />
-                Tt   trigintillion 93 0s<br />
-                Utt  untrigintillion 96 0s<br />
-                <br />
-                And finally, Gg googol 100 0s. If you get this much money you have beaten the game.
-            </p>
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya19()" id="a19">+30Se Clicks per second $1.65Oc</div></td></tr>
+                    <tr><td><div onclick="buya20()" id="a20">+900Se Clicks per second $49.32Oc</div></td></tr>
+                    <tr><td><div onclick="buya21()" id="a21">+35Oc Clicks per second $1.92No</div></td></tr>
+                    <tr><td><div onclick="buya22()" id="a22">+1No Clicks per second $54.4No</div></td></tr>
+                    <tr><td><div onclick="buya23()" id="a23">+40No Clicks per second $2.17De</div></td></tr>
+                    <tr><td><div onclick="buya24()" id="a24">+1.2De Clicks per second $64.8De</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya25()" id="a25">+45De Clicks per second $2.43Un</div></td></tr>
+                    <tr><td><div onclick="buya26()" id="a26">+1.4Un Clicks per second $75.32Un</div></td></tr>
+                    <tr><td><div onclick="buya27()" id="a27">+50Un Clicks per second $2.69Dd</div></td></tr>
+                    <tr><td><div onclick="buya28()" id="a28">+1.7Dd  Clicks per second $91.12Dd</div></td></tr>
+                    <tr><td><div onclick="buya29()" id="a29">+55Dd Clicks per second $2.95Td</div></td></tr>
+                    <tr><td><div onclick="buya30()" id="a30">+2Td Clicks per second $106.8Td</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya31()" id="a31">+60Td Clicks per second $3.2Qad</div></td></tr>
+                    <tr>
+                        <td>
+                            <div onclick="buya32()" id="a32">
+                                +2.4Qad Clicks per second $127.68Qad
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><td><div onclick="buya33()" id="a33">+70Qad Clicks per second $3.72Qid</div></td></tr>
+                    <tr><td><div onclick="buya34()" id="a34">+2.8Qid Clicks per second $148.4Qi</div></td></tr>
+                    <tr><td><div onclick="buya35()" id="a35">+80Qid Clicks per second $4.24Sxd</div></td></tr>
+                    <tr><td><div onclick="buya36()" id="a36">+3Sxd Clicks per second $158.4Sxd</div></td></tr>
+                </table>
+            </div><div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya37()" id="a37">+100Sxd Clicks per second $5.27Sed</div></td></tr>
+                    <tr><td><div onclick="buya38()" id="a38">+4Sed Clicks per second $210.4Sed</div></td></tr>
+                    <tr><td><div onclick="buya39()" id="a39">+130Sed Clicks per second $6.83Ocd</div></td></tr>
+                    <tr><td><div onclick="buya40()" id="a40">+5Ocd Clicks per second $262Ocd</div></td></tr>
+                    <tr><td><div onclick="buya41()" id="a41">+170Ocd Clicks per second $8.9Nod</div></td></tr>
+                    <tr><td><div onclick="buya42()" id="a42">+6Nod Clicks per second $313.2Nod</div></td></tr>
+
+
+                </table>
+            </div>
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya43()" id="a43">+200Nod Clicks per second $10.42Vt</div></td></tr>
+
+                    <tr><td><div onclick="buya44()" id="a44">+7Vt Clicks per second $364Vt</div></td></tr>
+                    <tr><td><div onclick="buya45()" id="a45">+250Vt Clicks per second $12.98Uvt</div></td></tr>
+                    <tr><td><div onclick="buya46()" id="a46">+9Uvt Clicks per second $466.2Uvt</div></td></tr>
+                    <tr><td><div onclick="buya47()" id="a47">+300Uvt Clicks per second $15.51Dvt</div></td></tr>
+                    <tr><td><div onclick="buya48()" id="a48">+11Dvt Clicks per second $567.6Dvt</div></td></tr>
+
+                </table>
+            </div>
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya49()" id="a49">+350Dvt Clicks per second $18.03Tvt</div></td></tr>
+                    <tr><td><div onclick="buya50()" id="a50">+14Tvt Clicks per second $719.6Tvt</div></td></tr>
+                    <tr><td><div onclick="buya51()" id="a51">+400Tvt Clicks per second $20.52Qav</div></td></tr>
+                    <tr><td><div onclick="buya52()" id="a52">+17Qavt Clicks per second $870.4Qavt</div></td></tr>
+                    <tr><td><div onclick="buya53()" id="a53">+550Qavt Clicks per second $28.11Qivt</div></td></tr>
+                    <tr><td><div onclick="buya54()" id="a54">+20Qivt Clicks per second $1.02Sxvt</div></td></tr>
+                </table>
+            </div><div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya55()" id="a55">+650Qivt Clicks per second $33.09Sxvt</div></td></tr>
+                    <tr><td><div onclick="buya56()" id="a56">+25Sxvt Clicks per second $1.27Sevt</div></td></tr>
+                    <tr><td><div onclick="buya57()" id="a57">+750Sxvt Clicks per second $38.03Sevt</div></td></tr>
+
+                    
+                    <tr><td><div onclick="buya58()" id="a58">+30Sevt Clicks per second $1.52Ocvt</div></td></tr>
+                    <tr><td><div onclick="buya59()" id="a59">+900Sevt Clicks per second $45.45Ocvt</div></td></tr>
+                    <tr><td><div onclick="buya60()" id="a60">+35Ocvt Clicks per second $1.77Novt</div></td></tr>
+                </table>
+            </div>
+            <div class="mySlides2">
+                <table>
+                    <tr><td><div onclick="buya61()" id="a61">+1Novt Clicks per second $50.3Novt</div></td></tr>
+                    <tr><td><div onclick="buya62()" id="a62">+40Novt Clicks per second $2.01Tt</div></td></tr>
+                    <tr><td><div onclick="buya63()" id="a63">+1.2Tt Clicks per second $60.12Tt</div></td></tr>
+                    <tr><td><div onclick="buya64()" id="a64">+45Tt Clicks per second $2.25Utt</div></td></tr>
+                    <tr><td><div onclick="buya65()" id="a65">+1.6Utt Clicks per second $79.84Utt</div></td></tr>
+                    <tr><td><div onclick="buya66()" id="a66">+50Utt Clicks per second $2490Utt</div></td></tr>
+                </table>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
         </div>
+
+        <p onclick="toggleexp()">What do all these letters mean?</p>
+        <p id="exp">
+            Each row shows the abbreviation, the actual word and the number of 0s. they are in order of smallest to biggest.
+            <br />
+            K thousand 3 0s<br />
+            M million  6 0s<br />
+            B billion  9 0s<br />
+            T trillion 12 0s <br />
+            Qa quadrillion 15 0s<br />
+            Qi quintillion 18 0s<br />
+            Sx sextillion 21 0s<br />
+            Se septillion 24 0s<br />
+            Oc octillion  27 0s<br />
+            No nontillion 30 0s<br />
+            De decillion 33 0s<br />
+            Un undecillion 36 0s<br />
+            Dd duodecillion 39 0s<br />
+            Td tredecillion 42 0s<br />
+            Qad quattrodecillion 45 0s<br />
+            Qid quindecillion 48 0s<br />
+            Sxd sexdecillion 51 0s<br />
+            Sed septendecillion 54 0s<br />
+            Ocd octodecillion 57 0s<br />
+            Nod novemdecillion 60 0s <br />
+            Vt  vigintillion 63 0s<br />
+            Uvt unvigintillioon 66 0s<br />
+            Dvt duovigintillion 69 0s<br />
+            Tvt trevigintillion 72 0s<br />
+            Qavt quattrovigintillion 75 0s<br />
+            Qivt quinvigintillion 78 0s<br />
+            Sxvt sexvigintillion 81 0s<br />
+            Sevt septenvigintillion 84 0s<br />
+            Ocvt octovigintillion 87 0s<br />
+            Novt novemvigintillion 90 0s<br />
+            Tt   trigintillion 93 0s<br />
+            Utt  untrigintillion 96 0s<br />
+            <br />
+            And finally, Gg googol 100 0s. If you get this much money you have beaten the game.
+        </p>
+    </div>
     <script>
         function toggleinput() {
-            var x = document.getElementById("custom");
-            if (x.style.display == "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+        var x = document.getElementById("custom");
+        if (x.style.display == "none") {
+        x.style.display = "block";
+        } else {
+        x.style.display = "none";
         }
-        
+        }
+
         function change() {
-            var y = document.getElementById("iniimg");
-            document.getElementById("image").src = y.value;
+        var y = document.getElementById("iniimg");
+        document.getElementById("image").src = y.value;
         }
         var slideIndex = [1,1];
         var slideId = ["mySlides1", "mySlides2"]
@@ -570,20 +580,20 @@
         document.getElementById("money").innerHTML = '$' + precisenum(money) ;
 
         }
-                function end(){
+        function end(){
 
-alert("We know this game is addictive, so we have created this to stop you. Your highscore will be kept, and the game will return in twenty minutes. Try finding something else on this website, there are things a load more interesting than this. ");
-document.body.style.display = "none";
-setTimeout(start, 1200000);
-}
-function start(){
-document.body.style.display = "block";
-alert("Welcome back.");
-setTimeout(end, 1200000);
-}
+        alert("We know this game is addictive, so we have created this to stop you. Your highscore will be kept, and the game will return in twenty minutes. Try finding something else on this website, there are things a load more interesting than this. ");
+        document.body.style.display = "none";
+        setTimeout(start, 1200000);
+        }
+        function start(){
+        document.body.style.display = "block";
+        alert("Welcome back.");
+        setTimeout(end, 1200000);
+        }
         // play function
         function play(){
-            setTimeout(end, 1200000);
+        setTimeout(end, 1200000);
 
         document.getElementById("game").style.display = "block";
         document.getElementById("playbutton").style.display = "none";
@@ -1190,6 +1200,451 @@ setTimeout(end, 1200000);
         document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
         }
         }
+        function buya13() {
+        if (money >= 9.12e+17) {
+        money -= 9.12e+17;
+        autoclicks += 1.6e+16;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+
+        function buya14() {
+        if (money >= 3.39e+19) {
+        money -= 3.39e+19;
+        autoclicks += 6e+17;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya15() {
+        if (money >= 1.12e+21) {
+        money -= 1.12e+21;
+        autoclicks += 2e+19;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        } function buya16() {
+        if (money >= 3.899e+22) {
+        money -= 3.899e+22;
+        autoclicks += 7e+200;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya17() {
+        if (money >= 1.385e+24) {
+        money -= 1.385e+24;
+        autoclicks += 2.5e+22;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya18() {
+        if (money >= 4.416e+25) {
+        money -= 4.416e+25;
+        autoclicks += 8e+23;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya19() {
+        if (money >= 1.65e+27) {
+        money -= 1.65e+27;
+        autoclicks += 3e+25;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya20() {
+        if (money >= 4.932e+28) {
+        money -= 4.932e+28;
+        autoclicks += 9e+26;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya21() {
+        if (money >= 1.911e+30) {
+        money -= 1.911e+30;
+        autoclicks += 3.5e+28;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya22() {
+        if (money >= 5.44e+31) {
+        money -= 5.44e+31;
+        autoclicks += 1e+30;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya23() {
+        if (money >= 2.168e+33) {
+        money -= 2.168e+33;
+        autoclicks += 4e+31;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya24() {
+        if (money >= 6.48e+34) {
+        money -= 6.48e+34;
+        autoclicks += 1.2e+33;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya25() {
+        if (money >= 2.4255e+36) {
+        money -= 2.4255;
+        autoclicks += 1.2e+33;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya26() {
+        if (money >= 7.532e+37) {
+        money -= 7.532e+37;
+        autoclicks += 1.4e+36;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        } function buya27() {
+        if (money >= 2.69e+39) {
+        money -= 2.69e+39;
+        autoclicks += 5e+37;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya28() {
+        if (money >= 9.112e+40) {
+        money -= 9.112e+40;
+        autoclicks += 1.7e+39;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya29() {
+        if (money >= 2.9425e+42) {
+        money -= 2.9425e+42;
+        autoclicks += 5.5e+40;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya30() {
+        if (money >= 1.068e+44) {
+        money -= 1.068e+44;
+        autoclicks += 2e+42;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya31() {
+        if (money >= 3.198e+45) {
+        money -= 3.198e+45;
+        autoclicks += 6e+43;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya32() {
+        if (money >= 1.2768e+47) {
+        money -= 1.2768e+47;
+        autoclicks += 2.4e+45;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya33() {
+        if (money >= 3.717e+48) {
+        money -= 3.717e+48;
+        autoclicks += 7e+46;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya34() {
+        if (money >= 1.484e+50) {
+        money -= 1.484e+50;
+        autoclicks += 2.8e+48;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya35() {
+        if (money >= 4.232e+51) {
+        money -= 4.232e+51;
+        autoclicks += 8e+49;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya36() {
+        if (money >= 1.584e+53) {
+        money -= 1.584e+53;
+        autoclicks += 3e+51;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+
+
+
+        function buya37() {
+        if (money >= 5.27e+54) {
+        money -= 5.27e+54;
+        autoclicks += 1e+53;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya38() {
+        if (money >= 2.104e+56) {
+        money -= 2.104e+56;
+        autoclicks += 4e+54;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya39() {
+        if (money >= 6.825e+57) {
+        money -= 6.825e+57;
+        autoclicks += 1.3e+56;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya40() {
+        if (money >= 2.62e+59) {
+        money -= 2.62e+59;
+        autoclicks += 5e+57;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya41() {
+        if (money >= 8.891e+60) {
+        money -= 8.891e+60;
+        autoclicks += 1.7e+59;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya42() {
+        if (money >= 3.132e+62) {
+        money -= 3.132e+62;
+        autoclicks += 6e+60;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya43() {
+        if (money >= 1.042e+64) {
+        money -= 1.042e+64;
+        autoclicks += 2e+62;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya44() {
+        if (money >= 3.64e+65) {
+        money -= 3.64e+65;
+        autoclicks += 7e+63
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya45() {
+        if (money >= 1.2975e+67) {
+        money -= 1.2975e+67;
+        autoclicks += 2.5e+65;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya46() {
+        if (money >= 4.662e+68) {
+        money -= 4.662e+68;
+        autoclicks += 9e+66;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya47() {
+        if (money >= 1.551e+70) {
+        money -= 1.551e+70;
+        autoclicks += 3e+68;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya48() {
+        if (money >= 5.676e+71) {
+        money -= 5.676e+71;
+        autoclicks += 1.1e+70;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya49() {
+        if (money >= 1.8025e+73) {
+        money -= 1.8025e+73;
+        autoclicks += 3.5e+71;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya50() {
+        if (money >= 7.196e+74) {
+        money -= 7.196e+74;
+        autoclicks += 1.4e+73;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya51() {
+        if (money >= 2.052e+76) {
+        money -= 2.052e+76;
+        autoclicks += 4e+74;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+
+        function buya52() {
+        if (money >= 8.704e+77) {
+        money -= 8.704e+77;
+        autoclicks += 1.7e+76;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya53() {
+        if (money >= 2.8105e+79) {
+        money -= 2.8105e+79;
+        autoclicks += 5.5e+77;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya54() {
+        if (money >= 1.02e+81) {
+        money -= 1.02e+81;
+        autoclicks += 2e+79;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya55() {
+        if (money >= 3.3805e+82) {
+        money -= 3.3805e+82;
+        autoclicks += 6.5e+80;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya56() {
+        if (money >= 1.27e+84) {
+        money -= 1.27e+84;
+        autoclicks += 2.5e+82;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya57() {
+        if (money >= 3.8025e+85) {
+        money -= 3.8025e+85;
+        autoclicks += 7.5e+83;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya58() {
+        if (money >= 1.518e+87) {
+        money -= 1.518e+87;
+        autoclicks += 3e+85;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya59() {
+        if (money >= 4.545e+88) {
+        money -= 4.545e+88;
+        autoclicks += 9e+86;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya60() {
+        if (money >= 1.764e+90) {
+        money -= 1.764e+90;
+        autoclicks += 3.5e+88;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya61() {
+        if (money >= 5.03e+91) {
+        money -= 5.03e+91;
+        autoclicks += 1e+90;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya62() {
+        if (money >= 2.008e+93) {
+        money -= 2.008e+93;
+        autoclicks += 4e+91;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya63() {
+        if (money >= 6.012e+94) {
+        money -= 6.012e+94;
+        autoclicks += 1.2e+93;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya64() {
+        if (money >= 2.25e+96) {
+        money -= 2.25e+96;
+        autoclicks += 4.5e+94;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya65() {
+        if (money >= 7.984e+97) {
+        money -= 7.984e+97;
+        autoclicks += 1.6e+96;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+        }
+        function buya66() {
+        if (money >= 2.49e+99) {
+        money -= 2.49e+99;
+        autoclicks += 5e+97;
+        document.getElementById("money").innerHTML = '$' + precisenum(money);
+        document.getElementById("autoclicks").innerHTML = precisenum(autoclicks) + " $ per second";
+        }
+
+        }
         function buy2(){
         if (money >= 200){
         money -= 200;
@@ -1460,222 +1915,222 @@ setTimeout(end, 1200000);
         document.getElementById("24").style.backgroundColor = "green";
         } else {
         document.getElementById("24").style.backgroundColor = "red";
-            }
-            if (money >= 4112000000000000000000000000000000000) {
-                document.getElementById("25").style.backgroundColor = "green";
-            } else {
-                document.getElementById("25").style.backgroundColor = "red";
-            }
-            if (money >= 112860000000000000000000000000000000000) {
-                document.getElementById("26").style.backgroundColor = "green";
-            } else {
-                document.getElementById("26").style.backgroundColor = "red";
-            }
-            if (money >= 5120000000000000000000000000000000000000) {
-                document.getElementById("27").style.backgroundColor = "green";
-            } else {
-                document.getElementById("27").style.backgroundColor = "red";
-            }
-            if (money >= 143080000000000000000000000000000000000000) {
-                document.getElementById("28").style.backgroundColor = "green";
-            } else {
-                document.getElementById("28").style.backgroundColor = "red";
-            }
-            if (money >= 5610000000000000000000000000000000000000000) {
-                document.getElementById("29").style.backgroundColor = "green";
-            } else {
-                document.getElementById("29").style.backgroundColor = "red";
-            }
-            if (money >= 162880000000000000000000000000000000000000000) {
-                document.getElementById("30").style.backgroundColor = "green";
-            } else {
-                document.getElementById("30").style.backgroundColor = "red";
-            }
-            if (money >= 6096000000000000000000000000000000000000000000) {
-                document.getElementById("31").style.backgroundColor = "green";
-            } else {
-                document.getElementById("31").style.backgroundColor = "red";
-            }
-            if (money >= 202800000000000000000000000000000000000000000000) {
-                document.getElementById("32").style.backgroundColor = "green";
-            } else {
-                document.getElementById("32").style.backgroundColor = "red";
-            }
-            if (money >= 7084000000000000000000000000000000000000000000000) {
-                document.getElementById("33").style.backgroundColor = "green";
-            } else {
-                document.getElementById("33").style.backgroundColor = "red";
-            }
-            if (money >= 252500000000000000000000000000000000000000000000000) {
-                document.getElementById("34").style.backgroundColor = "green";
-            } else {
-                document.getElementById("34").style.backgroundColor = "red";
-            }
-            if (money >= 8064000000000000000000000000000000000000000000000000) {
-                document.getElementById("35").style.backgroundColor = "green";
-            } else {
-                document.getElementById("35").style.backgroundColor = "red";
-            }
-            if (money >= 301800000000000000000000000000000000000000000000000000) {
-                document.getElementById("36").style.backgroundColor = "green";
-            } else {
-                document.getElementById("36").style.backgroundColor = "red";
-            }
-            if (money >= 9036000000000000000000000000000000000000000000000000000) {
-                document.getElementById("37").style.backgroundColor = "green";
-            } else {
-                document.getElementById("37").style.backgroundColor = "red";
-            }
-            if (money >= 350700000000000000000000000000000000000000000000000000000) {
-                document.getElementById("38").style.backgroundColor = "green";
-            } else {
-                document.getElementById("38").style.backgroundColor = "red";
-            }
-            if (money >= 10000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("39").style.backgroundColor = "green";
-            } else {
-                document.getElementById("39").style.backgroundColor = "red";
-            }
-            if (money >= 359280000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("40").style.backgroundColor = "green";
-            } else {
-                document.getElementById("40").style.backgroundColor = "red";
-            }
-            if (money >= 12948000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("41").style.backgroundColor = "green";
-            } else {
-                document.getElementById("41").style.backgroundColor = "red";
-            }
-            if (money >= 387660000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("42").style.backgroundColor = "green";
-            } else {
-                document.getElementById("42").style.backgroundColor = "red";
-            }
-            if (money >= 14880000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("43").style.backgroundColor = "green";
-            } else {
-                document.getElementById("43").style.backgroundColor = "red";
-            }
-            if (money >= 405900000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("44").style.backgroundColor = "green";
-            } else {
-                document.getElementById("44").style.backgroundColor = "red";
-            }
-            if (money >= 16796000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("45").style.backgroundColor = "green";
-            } else {
-                document.getElementById("45").style.backgroundColor = "red";
-            }
-            if (money >= 433840000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("46").style.backgroundColor = "green";
-            } else {
-                document.getElementById("46").style.backgroundColor = "red";
-            }
-            if (money >= 19680000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("47").style.backgroundColor = "green";
-            } else {
-                document.getElementById("47").style.backgroundColor = "red";
-            }
-            if (money >= 589200000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("48").style.backgroundColor = "green";
-            } else {
-                document.getElementById("48").style.backgroundColor = "red";
-            }
-            if (money >= 29400000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("49").style.backgroundColor = "green";
-            } else {
-                document.getElementById("49").style.backgroundColor = "red";
-            }
-            if (money >= 978000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("50").style.backgroundColor = "green";
-            } else {
-                document.getElementById("50").style.backgroundColor = "red";
-            }
-            if (money >= 39040000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("51").style.backgroundColor = "green";
-            } else {
-                document.getElementById("51").style.backgroundColor = "red";
-            }
-            if (money >= 1168800000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("52").style.backgroundColor = "green";
-            } else {
-                document.getElementById("52").style.backgroundColor = "red";
-            }
-            if (money >= 48600000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("53").style.backgroundColor = "green";
-            } else {
-                document.getElementById("53").style.backgroundColor = "red";
-            }
-            if (money >= 1649000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("54").style.backgroundColor = "green";
-            } else {
-                document.getElementById("54").style.backgroundColor = "red";
-            }
-            if (money >= 58080000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("55").style.backgroundColor = "green";
-            } else {
-                document.getElementById("55").style.backgroundColor = "red";
-            }
-            if (money >= 1932000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("56").style.backgroundColor = "green";
-            } else {
-                document.getElementById("56").style.backgroundColor = "red";
-            }
-            if (money >= 77120000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("57").style.backgroundColor = "green";
-            } else {
-                document.getElementById("57").style.backgroundColor = "red";
-            }
-            if (money >= 2886000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("58").style.backgroundColor = "green";
-            } else {
-                document.getElementById("58").style.backgroundColor = "red";
-            }
-            if (money >= 96000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("59").style.backgroundColor = "green";
-            } else {
-                document.getElementById("59").style.backgroundColor = "red";
-            }
-            if (money >= 3832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("60").style.backgroundColor = "green";
-            } else {
-                document.getElementById("60").style.backgroundColor = "red";
-            }
-            if (money >= 124280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("61").style.backgroundColor = "green";
-            } else {
-                document.getElementById("61").style.backgroundColor = "red";
-            }
-            if (money >= 4293000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("62").style.backgroundColor = "green";
-            } else {
-                document.getElementById("62").style.backgroundColor = "red";
-            }
-            if (money >= 161840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("63").style.backgroundColor = "green";
-            } else {
-                document.getElementById("63").style.backgroundColor = "red";
-            }
-            if (money >= 5225000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("64").style.backgroundColor = "green";
-            } else {
-                document.getElementById("64").style.backgroundColor = "red";
-            }
-            if (money >= 189600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("65").style.backgroundColor = "green";
-            } else {
-                document.getElementById("65").style.backgroundColor = "red";
-            }
-            if (money >= 6149000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
-                document.getElementById("66").style.backgroundColor = "green";
-            } else {
-                document.getElementById("66").style.backgroundColor = "red";
-            }
-            if (money >= 61800000000000000000000000000000000) {
-                document.getElementById("24").style.backgroundColor = "green";
-            } else {
-                document.getElementById("24").style.backgroundColor = "red";
-            }
+        }
+        if (money >= 4112000000000000000000000000000000000) {
+        document.getElementById("25").style.backgroundColor = "green";
+        } else {
+        document.getElementById("25").style.backgroundColor = "red";
+        }
+        if (money >= 112860000000000000000000000000000000000) {
+        document.getElementById("26").style.backgroundColor = "green";
+        } else {
+        document.getElementById("26").style.backgroundColor = "red";
+        }
+        if (money >= 5120000000000000000000000000000000000000) {
+        document.getElementById("27").style.backgroundColor = "green";
+        } else {
+        document.getElementById("27").style.backgroundColor = "red";
+        }
+        if (money >= 143080000000000000000000000000000000000000) {
+        document.getElementById("28").style.backgroundColor = "green";
+        } else {
+        document.getElementById("28").style.backgroundColor = "red";
+        }
+        if (money >= 5610000000000000000000000000000000000000000) {
+        document.getElementById("29").style.backgroundColor = "green";
+        } else {
+        document.getElementById("29").style.backgroundColor = "red";
+        }
+        if (money >= 162880000000000000000000000000000000000000000) {
+        document.getElementById("30").style.backgroundColor = "green";
+        } else {
+        document.getElementById("30").style.backgroundColor = "red";
+        }
+        if (money >= 6096000000000000000000000000000000000000000000) {
+        document.getElementById("31").style.backgroundColor = "green";
+        } else {
+        document.getElementById("31").style.backgroundColor = "red";
+        }
+        if (money >= 202800000000000000000000000000000000000000000000) {
+        document.getElementById("32").style.backgroundColor = "green";
+        } else {
+        document.getElementById("32").style.backgroundColor = "red";
+        }
+        if (money >= 7084000000000000000000000000000000000000000000000) {
+        document.getElementById("33").style.backgroundColor = "green";
+        } else {
+        document.getElementById("33").style.backgroundColor = "red";
+        }
+        if (money >= 252500000000000000000000000000000000000000000000000) {
+        document.getElementById("34").style.backgroundColor = "green";
+        } else {
+        document.getElementById("34").style.backgroundColor = "red";
+        }
+        if (money >= 8064000000000000000000000000000000000000000000000000) {
+        document.getElementById("35").style.backgroundColor = "green";
+        } else {
+        document.getElementById("35").style.backgroundColor = "red";
+        }
+        if (money >= 301800000000000000000000000000000000000000000000000000) {
+        document.getElementById("36").style.backgroundColor = "green";
+        } else {
+        document.getElementById("36").style.backgroundColor = "red";
+        }
+        if (money >= 9036000000000000000000000000000000000000000000000000000) {
+        document.getElementById("37").style.backgroundColor = "green";
+        } else {
+        document.getElementById("37").style.backgroundColor = "red";
+        }
+        if (money >= 350700000000000000000000000000000000000000000000000000000) {
+        document.getElementById("38").style.backgroundColor = "green";
+        } else {
+        document.getElementById("38").style.backgroundColor = "red";
+        }
+        if (money >= 10000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("39").style.backgroundColor = "green";
+        } else {
+        document.getElementById("39").style.backgroundColor = "red";
+        }
+        if (money >= 359280000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("40").style.backgroundColor = "green";
+        } else {
+        document.getElementById("40").style.backgroundColor = "red";
+        }
+        if (money >= 12948000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("41").style.backgroundColor = "green";
+        } else {
+        document.getElementById("41").style.backgroundColor = "red";
+        }
+        if (money >= 387660000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("42").style.backgroundColor = "green";
+        } else {
+        document.getElementById("42").style.backgroundColor = "red";
+        }
+        if (money >= 14880000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("43").style.backgroundColor = "green";
+        } else {
+        document.getElementById("43").style.backgroundColor = "red";
+        }
+        if (money >= 405900000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("44").style.backgroundColor = "green";
+        } else {
+        document.getElementById("44").style.backgroundColor = "red";
+        }
+        if (money >= 16796000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("45").style.backgroundColor = "green";
+        } else {
+        document.getElementById("45").style.backgroundColor = "red";
+        }
+        if (money >= 433840000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("46").style.backgroundColor = "green";
+        } else {
+        document.getElementById("46").style.backgroundColor = "red";
+        }
+        if (money >= 19680000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("47").style.backgroundColor = "green";
+        } else {
+        document.getElementById("47").style.backgroundColor = "red";
+        }
+        if (money >= 589200000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("48").style.backgroundColor = "green";
+        } else {
+        document.getElementById("48").style.backgroundColor = "red";
+        }
+        if (money >= 29400000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("49").style.backgroundColor = "green";
+        } else {
+        document.getElementById("49").style.backgroundColor = "red";
+        }
+        if (money >= 978000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("50").style.backgroundColor = "green";
+        } else {
+        document.getElementById("50").style.backgroundColor = "red";
+        }
+        if (money >= 39040000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("51").style.backgroundColor = "green";
+        } else {
+        document.getElementById("51").style.backgroundColor = "red";
+        }
+        if (money >= 1168800000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("52").style.backgroundColor = "green";
+        } else {
+        document.getElementById("52").style.backgroundColor = "red";
+        }
+        if (money >= 48600000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("53").style.backgroundColor = "green";
+        } else {
+        document.getElementById("53").style.backgroundColor = "red";
+        }
+        if (money >= 1649000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("54").style.backgroundColor = "green";
+        } else {
+        document.getElementById("54").style.backgroundColor = "red";
+        }
+        if (money >= 58080000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("55").style.backgroundColor = "green";
+        } else {
+        document.getElementById("55").style.backgroundColor = "red";
+        }
+        if (money >= 1932000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("56").style.backgroundColor = "green";
+        } else {
+        document.getElementById("56").style.backgroundColor = "red";
+        }
+        if (money >= 77120000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("57").style.backgroundColor = "green";
+        } else {
+        document.getElementById("57").style.backgroundColor = "red";
+        }
+        if (money >= 2886000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("58").style.backgroundColor = "green";
+        } else {
+        document.getElementById("58").style.backgroundColor = "red";
+        }
+        if (money >= 96000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("59").style.backgroundColor = "green";
+        } else {
+        document.getElementById("59").style.backgroundColor = "red";
+        }
+        if (money >= 3832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("60").style.backgroundColor = "green";
+        } else {
+        document.getElementById("60").style.backgroundColor = "red";
+        }
+        if (money >= 124280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("61").style.backgroundColor = "green";
+        } else {
+        document.getElementById("61").style.backgroundColor = "red";
+        }
+        if (money >= 4293000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("62").style.backgroundColor = "green";
+        } else {
+        document.getElementById("62").style.backgroundColor = "red";
+        }
+        if (money >= 161840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("63").style.backgroundColor = "green";
+        } else {
+        document.getElementById("63").style.backgroundColor = "red";
+        }
+        if (money >= 5225000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("64").style.backgroundColor = "green";
+        } else {
+        document.getElementById("64").style.backgroundColor = "red";
+        }
+        if (money >= 189600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("65").style.backgroundColor = "green";
+        } else {
+        document.getElementById("65").style.backgroundColor = "red";
+        }
+        if (money >= 6149000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) {
+        document.getElementById("66").style.backgroundColor = "green";
+        } else {
+        document.getElementById("66").style.backgroundColor = "red";
+        }
+        if (money >= 61800000000000000000000000000000000) {
+        document.getElementById("24").style.backgroundColor = "green";
+        } else {
+        document.getElementById("24").style.backgroundColor = "red";
+        }
         if (money >= 8000) {
         document.getElementById("3").style.backgroundColor = "green";
         } else {
@@ -1748,6 +2203,275 @@ setTimeout(end, 1200000);
         document.getElementById("a12").style.backgroundColor = "red";
         }
 
+        if (money >= 9.12e+17) {
+        document.getElementById("a13").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a13").style.backgroundColor = "red";
+        }
+        if (money >= 3.39e+19) {
+        document.getElementById("a14").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a14").style.backgroundColor = "red";
+        }
+        if (money >= 1.12e+21) {
+        document.getElementById("a15").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a15").style.backgroundColor = "red";
+        }
+        if (money >= 3.899e+22) {
+        document.getElementById("a16").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a16").style.backgroundColor = "red";
+        }
+        if (money >= 1.385e+24) {
+        document.getElementById("a17").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a17").style.backgroundColor = "red";
+        }
+        if (money >= 4.416e+25) {
+        document.getElementById("a18").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a18").style.backgroundColor = "red";
+        }
+        if (money >= 1.65e+27) {
+        document.getElementById("a19").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a19").style.backgroundColor = "red";
+        }
+        if (money >= 4.932e+28) {
+        document.getElementById("a20").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a20").style.backgroundColor = "red";
+        }
+        if (money >= 1.911e+30) {
+        document.getElementById("a21").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a21").style.backgroundColor = "red";
+        }
+        if (money >= 5.44e+31) {
+        document.getElementById("a22").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a22").style.backgroundColor = "red";
+        }
+        if (money >= 2.168e+33) {
+        document.getElementById("a23").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a23").style.backgroundColor = "red";
+        }
+        if (money >= 6.48e+34) {
+        document.getElementById("a24").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a24").style.backgroundColor = "red";
+        }
+        if (money >= 2.4255e+36) {
+        document.getElementById("a25").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a25").style.backgroundColor = "red";
+        }
+        if (money >= 7.532e+37) {
+        document.getElementById("a26").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a26").style.backgroundColor = "red";
+        }
+        if (money >= 2.685e+39) {
+        document.getElementById("a27").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a27").style.backgroundColor = "red";
+        }
+        if (money >= 9.112e+40) {
+        document.getElementById("a28").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a28").style.backgroundColor = "red";
+        }
+        if (money >= 2.9425e+42) {
+        document.getElementById("a29").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a29").style.backgroundColor = "red";
+        }
+        if (money >= 1.068e+44) {
+        document.getElementById("a30").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a30").style.backgroundColor = "red";
+        }
+        if (money >= 3.198e+45) {
+        document.getElementById("a31").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a31").style.backgroundColor = "red";
+        }
+        if (money >= 1.2768e+47) {
+        document.getElementById("a32").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a32").style.backgroundColor = "red";
+        }
+        if (money >= 3.717e+48) {
+        document.getElementById("a33").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a33").style.backgroundColor = "red";
+        }
+        if (money >= 1.484e+50) {
+        document.getElementById("a34").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a34").style.backgroundColor = "red";
+        }
+        if (money >= 4.232e+51) {
+        document.getElementById("a35").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a35").style.backgroundColor = "red";
+        }
+        if (money >= 1.584e+53) {
+        document.getElementById("a36").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a36").style.backgroundColor = "red";
+        }
+        if (money >= 5.27e+54) {
+        document.getElementById("a37").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a37").style.backgroundColor = "red";
+        }
+        if (money >= 2.104e+56) {
+        document.getElementById("a38").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a38").style.backgroundColor = "red";
+        }
+        if (money >= 6.825e+57) {
+        document.getElementById("a39").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a39").style.backgroundColor = "red";
+        }
+        if (money >= 2.62e+59) {
+        document.getElementById("a40").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a40").style.backgroundColor = "red";
+        }
+        if (money >= 8.891e+60) {
+        document.getElementById("a41").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a41").style.backgroundColor = "red";
+        }
+        if (money >= 3.132e+62) {
+        document.getElementById("a42").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a42").style.backgroundColor = "red";
+        }
+        if (money >= 1.042e+64) {
+        document.getElementById("a43").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a43").style.backgroundColor = "red";
+        }
+        if (money >= 3.64e+65) {
+        document.getElementById("a44").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a44").style.backgroundColor = "red";
+        }
+        if (money >= 1.2975e+67) {
+        document.getElementById("a45").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a45").style.backgroundColor = "red";
+        }
+        if (money >= 4.662e+68) {
+        document.getElementById("a46").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a46").style.backgroundColor = "red";
+        }
+        if (money >= 1.551e+70) {
+        document.getElementById("a47").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a47").style.backgroundColor = "red";
+        }
+        if (money >= 5.676e+71) {
+        document.getElementById("a48").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a48").style.backgroundColor = "red";
+        }
+        if (money >= 1.8025e+73) {
+        document.getElementById("a49").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a49").style.backgroundColor = "red";
+        } if (money >= 7.196e+74) {
+        document.getElementById("a50").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a50").style.backgroundColor = "red";
+        }
+        if (money >= 2.052e+76) {
+        document.getElementById("a51").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a51").style.backgroundColor = "red";
+        }
+        if (money >= 8.704e+77) {
+        document.getElementById("a52").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a52").style.backgroundColor = "red";
+        }
+        if (money >= 2.8105e+79) {
+        document.getElementById("a53").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a53").style.backgroundColor = "red";
+        }
+        if (money >= 1.02e+81) {
+        document.getElementById("a54").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a54").style.backgroundColor = "red";
+        }
+        if (money >= 3.3805e+82) {
+        document.getElementById("a55").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a55").style.backgroundColor = "red";
+        }
+        if (money >= 1.27e+84) {
+        document.getElementById("a56").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a56").style.backgroundColor = "red";
+        }
+        if (money >= 3.8025e+85) {
+        document.getElementById("a57").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a57").style.backgroundColor = "red";
+        }
+        if (money >= 1.518e+87) {
+        document.getElementById("a58").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a58").style.backgroundColor = "red";
+        }
+        if (money >= 4.545e+88) {
+        document.getElementById("a59").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a59").style.backgroundColor = "red";
+        }
+        if (money >= 1.764e+90) {
+        document.getElementById("a60").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a60").style.backgroundColor = "red";
+        }
+        if (money >= 5.03e+91) {
+        document.getElementById("a61").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a61").style.backgroundColor = "red";
+        }
+        if (money >= 2.008e+93) {
+        document.getElementById("a62").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a62").style.backgroundColor = "red";
+        }
+        if (money >= 6.012e+94) {
+        document.getElementById("a63").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a63").style.backgroundColor = "red";
+        }
+        if (money >= 2.25e+96) {
+        document.getElementById("a64").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a64").style.backgroundColor = "red";
+        }
+        if (money >= 7.984e+97) {
+        document.getElementById("a65").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a65").style.backgroundColor = "red";
+        }
+        if (money >= 2.49e+99) {
+        document.getElementById("a66").style.backgroundColor = "green";
+        } else {
+        document.getElementById("a66").style.backgroundColor = "red";
+        }
 
         }
 
