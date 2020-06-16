@@ -24,18 +24,18 @@
 /* Style the tab */
 .tab {
   float: left;
-  
+ 
   background-color: #4ee413;
   width: 30%;
   height: 3000px;
   background-color: #6a5c80;
-  
+ 
 }
 
 /* Style the buttons inside the tab */
 .tab button {
   display: block;
-  
+ 
   color: black;
   padding: 22px 16px;
   width: 100%;
@@ -46,7 +46,7 @@
   transition: 0.3s;
   font-size: 17px;
   background-color: #6a5c80;
-  
+ 
 }
 
 /* Change background color of buttons on hover */
@@ -61,14 +61,14 @@
 
 /* Style the tab content */
 .tabcontent {
-  
+ 
   padding: 0px 12px;
  
   width: 98%;
  
   height: 3000px;
   background-color: #524763;
-  
+ 
 }
 
 h1{
@@ -84,7 +84,7 @@ h1{
     text-indent: 30%;
     color: white;
     text-shadow: 2px 2px 5px black;
-    
+   
   }
  
   h3{
@@ -101,7 +101,7 @@ h1{
     text-indent: 30%;
     color: white;
     text-shadow: 2px 2px 5px black;
-    
+   
  
   }
  
@@ -110,7 +110,7 @@ h1{
     text-indent: 30%;
     color: white;
     text-shadow: 2px 2px 5px black;
-    
+   
   }
  
   h6{
@@ -150,7 +150,7 @@ h1{
  
  
  
- a { 
+ a {
   color: rgb(224, 195, 30);
   text-decoration: none;
  
@@ -163,13 +163,13 @@ h1{
         font-family: 'Allan', cursive;
         font-size: 27px;
         text-decoration: none;
-      
+     
  
         width: 267px;
         height: 40px;
-        
+       
      
-        
+       
  
       }
       .button:hover{
@@ -192,8 +192,8 @@ h1{
         width: 100%;
         top: 0;
  
-        
-        
+       
+       
       }
  
       li {
@@ -217,16 +217,16 @@ h1{
 <body>
 
   <ul class = "nav">
-    
+   
     <li><button class="button"><a href='index.html'>first page</a></button></li>
       <li><button class="button"><a href='af.html'>Activity finder </a></button></li>
       <li><button class="button"><a href='AU.html'>About us</a></button></li>
       <li><button class="button"><a href='DigitalGamePage.html'>digital game page</a></button></li>
-  
-  
-  
+ 
+ 
+ 
       <div id="myclockdisplay" class="clock"></div>
-      <script type="text/javascript"> 
+      <script type="text/javascript">
       function showtime(){
    
      
@@ -235,7 +235,7 @@ h1{
           h = date.getHours();
           m = date.getMinutes();
           s = date.getSeconds();
-          var session = "AM" 
+          var session = "AM"
    
           console.log(h, m, s)
            
@@ -253,10 +253,10 @@ h1{
           console.log(h)
           h = (h < 10) ? "0" + h : h;
    
-          
+         
           m = (m < 10) ? "0" + m : m;
           s = (s < 10) ? "0" + s : s;
-          
+         
           var time = h + ":" + m + ":" + s + ":" + session;
           console.log("check")
           console.log (time)
@@ -267,15 +267,15 @@ h1{
    
    
       }
-      
+     
       showtime();
-      
-      
+     
+     
       </script>
     </ul>
    
-  
-  
+ 
+ 
   </script>
 </ul>
 <br>
@@ -315,12 +315,14 @@ h1{
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'bookone')" id="defaultOpen">defult page</button>
-  <button class="tablinks" onclick="openCity(event, 'booktwo')">Half-Men of O</button>
+  <button class="tablinks" onclick="openCity(event, 'dp')" id="defaultOpen">defult page</button>
+  <button class="tablinks" onclick="openCity(event, 'hmoo')">Half-Men of O</button>
   <button class="tablinks" onclick="openCity(event, 'howls_moving_carstle')">Howlś moving castle</button>
   <button class="tablinks" onclick="openCity(event, 'wings_of_fire')" id="defaultOpen">wings of fire</button>
-  <button class="tablinks" onclick="openCity(event, 'booktwo')">booktwo</button>
-  <button class="tablinks" onclick="openCity(event, 'bookthree')">bookthree</button>
+  <button class="tablinks" onclick="openCity(event, 'harrypotter!')">harrypotter!</button>
+  <button class="tablinks" onclick="openCity(event, 'rr')">
+Percy jackson + others - rick riordan
+</button>
   <button class="tablinks" onclick="openCity(event, 'bookone')" id="defaultOpen">bookone</button>
   <button class="tablinks" onclick="openCity(event, 'booktwo')">booktwo</button>
   <button class="tablinks" onclick="openCity(event, 'bookthree')">bookthree</button>
@@ -329,25 +331,25 @@ h1{
   <button class="tablinks" onclick="openCity(event, 'bookthree')">bookthree</button>
 </div>
 
-<div id="bookone" class="tabcontent">
+<div id="dp" class="tabcontent">
   <h3>BOOK REVIEW!!</h3>
   <br>
   <br>
   <p>welcome to book review, on this page of activity-finder is were we get reviews from deforent websites like wikipedia and of course us! we hope you enjoy (click on the tabs to your left ) </p>
 </div>
 
-<div id="booktwo" class="tabcontent">
+<div id="hmoo" class="tabcontent">
   <h3>Half men of O the series - maurice gee</h3>
-  <p>The Half-Men of O is a fantastic book. Two people called Nick and Susan are kidnapped and taken to the land of O, where they learn that they are the only ones who can save O from the evil Odo Cling.<br /> 
+  <p>The Half-Men of O is a fantastic book. Two people called Nick and Susan are kidnapped and taken to the land of O, where they learn that they are the only ones who can save O from the evil Odo Cling.<br />
     In the sequel, The Priests of Ferris, Nick and Susan return to O to find that 60 years have passed, and some people have created a brutal religion based on Susan. Once again, they must save O from this. <br />
     In the third and final book, Motherstone, just as they are about to return to  their own world, Susan is kidnapped by another evil force which has enlisted the people of the fiery northern lands to wage war, and is building a Weapon which could destroy the balance of O. When Susan first placed the halves of good and evil, they were not equal, and the only hope for O lies in balancing them. <br>
-    
-    
-    
-    
-    
+   
+   
+   
+   
+   
     First book:
-    The first book of maurice gee trilogy half men of O it a great children's book which in our view should definitely be made into a movie, if you have read this book i am sure you will agree. - activity finder 
+    The first book of maurice gee trilogy half men of O it a great children's book which in our view should definitely be made into a movie, if you have read this book i am sure you will agree. - activity finder
     <br>
     When Nick Quinn goes to spend a couple of weeks on his uncle's farm at Lodestone Creek, he expects it to be like every other summer holiday. His dopey cousin Susan is more remote than ever, but swimming and exploring will make up for the lack of companionship.
     <br>
@@ -369,7 +371,7 @@ h1{
     Susan Ferris and her cousin Nick return to the world of O, which they had saved from the evil Half Men, only to discover that a hundred years have passed and O is now ruled by cruel and ruthless priests.
     Susan is inspired by the dreams and prophecies related to her to face the most dreadful dangers and free the inhabitants of O. - pengien
      <br>
-    </p> 
+    </p>
 </div>
 
 
@@ -380,30 +382,30 @@ h1{
     <br>
     <p>Howl's moving castle is a thriller fantasy. It starts<br>
        by introducing the character and then it moves on two the main<br> story a mysterious curse on one of the main characters. - activity finder<br><br><br>
-  
-  
+ 
+ 
       Sophie has the great misfortune of being the eldest of three daughters, destined to fail miserably should she ever leave home to seek her fate. But when she unwittingly attracts the ire of the Witch of the Waste, Sophie finds herself under a horrid spell that transforms her into an old lady. Her only chance at breaking it lies in the ever-moving castle in the hills: the Wizard Howl's castle. To untangle the enchantment, Sophie must handle the heartless Howl, strike a bargain with a fire demon, and meet the Witch of the Waste head-on. Along the way, she discovers that there's far more to Howl—and herself—than first meets the eye. -goodreads
       <br><br>
       Howl's Moving Castle is a fantasy novel by British author Diana Wynne Jones, first published in 1986 by Greenwillow Books of New York. It was a runner-up for the annual Boston Globe–Horn Book Award and it won the Phoenix Award twenty years later, recognising its rise from relative obscurity. -wikipedia
-      
+     
       </p>
   </div>
-  
+ 
   <div id="wings_of_fire" class="tabcontent">
-    <h3>booktwo</h3>
+    <h3>wings of fire!</h3>
     <p>
-      Wings of fire is a fantasy series in which dragons live on another planet. 
+      Wings of fire is a fantasy series in which dragons live on another planet.
       Part 1: Original series (books 1-5)
-      At the start of book 1 of this series, the world is in war, and five dragonets must figure out how to end it. Along the way, they all discover who they really are. 
+      At the start of book 1 of this series, the world is in war, and five dragonets must figure out how to end it. Along the way, they all discover who they really are.
       Part 2: Jade Mountain (books 6-10)
       After the war ended, the five dragonets started a school in which dragonets of different tribes. But an evil dragon is rising, and a young dragonet may have had the first real prophecy in centuries….
       Part 3: The lost continent (books 11-13+)
       On the other side of the dragon’s planet, there is another continent, with different types of dragons. But it is a dictatorship, with one tribe subservient, one ruling, and one completely wiped out, or so everyone else thinks… But this new world is full of secrets, and a few dragonets are trying to discover the truth.
-      
-      It is an amazing series, and I can’t wait for the next book to come out. 
-      
-      
-      Wings of fire has a trilogy story arc with a total of thirteen books it will take you a while. The first trilogy is kind of the origin story for the second story arc but at the same time something completely new as in  story wise. It is definity recommended that you read these in order or else it does not make sense. The second story arc is very fun to read. It ticks all of my boxe’s: has a villain, a kind of dream team and a power that seems untouchable. The third and probably finill arc has a very unexpected twist where the story instead of  taking place in the original world takes place in a completely different setting. I myself loved this part. 
+     
+      It is an amazing series, and I can’t wait for the next book to come out.
+     
+     
+      Wings of fire has a trilogy story arc with a total of thirteen books it will take you a while. The first trilogy is kind of the origin story for the second story arc but at the same time something completely new as in  story wise. It is definity recommended that you read these in order or else it does not make sense. The second story arc is very fun to read. It ticks all of my boxe’s: has a villain, a kind of dream team and a power that seems untouchable. The third and probably finill arc has a very unexpected twist where the story instead of  taking place in the original world takes place in a completely different setting. I myself loved this part.
       <br><br>
       Prophecy of arc one:
       When the war has lasted twenty years...
@@ -419,7 +421,7 @@ h1{
       for an egg the color of dragon blood.
       And hidden alone from the rival queens,
       the SandWing egg awaits unseen.
-      
+     
       Of three queens who blister and blaze and burn,
       two shall die and one shall learn
       if she bows to a fate that is stronger and higher,
@@ -431,9 +433,9 @@ h1{
       Darkness will rise to bring the light.
       The dragonets are coming...
       <br><br>
-      
+     
       <br><br>
-      
+     
       Book one wings of fire dragonet prophecy:
       Blurb:clay has lived his whole life under the mountain. The Mudwing dragonet knows that war is raging between the dragon tribes in the world outside - a war that he and four other dragonets are destined to end, according to the mysterious prophecy they’ve been taught. The five “chosen” dragonets were stolen from their homes while they were still in there eggs - and hidden away for years - all to fulfill the prophecy.
       <br>
@@ -475,7 +477,7 @@ h1{
       <br>
       <br>
       Book five last of the first wings of fire story arc The brightest night:
-      
+     
       Blurb:
       <br>
       Sunny has always taken the Dragonet Prophecy very seriously. If Pyrrhia's dragons need her, Clay, Tsunami, Glory, and Starflight to end the war, she's ready to try. She even has some good ideas how to do it, if anyone would listen to her.
@@ -488,7 +490,7 @@ h1{
       <br>
       Wings of first of the second story arc moon rising:
       <br>
-      Blurb: 
+      Blurb:
       <br>
       The war between the tribes is finally over, and now the dragonets of the prophecy have a plan for lasting peace: Jade Mountain Academy, a school that will gather dragonets from all the tribes and teach them to live together, perhaps even as friends.
       Moonwatcher isn't sure how she feels about school, however. Hidden in the rainforest for most of her life, the young NightWing has an awful secret. She can read minds, and even see the future. Living in a cave with dozens of other dragons is noisy, exhausting -- and dangerous.
@@ -507,7 +509,7 @@ h1{
       <br>
       <br>
       <br>
-      
+     
       Book eight wings of fire escaping peril:
       Blurb:
       <br>
@@ -523,14 +525,14 @@ h1{
        Blurb:
       <br>
       Turtle isn’t one of the heroes he reads about in stories. If he were, he’d use his animus powers to help Pyrrhia—instead of keeping his abilities a secret, even from his own sister. Now that Darkstalker, the sinister and impossibly old dragon from Pyrrhia’s most notorious legends, has returned, Turtle knows his own role is simple: hide. And stay hidden.
-      
+     
       But the more he watches Darkstalker from the shadows, the more Turtle knows that someone needs to stop the powerful dragon. A real hero. But Turtle is running out of time to find one, which means…he might have to try to save the day himself.
       <br>
       <br>
       <br>
       <br>
       Book ten wings of fire darkness of dragons:
-      <br> 
+      <br>
       Blurb:
       <br>
       Qibli knows Darkstalker must be stopped. And he knows he could stop him -- if he had magic. With even a sliver of the ancient dragon's all-powerful scroll, Qibli could rewrite history the right way: end war forever; make every dragon happy; perhaps even cast a very small spell so that everyone would like him...
@@ -547,7 +549,7 @@ h1{
       For centuries there have been rumors of another continent on the dragons' planet: another land far across the ocean, populated by tribes of dragons very different from those we know. But there's never been any evidence, and most dragons dismissed the rumors as fairy tales.
       Until now.
       Because it turns out the stories are true.
-      And the other tribes are coming.                                     
+      And the other tribes are coming.                                    
       <br>
       <br>
       <br>
@@ -556,7 +558,7 @@ h1{
       <br>
       Blurb:
       Growing up in the hives, Cricket has always had a million questions. Why are trees forbidden, even in art? Why do her parents seem to hate her? And the biggest, most dangerous and secret question of all: why is Cricket immune to Queen Wasp's powers? Whenever the queen takes control of all the HiveWings, speaking through their mouths and seeing through their eyes, Cricket has to hide, terrified of being discovered.
-      
+     
       Now she's hiding again, wanted for stealing the Book of Clearsight along with her new SilkWing friends, Blue and Swordtail, and the fierce LeafWing, Sundew. The fugitives need answers, and fast, in order to prevent a LeafWing attack. But Cricket has more questions than ever. How can she stay hidden and discover the queen's deadliest secret? And if she does succeed -- can a powerless dragonet really do anything to topple a regime and stop a war?
       <br>
       <br >
@@ -567,15 +569,68 @@ h1{
       Blurb:
       <br>
       It's no secret that Sundew wants to destroy the HiveWings. It's her life's mission to exact revenge on the tribe that tried to wipe out the LeafWings and ripped every tree from the surface of Pantala.
-      
+     
       Every tree, that is, except the wild and dangerous Poison Jungle, where the surviving LeafWings have been hiding since the war. Hiding, plotting, and waiting for a dragon like Sundew, who is uniquely qualified to bring down the Hives.
-      
+     
       There are dark secrets in the jungle, though — some that Sundew is keeping, and some that she's only just beginning to discover. And now that a new war is upon them, Sundew and her friends must unearth the oldest secret in the jungle-even if what they find has the power to destroy them all.
-      
-      
-      </p> 
+     
+     
+      </p>
   </div>
-  
+ 
+  <div id="harrypotter!" class="tabcontent">
+    <h3>
+Harry Potter series by jk rowlings
+</h3>
+    <p>The Harry Potter series is a fantasy where wizards exist under everyone’s noses. It is a new york times bestseller and a great read with mysterious beasts and magic brooms
+<br><br>
+Book 1: Harry potter is an ordinary boy, but sometimes strange things happen around him. Just before his eleventh birthday, a letter from a magic school arrives in the mail. He goes there, and discovers that the evil wizard who killed his parents is still around, and he is the only person who can stop him…
+<br>
+<br>
+Book 2: 50 years ago, the Chamber of Secrets was opened. Now it is opening again, and people are getting paralyzed. Harry must find a way to kill the creature that lurks within before it’s too late.
+Hello did you see the wings of fire blurbs that i did Working on this
+Have you put on surge yet?<br>
+Book 3: A prisoner named Sirius Black has escaped from the wizard jail Azkaban.
+<p>
+  </div>
+  <div id="rr" class="tabcontent">
+    <h3>
+Percy jackson + others - rick riordan
+</h3>
+    <p>Percy jackson is a great read for ages 7 and up. It keeps the reader interested.
+
+The Lightning Thief
+Twelve-year-old Percy Jackson is on the most dangerous quest of his life. With the help of a satyr and a daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction — Zeus' master bolt.
+<br>
+Sea of monsters
+Percy Jackson, son of a mortal mother and the Greek god Poseidon, returns to Camp Half-Blood, only to find it beset by monsters. The camp's protections are breaking down -- someone has poisoned Thalia's tree, which guards the camp, and Chiron has been fired, replaced by the evil Tantalus, who has been let out of Hades.<br>
+titan's curse<br>
+the fourteen-year-old demigod Percy Jackson as he and his friends go on a dangerous adventure. In this quest, they have to rescue his friend Annabeth and the Greek goddess Artemis, who have both been kidnapped.of the fourteen-year-old demigod Percy Jackson as he and his friends go on a dangerous adventure. In this quest, they have to rescue his friend Annabeth and the Greek goddess Artemis, who have both been kidnapped.
+Battle of the labyrinth
+Percy joinsAnnabeth in her quest to go into the labyrinth to find Daedalus' workshop. Annabeth Chase is the 15-year-old daughter of Athena, and one of Percy's closest friends.
+The last olympian
+It is the fifth and final installment in the Percy Jackson and the Olympians series. This conclusion to the saga revolves around Percy Jackson, the son of Poseidon, as he leads his friends in a last stand to protect Mount Olympus and the rest of the world from Kronos and his army of titans and monsters.
+Heroes of olympus
+The lost hero
+When a freak storm hits during the school trip, unleashing strange creatures and whisking her, Jason, and Leo away to someplace called Camp Half-Blood, she has a feeling she's going to find out, whether she wants to or not. LEO HAS A WAY WITH TOOLS.<br>
+The son of neptune<br>
+Percy is confused. When he awoke after his long sleep, he didn't know much more than his name. His brain-fuzz is lingering, even after the wolf Lupa told him he is a demigod and trained him to fight. Somehow Percy managed to make it to the camp for half-bloods, despite the fact that he had to continually kill monsters that, annoyingly, would not stay dead. But the camp doesn't ring any bells with him.<br>
+The mark of Atheana<br>
+In The Son of Neptune, Percy, Hazel, and Frank met in Camp Jupiter, the Roman equivalent of Camp Halfblood, and traveled to the land beyond the gods to complete a dangerous quest. The third book in the Heroes of Olympus series will unite them with Jason, Piper, and Leo. But they number only six--who will complete the Prophecy of Seven?<br>
+The house of hades<br>
+In The Son of Neptune, Percy, Hazel, and Frank met in Camp Jupiter, the Roman equivalent of Camp Halfblood, and traveled to the land beyond the gods to complete a dangerous quest. The third book in the Heroes of Olympus series will unite them with Jason, Piper, and Leo. But they number only six--who will complete the Prophecy of Seven?
+<br>
+The blood of olympus<br>
+Though the Greek and Roman crewmembers of the Argo II have made progress in their many quests, they still seem no closer to defeating the earth mother, Gaea. Her giants have risen-all of them-and they're stronger than ever. They must be stopped before the Feast of Spes, when Gaea plans to have two demigods sacrificed in Athens. She needs their blood-the blood of Olympus-in order to wake.
+ 
+</p>
+  </div>
+ 
+  <div id="booktwo" class="tabcontent">
+    <h3>booktwo</h3>
+    <p>booktwo is the capital of France.</p>
+  </div>
+ 
   <div id="bookthree" class="tabcontent">
     <h3>bookthree</h3>
     <p>bookthree is the capital of Japan.</p>
@@ -584,12 +639,12 @@ h1{
     <h3>bookone</h3>
     <p>bookone is the capital city of England.</p>
   </div>
-  
+ 
   <div id="booktwo" class="tabcontent">
     <h3>booktwo</h3>
-    <p>booktwo is the capital of France.</p> 
+    <p>booktwo is the capital of France.</p>
   </div>
-  
+ 
   <div id="bookthree" class="tabcontent">
     <h3>bookthree</h3>
     <p>bookthree is the capital of Japan.</p>
@@ -598,26 +653,12 @@ h1{
     <h3>bookone</h3>
     <p>bookone is the capital city of England.</p>
   </div>
-  
+ 
   <div id="booktwo" class="tabcontent">
     <h3>booktwo</h3>
-    <p>booktwo is the capital of France.</p> 
+    <p>booktwo is the capital of France.</p>
   </div>
-  
-  <div id="bookthree" class="tabcontent">
-    <h3>bookthree</h3>
-    <p>bookthree is the capital of Japan.</p>
-  </div>
-  <div id="bookone" class="tabcontent">
-    <h3>bookone</h3>
-    <p>bookone is the capital city of England.</p>
-  </div>
-  
-  <div id="booktwo" class="tabcontent">
-    <h3>booktwo</h3>
-    <p>booktwo is the capital of France.</p> 
-  </div>
-  
+ 
   <div id="bookthree" class="tabcontent">
     <h3>bookthree</h3>
     <p>bookthree is the capital of Japan.</p>
@@ -645,3 +686,4 @@ document.getElementById("defaultOpen").click();
    
 </body>
 </html> 
+
