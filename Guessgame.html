@@ -159,10 +159,10 @@ function checkguess(){
 guesses+= 1;
 document.getElementById("guesses").innerHTML = "Guesses:" + guesses;
 if (guess.value >= rand){
-document.getElementById("output").innerHTML = "too big try biger";
+document.getElementById("output").innerHTML = "too big try smaller";
 }
 if (guess.value <= rand){
-document.getElementById("output").innerHTML = "too small try higher";
+document.getElementById("output").innerHTML = "too small try bigger";
 }
 if (guess.value == rand){
 document.getElementById("congrats").innerHTML = "Congratulations!";
