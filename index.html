@@ -1,15 +1,27 @@
 <html>
 <head>
     <title>activity finder</title>
+    <ul class = "nav">
+    
+        <li><img alt="logo" src="acty.png"  width="270" height="40"> </li>
+          <li><button class="button"><a href='af.html'>Activity finder</a></button></li>
+          <li><button class="button"><a href='AU.html'>About us</a></button></li>
+          <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
+          <li><button class="button"><a href='DigitalGamePage.html'>gamepage</a></button></li>
+          <li>
+              <input id="myInput" value="Search Activity Finder">
+      <li>
+        </ul>
+       
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="./logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Allan|Black+Han+Sans|Lemonada&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
     <style>
-
-        body {
+         body {
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -99,24 +111,367 @@
             background-color: #5cb85c;
             color: white;
         }
-    </style>
-
+        #contianer{
+          min-height: 100%;
+       
+        }
+       
+        #main{
+          overflow: auto;
+          padding-bottom: 100px;
+        }
+       
+        
+       
+        * {
+          margin: 0;
+          padding: 0;
+        }
+       
+       
+        .position1{
+          position: absolute;
+          z-index: -1;
+          left: 0px;
+          
+        }
+       
+        .BigText{
+          font-family: 'Cinzel', serif
+         
+       
+        }
+       
+        h1{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+        }
+       
+        h2{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+          
+        }
+       
+        h3{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+         
+        }
+       
+        h4{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+          
+       
+        }
+       
+        h5{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+          
+        }
+       
+        h6{
+          text-align: left;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+         
+       
+        }
+       
+        p{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+         
+        }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        .clock{
+          font-size: 1rem;
+          color: rgb(224, 195, 30);
+       
+       
+       
+        }
+       
+       
+       
+       
+       
+       a { 
+        color: rgb(224, 195, 30);
+        text-decoration: none;
+        
+       }
+       
+       
+        .button {
+              background-color: #5c4e4e;
+              border: none;
+              font-family: 'Allan', cursive;
+              font-size: 20px;
+              text-decoration: none;
+              width: 140px;
+              height: 50px;
+            
+            }
+            .button:hover{
+                  background-color: rgb(27, 12, 51);
+       
+              }
+       
+           input{
+             width: 480px;
+             height: 50px;
+             background-image: linear-gradient(rgb(27, 12, 51), black);
+             font-weight: bolder;
+             color: cornsilk;
+             border-radius: 20px, 20px, 20px;
+             border-color: cyan;
+             text-decoration: cyan;
+           }
+                  
+       
+           
+         
+       
+       
+       
+       
+       
+           
+       
+         
+       
+              body {
+                background-image: url("2020-05-15.png");
+                background-size: 100%;
+                background-repeat: repeat;
+                background-attachment: fixed;
+                
+                font-family: 'Lemonada', cursive;
+                font-size: 70%;
+              }
+           
+       
+            
+       
+          
+      /* nav bar css */
+       
+                  ul {
+              color: rgb(251, 193, 4);
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              background-color: #5c4e4e;
+              background-attachment: fixed;
+              height: 50px;
+              width: 100%;
+       
+              
+              
+            }
+       
+            li {
+              float: right;
+            }
+       
+            li a {
+              display: block;
+              padding: 8px;
+            }
+       
+       
+            .nav{
+            position: fixed;
+          
+            }
+       
+       
+       
+          </style>
 </head>
  
  
   <!-- nav bar html -->
  
-  <ul class = "nav">
-    
-  <li>      <img alt="logo" src="acty.png"  width="270" height="40">
-</li>
-    <li><button class="button"><a href='af.html'>Activity finder</a></button></li>
-    <li><button class="button"><a href='AU.html'>About us</a></button></li>
-    <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
-    <li><button class="button"><a href='DigitalGamePage.html'>gamepage</a></button></li>
-    <li>
-        <input id="myInput" value="Search Activity Finder">
-        <script>var inputlist = "";
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  <body>
+      <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Search results</h2>
+              </div>
+              <div class="modal-body">
+
+                  <p id="but"></p>
+              </div>
+
+          </div>
+
+      </div>
+
+      <script>var modal = document.getElementById("myModal");
+
+
+          var span = document.getElementsByClassName("close")[0];
+
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+              modal.style.display = "none";
+          }
+
+          window.onclick = function (event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }</script>
+
+      <div id="container">
+          <div id="main">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br><br>
+              <br>
+              <br>
+              <br>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br><br>
+              <br>
+
+              <img class="position1" src="2020-05-08 (3).png" alt="mortal engines" width="100%" height="2000">
+          </div>
+
+          <h1>who this website is directed for:</h1>
+          <p> we have created this website for people like "you",</p>
+          <p>
+              you the person who is stuck indoors surfing the internet
+              for things
+          </p>
+          <p>to do </p>
+          <p>
+              by yourself or with others.
+              Well you're in luck because this is the website you've been looking for.
+          </p>
+          <p>
+              we have things for groups of
+          </p>
+          <p>
+              people, and activities for you by yourself.
+              So we hope you love this site.
+          </p>
+          <br>
+          <br>
+          <br>
+
+          <h1>what is this website about?</h1>
+          <p>This website is about finding the best activity in the least time.</p>
+          <p>
+              Unlike google our website has a series of questions that then
+          </p>
+
+          <p>
+              narrows the activities that you're looking for.
+              We have many choices but we recommend
+          </p><p> our tag page it has more than 17 different<p>
+          <p>
+              tag games!
+              We can also recommend our card game page.
+          </p>
+          <br>
+
+
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+          <h1>updates!</h1>
+          <br>
+          <p>yay so many updates this week! we have our own game page with two new games and one terible chatbot WOW! here a link to the</p><p> <a href="DigitalGamePage.html">game page!</a> go cheak it out! if you scroll a little you will also find a ink to the activity of the day that we also just made!  were still </p><p>going to be working on our activitys for those </p><p>sweet rainy days. we will also be adding a thing to every button in your nav bar: actvity finder, book review, about us and lastly </p><p>digital game page! </p>
+
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+
+
+          <p>Would you like to do a random activity, well you're in luck try out our activity of the day: </p>
+          <a href="dailyactivitytest.html">Daily activity</a>
+
+
+
+
+          <script>var inputlist = "";
             var input = document.getElementById("myInput");
             //0,1, 2,3,4
             var text = ["Theo's Guess Game Enter a number and guess! (must be between one and onehundred) Click To Play! Back", "Skyfall PLAY Use the arrow keys to move the red block and dodge everything falling from the sky!", "first page Activity finder About us book review mortal engines welcome to game page! to obtain your pure intertainment we have conjurd some basic html ,javasricpt and css games for you also one chat bot (poor lonely bert ('_') ), we have spent a while looking at the licening for some of our games like snail and they are happily royalty free (hazah!) snail: Qries snake the original arcade game made by Tom the unnoable using: html5, css3, javascript 1.5 we hope u enjoy! Theos shooter game Qries ajust the angles and speed to collect coins and get a high score! made with magic (and html5, css3, javascript 1.5 ) yep totally magic toms bert chat bot Qries bert is not an acronym the name just sounds cool by the way. so far bert only replys to about twinty qustions... yes bert is very polite and smart it was made using js, html5 and css3 and those are acronyms so bert must be smart.... nope theos guessing game Qries guss a number 1 to one hundred!! toms awsome ping pong game Qries did someone do a fart in here? because it sure dose PONG! the PONG really dose PING in your nose theos button cliker Qries see if you can get every power up theos sky fall game Qries try to a score over 50 - bet you cant", "KO 12 or more people, half as many people minus 1 chairs, a stopwatch 1. Line up the chairs in a row, direction alternating between one side and the other. Divide the players into two teams. If there is an odd number of people, one person will run for both teams. 2. One team chooses a person to be the tagger for the first round, who goes to one end of the chairs. The rest of that team sit on the chairs. 3. The other team lines up at the other end of the chairs. 4. Someone starts the timer, the first person in the line and the tagger start running. 5. The person who was in line can run between the chairs, the tagger can only run around the ends. 6. The tagger can tag the back of a chair, and then the person in that chair is the new tagger, and the tagger sits in that chair. 7. As soon as the first person in line is tagged, they are out, and the second person starts running. 8. When the last person is tagged, the stopwatch is stopped. 9. The teams swap places and repeat. 10. The team who took the longest time wins.", "about this website this website is made for people who are bored stuck inside, actually, we've written this website in lockdown(clarification: coronavirus lockdown 2020), that’s part of the reason we built this in fact so that we can spread ideas to people who have nothing else to do and needs something fun, creative and something  that you can play by yourself or with others. We are competing in a competition called 123tech. 123tech is about young coders and problem-solvers having the opportunity to make an app or a website. If you were to join, you would contribute to solving a problem in your community by using digital technology. about us we are based in wellington, New Zealand, This website was coded by Tom and Theo. The writing was done by the whole team but mainly elenor billy plus a bit of theo. The ideas were created by Billy, Eleanor and Theo.infact This page was written by tom who is righting in third person.how was this website made? This website was coded mainly using html5 css3 and javascript. We use visual studios as our web editor. We have twopeople working with visual studios. We use branches to share each other's work with github you can visit us now@gihub 123tech. How did we put this website on the web? well we use a software called surge, surge is a front endstatic website publisher visit surge here if you look slightly up in our url you can see that the domainis surge.sh that is the default domain for surge (if we were to get another it would cost money if you are interesteda url like .com would cost round 20-30$ nz cash)."];
@@ -404,373 +759,9 @@
                 }
             });</script>
 
-<li>
-    
-
-
-
- 
-  </ul>
- 
- 
-  
- 
- 
- 
- 
- 
- 
-  <body>
-      <div id="myModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-              <div class="modal-header">
-                  <span class="close">&times;</span>
-                  <h2>Search results</h2>
-              </div>
-              <div class="modal-body">
-
-                  <p id="but"></p>
-              </div>
-
-          </div>
-
-      </div>
-
-      <script>var modal = document.getElementById("myModal");
-
-
-          var span = document.getElementsByClassName("close")[0];
-
-
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function () {
-              modal.style.display = "none";
-          }
-
-          window.onclick = function (event) {
-              if (event.target == modal) {
-                  modal.style.display = "none";
-              }
-          }</script>
-
-      <div id="container">
-          <div id="main">
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br><br>
-              <br>
-              <br>
-              <br>
-
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br><br>
-              <br>
-
-              <img class="position1" src="2020-05-08 (3).png" alt="mortal engines" width="100%" height="2000">
-          </div>
-
-          <h1>who this website is directed for:</h1>
-          <p> we have created this website for people like "you",</p>
-          <p>
-              you the person who is stuck indoors surfing the internet
-              for things
-          </p>
-          <p>to do </p>
-          <p>
-              by yourself or with others.
-              Well you're in luck because this is the website you've been looking for.
-          </p>
-          <p>
-              we have things for groups of
-          </p>
-          <p>
-              people, and activities for you by yourself.
-              So we hope you love this site.
-          </p>
-          <br>
-          <br>
-          <br>
-
-          <h1>what is this website about?</h1>
-          <p>This website is about finding the best activity in the least time.</p>
-          <p>
-              Unlike google our website has a series of questions that then
-          </p>
-
-          <p>
-              narrows the activities that you're looking for.
-              We have many choices but we recommend
-          </p><p> our tag page it has more than 17 different<p>
-          <p>
-              tag games!
-              We can also recommend our card game page.
-          </p>
-          <br>
-
-
-
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-
-          <h1>updates!</h1>
-          <br>
-          <p>yay so many updates this week! we have our own game page with two new games and one terible chatbot WOW! here a link to the</p><p> <a href="DigitalGamePage.html">game page!</a> go cheak it out! if you scroll a little you will also find a ink to the activity of the day that we also just made!  were still </p><p>going to be working on our activitys for those </p><p>sweet rainy days. we will also be adding a thing to every button in your nav bar: actvity finder, book review, about us and lastly </p><p>digital game page! </p>
-
-
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-
-
-
-          <p>Would you like to do a random activity, well you're in luck try out our activity of the day: </p>
-          <a href="dailyactivitytest.html">Daily activity</a>
-
-
-
-
-
-
 
   </body>
-<style>
-  #contianer{
-    min-height: 100%;
- 
-  }
- 
-  #main{
-    overflow: auto;
-    padding-bottom: 100px;
-  }
- 
-  
- 
-  * {
-    margin: 0;
-    padding: 0;
-  }
- 
- 
-  .position1{
-    position: absolute;
-    z-index: -1;
-    left: 0px;
-    
-  }
- 
-  .BigText{
-    font-family: 'Cinzel', serif
-   
- 
-  }
- 
-  h1{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-  }
- 
-  h2{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
- 
-  h3{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
- 
-  h4{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
- 
-  }
- 
-  h5{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
- 
-  h6{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
- 
-  }
- 
-  p{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  .clock{
-    font-size: 1rem;
-    color: rgb(224, 195, 30);
- 
- 
- 
-  }
- 
- 
- 
- 
- 
- a { 
-  color: rgb(224, 195, 30);
-  text-decoration: none;
-  
- }
- 
- 
-  .button {
-        background-color: #5c4e4e;
-        border: none;
-        font-family: 'Allan', cursive;
-        font-size: 20px;
-        text-decoration: none;
-        width: 140px;
-        height: 50px;
-      
-      }
-      .button:hover{
-            background-color: rgb(27, 12, 51);
- 
-        }
- 
-     input{
-       width: 500px;
-       height: 50px;
-       background-image: linear-gradient(rgb(27, 12, 51), black);
-       font-weight: bolder;
-       color: cornsilk;
-       border-radius: 20px, 20px, 20px;
-       border-color: cyan;
-       text-decoration: cyan;
-     }
-            
- 
-     
-   
- 
- 
- 
- 
- 
-     
- 
-   
- 
-        body {
-          background-image: url("2020-05-15.png");
-          background-size: 100%;
-          background-repeat: repeat;
-          background-attachment: fixed;
-          
-          font-family: 'Lemonada', cursive;
-          font-size: 70%;
-        }
-     
- 
-      
- 
-    
-/* nav bar css */
- 
-            ul {
-        color: rgb(251, 193, 4);
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: #5c4e4e;
-        background-attachment: fixed;
-        height: 50px;
-        width: 100%;
- 
-        
-        
-      }
- 
-      li {
-        float: right;
-      }
- 
-      li a {
-        display: block;
-        padding: 8px;
-      }
- 
- 
-      .nav{
-      position: fixed;
-    
-      }
- 
- 
- 
-    </style>
+
  
  <script type="text/javascript"> 
   
