@@ -66,11 +66,12 @@
 <h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
 <p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Rules: do not use element styling (eg p{}) as that will effect everything else. <br>
 Instead of body for styling, use #body. <br>
-No head, html or body tags, just put everything in.<br>
-Do not use Document.createElement.<br>
+No head, html or body tags, just put everything in as usual.<br>
+Don't bother with line breaks. Everything will work fine without them, but do remember to add semicolons (;) at the end of every line of css. 
+    Do not use Document.createElement.<br>
 Do not use anything with id input or body<br>
 </p>
-<input id="input">
+<input id="input" style="width: 100%; overflow: scroll;">
 <button onclick="run()">Run</button>
 <script>
 function run(){
