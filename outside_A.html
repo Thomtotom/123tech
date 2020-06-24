@@ -13,6 +13,14 @@ a {
     color: rgb(172, 124, 13);
 
   }
+.info{
+display: none;
+text-align: center;
+font-size: 15px;
+}
+.button:hover .info{
+display: block;
+}
 
 
 .button {
@@ -24,7 +32,6 @@ a {
   font-size: 28px;
   padding: 20px;
   width: 267px;
-  height: 60px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -121,6 +128,7 @@ a {
 </head>
 <body>
     <div align="center">
+    <h1>Outside 1 person</h1>
       <br>
       <br>
       <br>
@@ -130,12 +138,12 @@ a {
       <br>
       <br>
       <br>
-    <button class="button button"><a href="kite_outside1.html">Make a kite</a></button>
-    <button class="button button"><a href="garden_outside1.html">Grow a garden</a></button>
-    <button class="button button"><a href="makeaboat_outside1.html">Make a boat</a></button>
-    <button class="button button"><a href="skipping_outside1.html">Skipping</a></button>
-        <button class="button button"><a href="hulahoop.html">Hula hooping</a></button>
-    <button class="button button"><a href="singleperson_branch.html">Back</a></button>
+    <button class="button button"><a href="kite_outside1.html"><span>Make a kite</span></a><div class="info">Make a kite!</div></button>
+    <button class="button button"><a href="garden_outside1.html"><span>Grow a garden</span></a><div class="info">Grow a garden</div></button>
+    <button class="button button"><a href="makeaboat_outside1.html"><span>Make a boat</span></a><div class="info">Several different ways to make a toy boat! </div></button>
+    <button class="button button"><a href="skipping_outside1.html"><span>Skipping</span></a><div class="info">Some different ways to skip</div></button>
+        <button class="button button"><a href="hulahoop.html"><span>Hula hooping</span></a><div class="info">How to hula hoop</div></button>
+    <button class="button button"><a href="singleperson_branch.html"><span>Back</span></a></button>
     </div>
 </body>
 </html>
