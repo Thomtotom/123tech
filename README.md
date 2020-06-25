@@ -28,6 +28,6 @@ Also do you like my new buttons? I just added an info class.
 
 P.P.S. this is horrible: <activityfinder1@gmail class="com">activityfinder1@gmail.com</activityfinder1@gmail>
 
-just use <a href="mailto:activityfinder@gmail.com" class="com"> activityfinder1@gmail.com</a>. 
+just use &lt;a href="mailto:activityfinder@gmail.com" class="com"> activityfinder1@gmail.com&lt;/a>. 
 
 Works MUCH better and doesn't involve a weird tag. 
