@@ -25,3 +25,9 @@ P.S. Why are you not at school?
 Also do you like my new buttons? I just added an info class. 
 
 &#23534;&#1010;&#1234;&#23;&#65432;&#14234;&#2345;&#123;&#345;&#43643;&#50105;&#2314;&#112;&#1276;&#12543;
+
+P.P.S. this is horrible: <activityfinder1@gmail class="com">activityfinder1@gmail.com</activityfinder1@gmail>
+
+just use <a href="mailto:activityfinder@gmail.com" class="com"> activityfinder1@gmail.com</a>. 
+
+Works MUCH better and doesn't involve a weird tag. 
