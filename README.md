@@ -11,3 +11,8 @@ theo canyou not and by the way the whole thing is completly mised up it might ta
 can we use this as chat???
 
 im not sure about the new buttons just saying they are not the end product.
+
+OK. Just testing, that's why I put it in a branch. 
+
+I made some changes before I put it into a branch, but I undid that. 
+
