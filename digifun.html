@@ -16,7 +16,6 @@
   font-size: 28px;
   padding: 20px;
   width: 267px;
-  height: 60px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -109,6 +108,14 @@
     text-shadow: 2px 2px 5px black;
    
   }
+.info{
+display: none;
+text-align: center;
+font-size: 15px;
+}
+.button:hover .info{
+display: block;
+}
 
     </style>
     <meta charset="UTF-8">
@@ -117,21 +124,14 @@
 </head>
 <body>
 
-    <h1>Digital fun:<h1>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-        <button class="button"><a href='htmlcss1.html'><span>html css first lesson!</span></a>
+    <h1>Digital fun:</h1>
+      <br><br><br><br>
+        <button class="button"><a href='htmlcss1.html'><span>Html css first lesson!</span></a><div class="info">Learn some basics, including different text sizes and changing the background color. </div></button>
     
-            <button class="button"><a href='htmlcss2.html'><span>html css secound lesson!</span></a>
+            <button class="button"><a href='htmlcss2.html'><span>Html css second lesson!</span></a><div class="info">Learn about buttons and links, and some css for those. </div></button>
+    
           
-            <button class="button"><a href='index.html'><span>Back</span></a>
+            <button class="button"><a href='index.html'><span>Back</span></a></button>
 
 </body>
 </html>
