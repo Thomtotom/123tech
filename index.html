@@ -1,196 +1,15 @@
 <html>
 <head>
     <title>activity finder</title>
+    
+       
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="./logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Allan|Black+Han+Sans|Lemonada&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-    <style>
-        #contianer {
-            min-height: 100%;
-        }
-
-        #main {
-            overflow: auto;
-            padding-bottom: 100px;
-        }
-
-
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-
-        .position1 {
-            position: absolute;
-            z-index: -1;
-            left: 0px;
-        }
-
-        .BigText {
-            font-family: 'Cinzel', serif
-        }
-
-        h1 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        h2 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        h3 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        h4 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        h5 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        h6 {
-            text-align: left;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        p {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-
-
-
-
-
-
-
-
-        .clock {
-            font-size: 1rem;
-            color: rgb(224, 195, 30);
-        }
-
-
-
-
-
-        a {
-            color: rgb(224, 195, 30);
-            text-decoration: none;
-        }
-
-
-        .button {
-            background-color: #5c4e4e;
-            border: none;
-            font-family: 'Allan', cursive;
-            font-size: 20px;
-            text-decoration: none;
-            width: 140px;
-            height: 50px;
-        }
-
-            .button:hover {
-                background-color: rgb(27, 12, 51);
-            }
-
-        input {
-            width: 500px;
-            height: 50px;
-            background-image: linear-gradient(rgb(27, 12, 51), black);
-            font-weight: bolder;
-            color: cornsilk;
-            border-radius: 20px, 20px, 20px;
-            border-color: cyan;
-            text-decoration: cyan;
-        }
-
-
-
-
-
-
-
-
-
-        .footer {
-            background-color: black;
-            width: 100%;
-            position: fixed;
-            bottom: 0px;
-            width: 100%;
-            text-align: center;
-        }
-
-
-
-        body {
-            background-image: url("2020-05-15.png");
-            background-size: 100%;
-            background-repeat: repeat;
-            background-attachment: fixed;
-            font-family: 'Lemonada', cursive;
-            font-size: 70%;
-        }
-
-
-
-
-
-        /* nav bar css */
-
-        ul {
-            color: rgb(251, 193, 4);
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: #5c4e4e;
-            background-attachment: fixed;
-            height: 50px;
-            width: 100%;
-        }
-
-        li {
-            float: right;
-        }
-
-            li a {
-                display: block;
-                padding: 8px;
-            }
-
-
-        .nav {
-            position: fixed;
-        }
-    </style>
-
+   
     <style>
 
 
@@ -281,194 +100,376 @@
             background-color: #5cb85c;
             color: white;
         }
-    </style>
-
-</head>
-
-
-<!-- nav bar html -->
-
-<ul class="nav">
-
-    <li>
-        <img alt="logo" src="acty.png" width="270" height="40">
-    </li>
-    <li><button class="button"><a href='af.html'>Activity finder</a></button></li>
-    <li><button class="button"><a href='AU.html'>About us</a></button></li>
-    <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
-    <li><button class="button"><a href='DigitalGamePage.html'>gamepage</a></button></li>
-    <li>
-        <input id="myInput" value="Search Activity Finder">
-        <script src="searchcode.js"></script>
-
-    <li>
-
-
-
-
-
-</ul>
-
-
-
-
-
-
-
-
-
-<body>
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Search results</h2>
-            </div>
-            <div class="modal-body">
-
-                <p id="but"></p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <script>var modal = document.getElementById("myModal");
-
-
-        var span = document.getElementsByClassName("close")[0];
-
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
+        #contianer{
+          min-height: 100%;
+       
         }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+       
+        #main{
+          overflow: auto;
+          padding-bottom: 100px;
+        }
+       
+        
+       
+        * {
+          margin: 0;
+          padding: 0;
+        }
+       
+       
+        .position1{
+          position: absolute;
+          z-index: -1;
+          left: 0px;
+          
+        }
+       
+        .BigText{
+          font-family: 'Cinzel', serif
+         
+       
+        }
+       
+        h1{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+        }
+       
+        h2{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+          
+        }
+       
+        h3{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+         
+        }
+       
+        h4{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+          
+       
+        }
+       
+        h5{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+          
+        }
+       
+        h6{
+          text-align: left;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+         
+       
+        }
+       
+        p{
+          text-align: left;
+          text-indent: 30%;
+          color: white;
+          text-shadow: 2px 2px 5px black;
+         
+        }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       a { 
+        color: rgb(224, 195, 30);
+        text-decoration: none;
+        
+       }
+       
+       
+        .button {
+              background-color: #5c4e4e;
+              border: none;
+              font-family: 'Allan', cursive;
+              font-size: 20px;
+              text-decoration: none;
+              width: 140px;
+              height: 50px;
+            
             }
-        }</script>
+            .button:hover{
+                  background-color: rgb(27, 12, 51);
+       
+              }
+       
+           input{
+             width: 400px;
+             height: 50px;
+             background-image: linear-gradient(rgb(27, 12, 51), black);
+             font-weight: bolder;
+             color: cornsilk;
+             border-radius: 20px, 20px, 20px;
+             border-color: cyan;
+             text-decoration: cyan;
+           }
+                  
+       
+           
+         
+       
+       
+       
+       
+       
+           
+       
+         
+       
+              body {
+                background-image: url("2020-05-15.png");
+                background-size: 100%;
+                background-repeat: repeat;
+                background-attachment: fixed;
+                
+                font-family: 'Lemonada', cursive;
+                font-size: 70%;
+              }
+           
+       
+            
+       
+          
+      /* nav bar css */
+       
+                  ul {
+              color: rgb(251, 193, 4);
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              background-color: #5c4e4e;
+              background-attachment: fixed;
+              height: 50px;
+              width: 100%;
+       
+              
+              
+            }
+       
+            li {
+              float: right;
+            }
+       
+            li a {
+              display: block;
+              padding: 8px;
+            }
+       
+       
+            .nav{
+            position: fixed;
+        
+       
+       
+       
+          </style>
+</head>
+ 
+ 
+  <!-- nav bar html -->
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  <body>
+      <ul class = "nav">
+    
+        <li><img alt="logo" src="acty.png"  width="270" height="40"> </li>
+          <li><button class="button"><a href='af.html'>Activity finder</a></button></li>
+          <li><button class="button"><a href='AU.html'>About us</a></button></li>
+          <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
+          <li><button class="button"><a href='DigitalGamePage.html'>gamepage</a></button></li>
+          <li>
+              <input id="myInput" value="Search Activity Finder">
+      <li>
+        </ul>
+      <div id="myModal" class="modal">
 
-    <div id="container">
-        <div id="main">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+          <!-- Modal content -->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Search results</h2>
+              </div>
+              <div class="modal-body">
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br><br>
-            <br>
-            <br>
-            <br>
+                  <p id="but"></p>
+              </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br><br>
-            <br>
+          </div>
 
-            <img class="position1" src="2020-05-08 (3).png" alt="mortal engines" width="100%" height="2000">
-        </div>
+      </div>
 
-        <h1>who this website is directed for:</h1>
-        <p> we have created this website for people like "you",</p>
-        <p>
-            you the person who is stuck indoors surfing the internet
-            for things
-        </p>
-        <p>to do </p>
-        <p>
-            by yourself or with others.
-            Well you're in luck because this is the website you've been looking for.
-        </p>
-        <p>
-            we have things for groups of
-        </p>
-        <p>
-            people, and activities for you by yourself.
-            So we hope you love this site.
-        </p>
-        <br>
-        <br>
-        <br>
-
-        <h1>what is this website about?</h1>
-        <p>This website is about finding the best activity in the least time.</p>
-        <p>
-            Unlike google our website has a series of questions that then
-        </p>
-
-        <p>
-            narrows the activities that you're looking for.
-            We have many choices but we recommend
-        </p><p> our tag page it has more than 17 different<p>
-        <p>
-            tag games!
-            We can also recommend our card game page.
-        </p>
-        <br>
+      <script>var modal = document.getElementById("myModal");
 
 
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+          var span = document.getElementsByClassName("close")[0];
 
 
-        <h1>updates!</h1>
-        <br>
-        <p>yay so many updates this week! we have our own game page with two new games and one terible chatbot WOW! here a link to the</p><p> <a href="DigitalGamePage.html">game page!</a> go cheak it out! if you scroll a little you will also find a ink to the activity of the day that we also just made!  were still </p><p>going to be working on our activitys for those </p><p>sweet rainy days. we will also be adding a thing to every button in your nav bar: actvity finder, book review, about us and lastly </p><p>digital game page! </p>
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+              modal.style.display = "none";
+          }
 
+          window.onclick = function (event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }</script>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+      <div id="container">
+          <div id="main">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
 
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br><br>
+              <br>
+              <br>
+              <br>
 
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br><br>
+              <br>
 
+              <img class="position1" src="2020-05-08 (3).png" alt="mortal engines" width="100%" height="1500">
+          </div>
 
-        <p>Would you like to do a random activity, well you're in luck try out our activity of the day: </p>
-        <a href="dailyactivitytest.html">Daily activity</a>
+          <h1>What this website is for:</h1>
+          <p> We have created this website for people like "you",
+              you the person who is stuck indoors surfing the internet
+              for things
+          to do 
+              by yourself or with others.
+              Well you're in luck because this is the website you've been looking for.
+         
+              we have things for groups of
+          
+              people, and activities for you by yourself.
+              So we hope you love this site.
+          </p>
+          <br>
+          <br>
+          <br>
+
+          <h1>What is this website about?</h1>
+          <p>This website is about finding the best activity in the least time.
+              Unlike Google; our website has a series of questions that then
+          
+              narrows the activities that you're looking for, in addition to a search bar. 
+              We have many choices but we recommend
+           our tag page it has more than 17 different 
+              tag games!
+              We can also recommend our card game page.
+          </p>
+          <br>
 
 
 
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
 
 
-        <div  class="footer"   align="center" >
-            <p style="text-align: center;text-indent: 0px;">Comments, Questions or Suggestions? Contact us at <a href="mailto:activityfinder1@gmail.com">Activityfinder1@gmail.com</a> <p>
-        </div>
+          <h1>Updates!</h1>
+          <br>
+          <p>26/6<br>This week we have finished off the gamepage, which now has 7 different games! Warning: because of addiction, we have had to make some of the games disable after a certain amout of time. We also have a search bar, and an email address. </p>
+          <p>6/6<br>Yay so many updates this week! We have our own game page with two new games and one terible chatbot WOW! Here's a link to the <a href="DigitalGamePage.html">game page!</a> Go check it out! If you scroll a little you will also find a link to the activity of the day that we also just made!  We're still going to be working on our activitys for those sweet rainy days. We will also be adding a thing to every button in your nav bar: actvity finder, book review, about us and lastly digital game page! </p>
 
-</body>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+
+          <h1>Daily Activitys</h1>
+          <p>Do you want a random activity every day without having to search or look for it? We have decided to help you with that. Here is our solution: <a href="dailyactivitytest.html">Daily activity.</a> Hope you enjoy!</p>
+         <br>
+         <br>
+         <br>
+         <h1>contacts!</h1>
+         <p>Have any complants, isues, ideas, feedback etcetera? We would love to hear, please contact us here at <a href="activityfinder1@gmail.com" class="com">activityfinder1@gmail.com</a> and we will respond to anything you might ask!</p>
+
+
+
+
+
+
+
+
+
+
+
+        <script src="searchcode.js"></script>
+      </div></div>
+          </body>    
+
+
 
 
 
