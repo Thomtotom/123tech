@@ -22,7 +22,6 @@
   font-size: 28px;
   padding: 20px;
   width: 267px;
-  height: 60px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -115,6 +114,14 @@
     text-shadow: 2px 2px 5px black;
    
   }
+.info{
+display: none;
+text-align: center;
+font-size: 15px;
+}
+.button:hover .info{
+display: block;
+}
 
     </style>
 </head><body>
@@ -128,9 +135,9 @@
     <br>
     <br>
     <br>
-    <button class="button button"><a href="sudoku.html">Sudoku</a></button>
-    <button class="button button"><a href="interestinglogicpuzzles.html">Puzzles</a></button>
-    <button class="button button"><a href="rebus.html">REbus puzzles</a></button>
-    <button class="button button"><a href="puzzleindex.html">Back</a></button>
+    <button class="button button"><a href="sudoku.html"><span>Sudoku</span></a><div class="info">A tutorial on how to solve sudoku</div></button>
+    <button class="button button"><a href="interestinglogicpuzzles.html"><span>Puzzles</span></a><div class="info">Some logic puzzles</div></button>
+    <button class="button button"><a href="rebus.html"><span>Rebus puzzles</span></a><div class="info">Puzzles where you try to find out what a specific arrangement of words means</div></button>
+    <button class="button button"><a href="puzzleindex.html"><span>Back</span></a></button>
 </body>
 </html>
