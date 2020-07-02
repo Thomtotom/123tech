@@ -13,7 +13,16 @@
       
         }
       
-      
+          
+.info{
+display: none;
+text-align: center;
+font-size: 15px;
+}
+.button:hover .info{
+display: block;
+}
+
       .button {
         border-radius: 4px;
         background-color: #0b0a53;
@@ -22,8 +31,7 @@
         text-align: center;
         font-size: 28px;
         padding: 20px;
-        width: 250px;
-        height: 150px;
+        width: 267px;
         transition: all 0.5s;
         cursor: pointer;
         margin: 5px;
@@ -117,13 +125,10 @@
          
         }
           </style>
-    </style>
-</head>
+\</head>
 <body>
     <h1>Puzzles</h1>
-    <h2>Weekly puzzle</h2>
-    <!--Insert content here-->
-    <h2>Or try to find the right puzzle for you</h2>
+    
     <br>
     <br>
     <br>
@@ -132,12 +137,11 @@
     <br>
     <br>
     <br>
-    <br>
-    <button class="button button"><a href="logic_puzzle.html">Logic Puzzles</a></button>
-    <button class="button button"><a href="maths_puzzle.html">Math Puzzles</a></button>
-    <button class="button button"><a href="word_puzzle.html">Word Puzzles</a></button>
+    <button class="button button"><a href="logic_puzzle.html"><span>Logic Puzzles</span></a><div class="info">Sudoku, Rebus and some interesting logic puzzles.</div></button>
+    <button class="button button"><a href="maths_puzzle.html"><span>Math Puzzles</span></a><div class="info">A maths quiz, countdown and some maths puzzles. </div></button>
+    <button class="button button"><a href="word_puzzle.html"><span>Word Puzzles</span></a><div class="info">Anagrams, fill-in the blanks and riddles. </div></button>
 
-    <button class="button button"><a href="inside_A.html">Back</a></button>
+    <button class="button button"><a href="inside_A.html"><span>Back</span></a></button>
 
 </body>
 </html>
