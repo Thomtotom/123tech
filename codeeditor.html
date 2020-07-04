@@ -59,6 +59,10 @@
           background-attachment: fixed;	
           margin: 0;	
         }
+        #inputs{
+        max-height: 300px; 
+        overflow-y: auto;
+        }
         </style>
         </head>
 <body>
@@ -66,17 +70,27 @@
 <h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
 <p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Rules: do not use element styling (eg p{}) as that will effect everything else. <br>
 Instead of body for styling, use #body. <br>
-No head, html or body tags, just put everything in as usual.<br>
-Don't bother with line breaks. Everything will work fine without them, but do remember to add semicolons (;) at the end of every line of css. 
-    Do not use Document.createElement.<br>
+No head, html or body tags, just put everything in as you would in the body tag.<br>
+Press the new line button for a new line. Warning: All code disappears when you press this button, so make enough extra lines first. Remember to make every line of css end with ;<br>
 Do not use anything with id input or body<br>
 </p>
-<input id="input" style="width: 100%; overflow: scroll;">
-<button onclick="run()">Run</button>
+<div id="inputs">
+<input class="input" style="width: 100%;">
+
+</div>
+<button onclick="run()">Run</button><button onclick="newline()">New line</button>
+
 <script>
+function  newline(){
+document.getElementById("inputs").innerHTML += "<br><input class='input' style='width: 100%;'>"
+}
 function run(){
-var input = document.getElementById("input");
-document.getElementById("body").innerHTML = input.value;
+var text = "";
+var input = document.getElementsByClassName("input");
+for( var x =  0; x < input.length; x++){
+text += input[x].value;
+}
+document.getElementById("body").innerHTML = text;
 }
 </script>
 <div id="body" style="border: 2px solid black;"></div>
@@ -84,3 +98,4 @@ document.getElementById("body").innerHTML = input.value;
 </body>
 
 </html>
+
