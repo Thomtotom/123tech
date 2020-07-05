@@ -71,8 +71,8 @@
 <p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Rules: do not use element styling (eg p{}) as that will effect everything else. <br>
 Instead of body for styling, use #body. <br>
 No head, html or body tags, just put everything in as you would in the body tag.<br>
-Press the new line button for a new line. Warning: All code disappears when you press this button, so make enough extra lines first. Remember to make every line of css end with ;<br>
-Do not use anything with id input or body<br>
+Press the new line button for a new line.  Remember to make every line of css end with ;<br>
+Do not use anything with id input or body, or class input. <br>
 </p>
 <div id="inputs">
 <input class="input" style="width: 100%;">
@@ -82,7 +82,13 @@ Do not use anything with id input or body<br>
 
 <script>
 function  newline(){
-document.getElementById("inputs").innerHTML += "<br><input class='input' style='width: 100%;'>"
+var input2 = document.getElementsByClassName("input");
+var text2 = ""
+for( var y = 0; y < input2.length; y++){
+text2 += "<input class='input' style='width: 100%' value='" + input2[y].value + "'><br>"
+}
+text2 += "<input class='input' style='width: 100%;'><br>"
+document.getElementById("inputs").innerHTML = text2;
 }
 function run(){
 var text = "";
