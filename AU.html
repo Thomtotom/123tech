@@ -129,68 +129,26 @@
     }
 
 
-    .position1 {
-        position: absolute;
-        z-index: -1;
-        left: 0px;
-    }
+    .position1{
+          position: absolute;
+          z-index: -1;
+          left: 0px;
+          height: 3500px;
+        }
 
     .BigText {
         font-family: 'Cinzel', serif
     }
 
-    h1 {
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-    h2 {
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-    h3 {
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-    h4 {
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-    h5 {
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-    h6 {
-        text-align: left;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-    p {
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-    }
-
-
-
-
-
+        h1, h2, h3, h4, h5, h6, p {
+            text-align: left;
+            margin: 15%;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+ 
+ 
+           
 
 
 
@@ -252,11 +210,10 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
         background-color: #5c4e4e;
         background-attachment: fixed;
         display: flex;
-        height: 38px;
+        height: 50px;
         width: 100%;
     }
 
@@ -272,7 +229,6 @@
 
     .nav {
         position: fixed;
-        overflow-x: auto;
     }
 
     .button {
@@ -290,7 +246,7 @@
         }
 
     input {
-        width: 500px;
+        width: 400px;
         height: 50px;
         background-image: linear-gradient(rgb(27, 12, 51), black);
         font-weight: bolder;
@@ -299,11 +255,81 @@
         border-color: cyan;
         text-decoration: cyan;
     }
+
+        .morelinks a {
+            padding: 0px;
+            width: 140px;
+        }
+
+            .morelinks a:hover {
+                background-color: rgb(27, 12, 51);
+            }
+
+        .nav {
+            position: fixed;
+        }
+
+        .more {
+            display: none;
+            width: 140px;
+        }
+
+        .morelinks, .more {
+            background-color: #5c4e4e;
+            display: none;
+            text-align: center;
+        }
+
+            
+
+        @media only screen and (max-width: 1260px) and (min-width: 810px) {
+            .a {
+                display: none;
+                padding: 8px;
+            }
+
+            .more {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 810px) and (min-width: 500px) {
+            .a {
+                display: none;
+                padding: 8px;
+            }
+
+            .more {
+                display: block;
+            }
+
+            li img {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .a {
+                display: none;
+                padding: 8px;
+            }
+
+            .more {
+                display: block;
+            }
+
+            li img {
+                display: none;
+            }
+
+            input {
+                width: 100px;
+            }
+        }
 </style>
 </head>
 
-<HEADer>
-</HEADer>
+
 
 
 <body>
@@ -312,64 +338,81 @@
             <img alt="logo" src="acty.png" width="270" height="40">
         </li>
         <li>
-            <input id="myInput" value="Search Activity Finder">
+            <input id="myInput" placeholder="Search Activity Finder">
             <script src="searchcode.js"></script>
 
         </li>
-        <li><button class="button"><a href='index.html'>first page</a></button></li>
-        <li><button class="button"><a href='af.html'>Activity finder </a></button></li>
-        <li><button class="button"><a href='AU.html'>About us</a></button></li>
-        <li><button class="button"><a href='bookReview.html'>book review</a></button></li>
+        <li class="a"><button class="button"><a href='index.html'>first page</a></button></li>
+        <li class="a"><button class="button"><a href='af.html'>Activity finder </a></button></li>
+        <li class="a"><button class="button"><a href='AU.html'>About us</a></button></li>
+        <li class="a"><button class="button"><a href='bookReview.html'>book review</a></button></li>
+        <li class="more">
+            <div class="button" onclick="togglepurple()">More</div><div class="morelinks">
+                <a href="index.html">Home</a><br />
+                <a href="af.html">Activity finder</a><br />
+                <a href="bookReview.html">Book review</a><br />
+                <a href="DigitalGamePage.html">Game page</a>
+            </div>
+            <script>function togglepurple() {
+
+                    var x = document.getElementsByClassName("morelinks")[0];
+                    if (x.style.display == "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }</script>
+        </li>
 
 
 
         <!--<div id="myclockdisplay" class="clock"></div>
-        <script type="text/javascript">
-        function showtime(){
+    <script type="text/javascript">
+    function showtime(){
 
 
 
-            var date=new Date();
-            h = date.getHours();
-            m = date.getMinutes();
-            s = date.getSeconds();
-            var session = "AM"
+        var date=new Date();
+        h = date.getHours();
+        m = date.getMinutes();
+        s = date.getSeconds();
+        var session = "AM"
 
-            console.log(h, m, s)
+        console.log(h, m, s)
 
-            if (h == 0){
-                h = 12;
-
-
-            }
-
-            if (h > 12){
-                h = h -12;
-                session = "pm"
-            }
-
-            console.log(h)
-            h = (h < 10) ? "0" + h : h;
-
-
-            m = (m < 10) ? "0" + m : m;
-            s = (s < 10) ? "0" + s : s;
-
-            var time = h + ":" + m + ":" + s + ":" + session;
-            console.log("check")
-            console.log (time)
-            document.getElementById("myclockdisplay").innerText = time;
-            document.getElementById("myclockdisplay").textContent = time;
-
-            setTimeout(showtime, 1000)
+        if (h == 0){
+            h = 12;
 
 
         }
 
-        showtime();
+        if (h > 12){
+            h = h -12;
+            session = "pm"
+        }
+
+        console.log(h)
+        h = (h < 10) ? "0" + h : h;
 
 
-        </script>-->
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + ":" + session;
+        console.log("check")
+        console.log (time)
+        document.getElementById("myclockdisplay").innerText = time;
+        document.getElementById("myclockdisplay").textContent = time;
+
+        setTimeout(showtime, 1000)
+
+
+    }
+
+    showtime();
+
+
+    </script>-->
     </ul>
     <div id="myModal" class="modal">
 
