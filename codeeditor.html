@@ -59,47 +59,31 @@
           background-attachment: fixed;	
           margin: 0;	
         }
-        #inputs{
-        max-height: 300px; 
-        overflow-y: auto;
+         #body {	
+          background-color: #ffffff;	
+          
         }
         </style>
         </head>
 <body>
 
 <h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
-<p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Rules: do not use element styling (eg p{}) as that will effect everything else. <br>
+<p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">
 Instead of body for styling, use #body. <br>
-No head, html or body tags, just put everything in as you would in the body tag.<br>
-Press the new line button for a new line.  Remember to make every line of css end with ;<br>
-Do not use anything with id input or body, or class input. <br>
-</p>
-<div id="inputs">
-<input class="input" style="width: 100%;">
 
-</div>
-<button onclick="run()">Run</button><button onclick="newline()">New line</button>
+
+Do not use anything with id input or body, or class input. <br>
+</p><table style="width: 100%"><tr><td><button onclick="run()">Run</button>
+</td></tr><tr><td style="width: 50%;">
+<textarea id="input" placeholder="type code here" style="width: 100%; min-height: 500px; resize: none;"></textarea></td><td style="height: 500px"><div id="body" style="border: 2px solid black;height: 100%;"></div></td></tr></table>
+
 
 <script>
-function  newline(){
-var input2 = document.getElementsByClassName("input");
-var text2 = ""
-for( var y = 0; y < input2.length; y++){
-text2 += "<input class='input' style='width: 100%' value='" + input2[y].value + "'><br>"
-}
-text2 += "<input class='input' style='width: 100%;'><br>"
-document.getElementById("inputs").innerHTML = text2;
-}
+
 function run(){
-var text = "";
-var input = document.getElementsByClassName("input");
-for( var x =  0; x < input.length; x++){
-text += input[x].value;
-}
-document.getElementById("body").innerHTML = text;
+document.getElementById("body").innerHTML = document.getElementById("input").value;
 }
 </script>
-<div id="body" style="border: 2px solid black;"></div>
     <button class="button button"><a href="index.html">Back</a></button>
 </body>
 
