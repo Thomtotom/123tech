@@ -36,3 +36,5 @@ Works MUCH better and doesn't involve a weird tag.
 And can I have something to do? 
 
 UPDATE: Mel says we have until wednesday to finish. Either we are sticking with the normal buttons, or going with mine, and we need to do a final debug. NO MORE CONTENT. delete extra book review tabs and Mel also says we should teach Eleanor and Billy some basic HTML
+
+Tom I think it's fine carrying on as long as we DON'T surge the content. 
