@@ -74,9 +74,7 @@ function updateGameArea() {
     for( var x = 0; x < myFallen.length; x++){
         myFallen[x].update();
     }
-    if (myGameArea.key) {
-    check();
-    }
+    
     myGamePiece.update();
 }
 function check(){
@@ -101,16 +99,19 @@ myGamePiece.width -= (myGamePiece.x - myFallen[0].x)
 }
 }
 }
-}
+    }
+    document.getElementById("score").innerHTML = "Score: " + score;
+
 myFallen.unshift(new component(myGamePiece.width, myGamePiece.height, "red", myGamePiece.x, myGamePiece.y));
-myGamePiece.x = math.random() * myGamePiece.x;
-if (myFallen.length >= 12) {
-for (var p = 0; p <= myFallen.length; p++){
-myFallen[p].y += 20;
-}
-}
-    myGamePiece.y -= 20;
-document.getElementById("score").innerHTML = "Score: " + score;
+    if (myFallen.length >= 12) {
+        for (var p = 0; p <= myFallen.length; p++) {
+            myFallen[p].y += 20;
+        }
+    } else {
+        myGamePiece.y -= 20;
+    }
+    myGamePiece.x = 0;
+
 } else {
 clearInterval(myGameArea.interval);
 document.getElementById("lose").style.display = "block";
