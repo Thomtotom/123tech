@@ -1,119 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-</configuration>
+﻿<!doctype html>
 <html>
 <head>
     <title> Learn to play Canasta!</title>
-    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <link rel="shortcut icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="default.css" />
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
     <style>
-  a {
-    color: rgb(172, 124, 13);
-
-  }
-
-
-.button {
-  border-radius: 4px;
-  background-color: #0b0a53;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 267px;
-  height: 60px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
-      body {
-          background-color: #524763;
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          margin: 0;
+        pre {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            margin: 15%;
+            color: white;
+            text-shadow: 2px 2px 5px black;
         }
-
-        h1{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-  }
-
-  h2{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
-
-  h3{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-
-  h4{
-    text-align: left;
-    text-indent: 30%;
-    text-shadow: 2px 2px 5px black;
-    
-
-  }
-
-  h5{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
-
-  h6{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-
-  }
-
-  p{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
 
     </style>
 </head>
@@ -124,29 +23,29 @@
     <img src="diamond.png" alt="diamond" width="40" height="40" />
     <h2> Overview</h2>
     <p>
-        Your goal is to beat your opponent by scoring more points. You score points by melding<br />
-        cards, and making as many canastas as possible. A canasta is a meld of at least seven<br />
+        Your goal is to beat your opponent by scoring more points. You score points by melding
+        cards, and making as many canastas as possible. A canasta is a meld of at least seven
         cards of the same rank.<br />
         <br />
-        Each player starts with 12 cards in their hand.<br />
-        Both players take turns in drawing one card from the deck, and discarding one card on the <br />
+        Each player starts with 12 cards in their hand. 
+        Both players take turns in drawing one card from the deck, and discarding one card on the 
         discard pile (in that order).<br />
         <br />
-        After drawing a card, a player may meld cards if they want to. Cards are melded in columns<br />
-        of at least three cards; e.g. you can meld three Kings, or four Fives. You cannot meld <br />
-        sequences like Four-Five-Six. Once a card has been melded, it cannot be taken back into the<br />
+        After drawing a card, a player may meld cards if they want to. Cards are melded in columns
+        of at least three cards; e.g. you can meld three Kings, or four Fives. You cannot meld 
+        sequences like Four-Five-Six. Once a card has been melded, it cannot be taken back into the 
         hand.<br />
         <br />
-        When a player has melded their cards, they end their turn by discarding a card. At that <br />
-        point, their melded cards are checked to see if they conform to the canasta rules. Discarding <br />
+        When a player has melded their cards, they end their turn by discarding a card. At that 
+        point, their melded cards are checked to see if they conform to the canasta rules. Discarding 
         a card is not necessary if the player can go out by melding all of their cards.<br />
         <br />
-        Instead of drawing a card from the deck, a player may take the entire discard pile. <br />
+        Instead of drawing a card from the deck, a player may take the entire discard pile. 
         However, this is only allowed if they can directly meld the top card.<br />
         <br />
-        A hand is over when one of the players has no cards left in their hand, or when there  <br />
-        are no cards left on the stock. The scores of both players are then computed and added to  <br />
-        the scores, and a new hand is dealt. A player can only finish a hand when they have at least  <br />
+        A hand is over when one of the players has no cards left in their hand, or when there  
+        are no cards left on the stock. The scores of both players are then computed and added to  
+        the scores, and a new hand is dealt. A player can only finish a hand when they have at least 
         one canasta. <br />
         <br />
         A canasta match is over when one of the players reaches a chosen number of points.<br />
@@ -157,35 +56,33 @@
     <p>
         If a rank is melded, it must contain at least three cards on the table.<br />
         <br />
-        It is possible to add a wildcard to a column of cards of any rank on the table. The <br />
-        wildcard is then seen as a card of that rank (but the value remains unchanged).<br />
+        It is possible to add a wildcard to a column of cards of any rank on the table. The 
+        wildcard is then seen as a card of that rank (but the value remains unchanged).
         However, there may never be more wildcards than natural cards within one meld.<br />
         <br />
-        At the beginning of a hand, the top card of the deck is turned over and placed on the <br />
-        discard pile. If this card is a Red Three or a wildcard, the procedure is repeated until <br />
-        the top card of the discard pile is neither a Red Three nor a wildcard.
-        When a new hand is dealt, the hands of both players are checked to see if they contain a Red<br />
-
-        Three. If there is one, that Three is then automatically melded, and an extra card is dealt to <br />
-        the hand out of which it came. This procedure is repeated until neither player has any Red Threes <br />
+        At the beginning of a hand, the top card of the deck is turned over and placed on the 
+        discard pile. If this card is a Red Three or a wildcard, the procedure is repeated until 
+        the top card of the discard pile is neither a Red Three nor a wildcard. When a new hand is dealt, the hands of both players are checked to see if they contain a Red
+        Three. If there is one, that Three is then automatically melded, and an extra card is dealt to 
+        the hand out of which it came. This procedure is repeated until neither player has any Red Threes 
         left in their hand.<br />
         <br />
-        Black Threes may not be melded, except when the player can go out by melding a column of three or<br />
+        Black Threes may not be melded, except when the player can go out by melding a column of three or
         four Black Threes. These Black Threes must then be the last cards to be melded.<br />
         <br />
-        The discard pile can be frozen by discarding a wildcard or a Red Three. A freeze means that both <br />
-        players are only allowed to take the discard pile if they can meld the top card using only the <br />
-        cards in their hand, as if they had no cards on the table. For example, if the discard pile is <br />
-        frozen and the top card is a Seven, the pile may only be taken if the player has two Sevens in <br />
-        their hand, even though they have a column of three Sevens on the table. Also, no wildcards may <br />
-        be used in melding: if they have one Seven and a wildcard in hand - instead of two Sevens- they <br />
+        The discard pile can be frozen by discarding a wildcard or a Red Three. A freeze means that both 
+        players are only allowed to take the discard pile if they can meld the top card using only the 
+        cards in their hand, as if they had no cards on the table. For example, if the discard pile is 
+        frozen and the top card is a Seven, the pile may only be taken if the player has two Sevens in 
+        their hand, even though they have a column of three Sevens on the table. Also, no wildcards may 
+        be used in melding: if they have one Seven and a wildcard in hand - instead of two Sevens- they 
         may not take the discard pile.<br />
         <br />
-        If you have taken the discard pile but discover that you cannot use the top card, you must put <br />
+        If you have taken the discard pile but discover that you cannot use the top card, you must put 
         the cards that were in the discard pile back, and lose 50 points.<br />
         <br />
-        It is never allowed to take the discard pile when the top card is a Black Three, a <br />
-        Red Three or a wildcard. Thus, Black Threes can be used to freeze the pile for a single <br />
+        It is never allowed to take the discard pile when the top card is a Black Three, a 
+        Red Three or a wildcard. Thus, Black Threes can be used to freeze the pile for a single 
         turn.<br />
         <br />
         The first time a player melds cards in a hand, their value must be at least a certain minimum.<br />
@@ -202,28 +99,42 @@
     <img src="heart.png" alt="heart" width="40" height="40" />
     <h2>Scoring: card values and bonuses</h2>
     <h3> These cards have the following values:</h3>
-    <p>
-        Black Three, Four                               5<br />
+    <pre>
+        Black Three, Four                                        5<br />
         <br />
-        Five, Six, Seven, Eight, Nine, Ten              10<br />
+        Five, Six, Seven, Eight, Nine, Ten               10<br />
         <br />
-        Jack, Queen, King                               15<br />
+        Jack, Queen, King                                       15<br />
         <br />
-        Ace,Two                                         20<br />
+        Ace,Two                                                      20<br />
         <br />
-        Joker                                           50<br />
+        Joker                                                           50<br />
         <br />
-        Red Three                                       300<br />
+        Red Three                                                  300<br />
         <br />
-    </p>
+    </pre>
     <h3> The following bonuses are awarded:</h3>
     <p>
         A mixed canasta is worth 300 points, a natural canasta ( 500 points, and a wildcard<br />
         canasta 1,000 points.<br />
         <br />
         The player that goes out gets a bonus of 200 points for one of their canastas, and 300 <br />
-        in addition to the natural bonus if one of their canastas is a natural.<br />
+        in addition to the natural bonus if one of their canastas is a natural. <br />
         <br />
+    </p>
+    <p>
+        Extension rules: There are three possible bonuses for a canasta: natural , Instanasta and going out. Natural is no-wildcard, Going out is for when someone goes out, and Instanasta is when someone melds an entire canasta in one turn. 
+<br />
+        <br />
+        No Bonus: 300 points<br /><br />
+        1 Bonus: 500 points<br /><br />
+        2 Bonuses: 800 points<br /><br />
+        3 Bonuses: 1300 points<br /><br />
+        <br />
+        For wildcard canastas, only Instanasta and Going out apply.<br /><br />
+        No Bonus: 1000 points<br /><br />
+        1 Bonus: 1500 points<br /><br />
+        2 Bonuses: 2500 points<br /><br />
     </p>
     <img src="club.png" alt="club" width="40" height="40" />
     <h2>Total score</h2>
@@ -242,31 +153,26 @@
     <img src="diamond.png" alt="diamond" width="40" height="40" />
     <h2> Minimum</h2>
     <p>
-        The first time in a hand that a player melds cards the sum of their values must <br />
-        be at least a certain minimum. This minimum depends on your current score in the following way:<br />
+        The first time in a hand that a player melds cards the sum of their values must 
+        be at least a certain minimum. This minimum depends on your current score in the following way:
         <br />
-
-        Less than 0         None<br />
         <br />
-        From 0 to 995       50<br />
+        Less than 0:         None<br />
         <br />
-        From 1000 to 1995   80<br />
+        From 0 to 995:       50<br />
         <br />
-        From 2000 to 2995   100<br />
+        From 1000 to 1995:   80<br />
         <br />
-        3000 or more        120<br />
+        From 2000 to 2995:   100<br />
+        <br />
+        3000 or more:       120<br />
         <br />
 
     </p>
     <h2>The end! Now go play canasta!</h2>
-    <button class="button button"><a href="gamepage.html">Back to game page</a></button>
+    <button class="button button"><a href="gamepage.html"><span>Back to game page</span></a></button>
 
 </body>
 
 </html>
-<style>
-    body{
-    background-image: url(randomgreenback3.png);
-    background-size: 100%;
-    }
-</style>
+

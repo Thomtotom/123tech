@@ -2,111 +2,26 @@
 <html>
 <head>
     <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <link rel="stylesheet" href="default.css" />
     <title>STACKY</title>
-    <style>
-        .n {
-            width: 200px;
-            height: 100px;
-        }
-        a {
-            color: rgb(172, 124, 13);
-        }
-        .button {
-            border-radius: 4px;
-            background-color: #0b0a53;
-            border: none;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 28px;
-            padding: 20px;
-            width: 250px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
-        }
-            .button span {
-                cursor: pointer;
-                display: inline-block;
-                position: relative;
-                transition: 0.5s;
-            }
-                .button span:after {
-                    content: '\00bb';
-                    position: absolute;
-                    opacity: 0;
-                    top: 0;
-                    right: -20px;
-                    transition: 0.5s;
-                }
-            .button:hover span {
-                padding-right: 25px;
-            }
-                .button:hover span:after {
-                    opacity: 1;
-                    right: 0;
-                }
-        body {
-            background-color: #524763;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-        }
-        h1 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-        h2 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-        h3 {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-        h4 {
-            text-align: left;
-            text-indent: 30%;
-            text-shadow: 2px 2px 5px black;
-        }
-        h5 {
-            text-align: left;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-        h6 {
-            text-align: left;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-        p {
-            text-align: left;
-            text-indent: 30%;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-        
-    </style>
+
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+
         canvas {
             border: 1px solid #d3d3d3;
             background-color: #f1f1f1;
         }
+
         #lose {
             display: none;
         }
     </style>
 </head>
 <body onload="startGame()">
-    <script>var score = 0;
+    <script>var score = 0;  
 var myGamePiece;
     var xs = 2;
         var s = 1;
@@ -127,7 +42,6 @@ var myGameArea = {
     start : function() {
         this.canvas.width = 480;
         this.canvas.height = 270;
-        this.canvas.onkeyup = 'check()';
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);
