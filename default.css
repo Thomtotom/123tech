@@ -1,5 +1,9 @@
 ﻿a {
     color: rgb(172, 124, 13);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 .info {
     display: none;
@@ -52,7 +56,8 @@ body {
 }
 h1, h2, h3, h4, h5, h6, p {
     text-align: left;
-    margin: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
     color: white;
     text-shadow: 2px 2px 5px black;
 }

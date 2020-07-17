@@ -23,107 +23,110 @@
     </style>
 </head>
 <body onload="startGame()">
-    <script>var score = 0;  
-var myGamePiece;
-    var xs = 2;
+
+    <script>var score = 0;
+        var myGamePiece;
+        var xs = 2;
         var s = 1;
-var myFallen = [];
-function startGame() {
-document.getElementById("lose").style.display = "none";
-score = 0;
- xs = 2;
- myFallen = [];
-    s = 1;
- clearInterval(myGameArea.interval);
-    myGamePiece = new component(120, 20, "red", 10, 230);
-    myFallen.push(new component(120, 20, "red", 180, 250));
-    myGameArea.start();
-}
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
-
-    },
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-}
-function component(width, height, color, x, y) {
-    this.width = width;
-    this.height = height;
-    this.x = x;
-    this.y = y;
-    this.update = function(){
-        ctx = myGameArea.context;
-        ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
-}
-function updateGameArea() {
-    myGameArea.clear();
-    if(myGamePiece.x >= (480 - myGamePiece.width)){
-    xs = -2;
-    }
-    if(myGamePiece.x <= 0){
-    xs = 2;
-    }
-    myGamePiece.x += xs;
-    for( var x = 0; x < myFallen.length; x++){
-        myFallen[x].update();
-    }
-    
-    myGamePiece.update();
-}
-function check(){
-if (s == 1){
-score += 1;
-document.getElementById("score").innerHTML = "Score: " + score;
-    }
-if (Math.abs(myGamePiece.x - myFallen[0].x) <= myGamePiece.width){
-if (xs == 2 && myGamePiece.x <= myFallen[0].x){
-myGamePiece.width -= (myFallen[0].x - myGamePiece.x)
-myGamePiece.x = myFallen[0].x;
-} else {
-if (xs == 2 && myFallen[0].x <= myGamePiece.x){
-myGamePiece.width -= (myGamePiece.x - myFallen[0].x)
-} else {
-if (xs == -2 && myGamePiece.x <= myFallen[0].x){
-myGamePiece.width -= (myFallen[0].x - myGamePiece.x)
-myGamePiece.x = myFallen[0].x;
-} else {
-if (xs == -2 && myFallen[0].x <= myGamePiece.x){
-myGamePiece.width -= (myGamePiece.x - myFallen[0].x)
-}
-}
-}
-    }
-    document.getElementById("score").innerHTML = "Score: " + score;
-
-myFallen.unshift(new component(myGamePiece.width, myGamePiece.height, "red", myGamePiece.x, myGamePiece.y));
-    if (myFallen.length >= 12) {
-        for (var p = 0; p <= myFallen.length; p++) {
-            myFallen[p].y += 20;
+        var myFallen = [];
+        function startGame() {
+            document.getElementById("lose").style.display = "none";
+            score = 0;
+            xs = 2;
+            myFallen = [];
+            s = 1;
+            clearInterval(myGameArea.interval);
+            myGamePiece = new component(120, 20, "red", 10, 230);
+            myFallen.push(new component(120, 20, "red", 180, 250));
+            myGameArea.start();
         }
-    } else {
-        myGamePiece.y -= 20;
-    }
-    myGamePiece.x = 0;
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function () {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 20);
 
-} else {
-clearInterval(myGameArea.interval);
-document.getElementById("lose").style.display = "block";
-    s = 0;
-}
-}</script>
+            },
+            clear: function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
+        function component(width, height, color, x, y) {
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+            this.update = function () {
+                ctx = myGameArea.context;
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+        function updateGameArea() {
+            myGameArea.clear();
+            if (myGamePiece.x >= (480 - myGamePiece.width)) {
+                xs = -2;
+            }
+            if (myGamePiece.x <= 0) {
+                xs = 2;
+            }
+            myGamePiece.x += xs;
+            for (var x = 0; x < myFallen.length; x++) {
+                myFallen[x].update();
+            }
+
+            myGamePiece.update();
+        }
+        function check() {
+            if (s == 1) {
+                score += 1;
+                document.getElementById("score").innerHTML = "Score: " + score;
+            }
+            if (Math.abs(myGamePiece.x - myFallen[0].x) <= myGamePiece.width) {
+                if (xs == 2 && myGamePiece.x <= myFallen[0].x) {
+                    myGamePiece.width -= (myFallen[0].x - myGamePiece.x)
+                    myGamePiece.x = myFallen[0].x;
+                } else {
+                    if (xs == 2 && myFallen[0].x <= myGamePiece.x) {
+                        myGamePiece.width -= (myGamePiece.x - myFallen[0].x)
+                    } else {
+                        if (xs == -2 && myGamePiece.x <= myFallen[0].x) {
+                            myGamePiece.width -= (myFallen[0].x - myGamePiece.x)
+                            myGamePiece.x = myFallen[0].x;
+                        } else {
+                            if (xs == -2 && myFallen[0].x <= myGamePiece.x) {
+                                myGamePiece.width -= (myGamePiece.x - myFallen[0].x)
+                            }
+                        }
+                    }
+                }
+                document.getElementById("score").innerHTML = "Score: " + score;
+
+                myFallen.unshift(new component(myGamePiece.width, myGamePiece.height, "red", myGamePiece.x, myGamePiece.y));
+                if (myFallen.length >= 12) {
+                    for (var p = 0; p <= myFallen.length; p++) {
+                        myFallen[p].y += 20;
+                    }
+                } else {
+                    myGamePiece.y -= 20;
+                }
+                myGamePiece.x = 0;
+
+            } else {
+                clearInterval(myGameArea.interval);
+                document.getElementById("lose").style.display = "block";
+                s = 0;
+            }
+        }</script>
     <br>
     <button class="button" onclick="startGame()">Play</button>
     <button class="button" onclick="check()">Drop</button>
     <p id="score">Score: 0</p>
+    <p class="breadcrumb"><a href="af.html">Activity finder</a> / <a href="singleperson_branch.html">By Yourself</a> / <a href="inside_A.html">Inside</a> / <a href="DigitalGamePage.html">Digital Games</a> / Stacky</p>
+
     <h1>Stacky</h1>
     <p>Press drop to stack the moving red box on top of the others! Try to get a highscore! </p>
     <p id="lose">You lose! Play again? </p>

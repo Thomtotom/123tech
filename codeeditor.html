@@ -7,10 +7,18 @@
     <meta name="description" content="Our custom code editor displays what you want to see inside a small box! It has one special rule, but it works quite well!" />
 
     <style>
-        a {
+        .button a{
             color: rgb(172, 124, 13);
         }
 
+        .breadcrumb a {
+            color: rgb(172, 124, 13);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
 
         .button {
             border-radius: 4px;
@@ -64,27 +72,41 @@
         #body {
             background-color: #ffffff;
         }
+
+        .breadcrumb {
+            background-color: #0b0a53;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
     </style>
 </head>
 <body>
+    <p class="breadcrumb"><a href="af.html">Activity finder</a> / <a href="singleperson_branch.html">By Yourself</a> / <a href="inside_A.html">Inside</a> / <a href="digifun.html">Html css tutorial</a> / Code Editor</p>
 
-<h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
-<p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">
-Instead of body for styling, use #body. <br>
-
-
-Do not use anything with id input or body, or class input. <br>
-</p><table style="width: 100%"><tr><td><button onclick="run()">Run</button>
-</td></tr><tr><td style="width: 50%;">
-<textarea id="input" placeholder="type code here" style="width: 100%; min-height: 500px; resize: none;"></textarea></td><td style="height: 500px"><div id="body" style="border: 2px solid black;height: 100%;"></div></td></tr></table>
+    <h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
+    <p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">
+        Instead of body for styling, use #body. <br>
 
 
-<script>
+        Do not use anything with id input or body, or class input. <br>
+    </p><table style="width: 100%">
+        <tr>
+            <td>
+                <button onclick="run()">Run</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">
+<textarea id="input" placeholder="type code here" style="width: 100%; min-height: 500px; resize: none;"></textarea>
+            </td>
+            <td style="height: 500px"><div id="body" style="border: 2px solid black;height: 100%;"></div></td>
+        </tr>
+    </table>
 
-function run(){
-document.getElementById("body").innerHTML = document.getElementById("input").value;
-}
-</script>
+
+    <script>function run() {
+            document.getElementById("body").innerHTML = document.getElementById("input").value;
+        }</script>
     <button class="button button"><a href="index.html"><span>Back</span></a></button>
 </body>
 
