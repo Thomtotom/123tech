@@ -1,16 +1,18 @@
 <html>
 <head>
     <title>activity finder</title>
-    
-       
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="./logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Allan|Black+Han+Sans|Lemonada&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-   
+    <meta name="description" content="Activity finder is a website where you can find an interesting activity to do. We have 60 interesting activities for you to do, whether inside or outside, by yourself or with more people. " />
+
     <style>
+
 
 
 
@@ -100,64 +102,61 @@
             background-color: #5cb85c;
             color: white;
         }
-        #contianer{
-          min-height: 100%;
-       
+
+        #contianer {
+            min-height: 100%;
         }
-       
-        #main{
-          overflow: auto;
-          padding-bottom: 100px;
+
+        #main {
+            overflow: auto;
+            padding-bottom: 100px;
         }
-       
-        
-       
+
+
+
         * {
-          margin: 0;
-          padding: 0;
+            margin: 0;
+            padding: 0;
         }
-       
-       
-        .position1{
-          position: absolute;
-          z-index: -1;
-          left: 0px;
-          height: 3500px;
+
+
+        .position1 {
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            height: 3500px;
         }
-       
-        .BigText{
-          font-family: 'Cinzel', serif
-         
-       
+
+        .BigText {
+            font-family: 'Cinzel', serif
         }
+
         h1, h2, h3, h4, h5, h6, p {
             text-align: left;
             margin: 15%;
             color: white;
             text-shadow: 2px 2px 5px black;
         }
- 
-       a { 
-        color: rgb(224, 195, 30);
-        text-decoration: none;
-        
-       }
-       
-       
+
+        a {
+            color: rgb(224, 195, 30);
+            text-decoration: none;
+        }
+
+
         .button {
-              background-color: #5c4e4e;
-              border: none;
-              font-family: 'Allan', cursive;
-              font-size: 20px;
-              text-decoration: none;
-              width: 140px;
-              height: 50px;
-            
+            background-color: #5c4e4e;
+            border: none;
+            font-family: 'Allan', cursive;
+            font-size: 20px;
+            text-decoration: none;
+            width: 140px;
+            height: 50px;
+        }
+
+            .button:hover {
+                background-color: rgb(27, 12, 51);
             }
-            .button:hover{
-                  background-color: rgb(27, 12, 51);
-       
-              }
 
         input {
             height: 50px;
@@ -168,71 +167,79 @@
             border-radius: 20px, 20px, 20px;
             border-color: cyan;
             text-decoration: cyan;
-            
         }
-                  
-      
-              body {
-                background-image: url("2020-05-15.png");
-                background-size: 100%;
-                background-repeat: repeat;
-                background-attachment: fixed;  
-                font-family: 'Lemonada', cursive;
-                font-size: 70%;
-              }
-           
-       
-            
-       
-          
-      /* nav bar css */
-       
-                  ul {
-              color: rgb(251, 193, 4);
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              background-color: #5c4e4e;
-              background-attachment: fixed;
-              height: 50px;
-              width: 100%;
-       
-              
-              
-            }
-       
-            li {
-              float: left;
-            }
-       
+
+
+        body {
+            background-image: url("2020-05-15.png");
+            background-size: 100%;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            font-family: 'Lemonada', cursive;
+            font-size: 70%;
+        }
+
+
+
+
+
+        /* nav bar css */
+
+        ul {
+            color: rgb(251, 193, 4);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #5c4e4e;
+            background-attachment: fixed;
+            height: 50px;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
             li a {
-              display: inline;
-              padding: 8px;
+                display: inline;
+                padding: 8px;
             }
-            
-            .morelinks a{padding: 0px; width: 140px;}
-        .morelinks a:hover {
-            background-color: rgb(27, 12, 51);
+
+        .morelinks a {
+            padding: 0px;
+            width: 140px;
         }
+
+            .morelinks a:hover {
+                background-color: rgb(27, 12, 51);
+            }
+
         .nav {
             position: fixed;
         }
-        .more{display: none; width: 140px;}
+
+        .more {
+            display: none;
+            width: 140px;
+        }
+
         .morelinks, .more {
             background-color: #5c4e4e;
             display: none;
             text-align: center;
         }
-            
+
         @media only screen and (max-width: 1260px) and (min-width: 810px) {
-             .a {
+            .a {
                 display: none;
                 padding: 8px;
             }
-             .more{display: block;
 
-             }
+            .more {
+                display: block;
+            }
         }
+
         @media only screen and (max-width: 810px) and (min-width: 500px) {
             .a {
                 display: none;
@@ -242,11 +249,12 @@
             .more {
                 display: block;
             }
-            li img{
-display: none;
+
+            li img {
+                display: none;
             }
-            
         }
+
         @media only screen and (max-width: 500px) {
             .a {
                 display: none;
@@ -260,12 +268,12 @@ display: none;
             li img {
                 display: none;
             }
-            input{
-                width: 100px;
 
+            input {
+                width: 100px;
             }
         }
-          </style>
+    </style>
 </head>
  
  
@@ -382,7 +390,7 @@ display: none;
               <br><br>
               <br>
 
-              <img class="position1" src="2020-05-08 (3).png" alt="mortal engines" width="100%" height="1500">
+              <img class="position1" src="2020-05-08 (3).png" alt="mortal engines" width="100%" height="2500">
           </div>
 
           <h1>What this website is for:</h1>

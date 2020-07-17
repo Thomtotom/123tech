@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head><style>
-html,body{
-    margin:0;
-    padding: 0;
-    border: black, 20px;
-}
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <meta name="description" content="THe classic Ping Pong game. " />
 
-body{
-   overflow: hidden;
-  
-   background-repeat: no-repeat;
-   background-size: auto;
-}
+    <title>Ping Pong</title>
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            border: black, 20px;
+        }
 
-#left{
-    position: relative;
-    width: 30px;
-    height: 200px;
-    background-color: blue;
-    float: left;
-}
+        body {
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
 
-#right{
-    position: relative;
-    width: 30px;
-    height: 200px;
-    background-color: red;    
-    float: right;
-}
+        #left {
+            position: relative;
+            width: 30px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
 
-#ball{
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    background-color:gold;
-    border-radius: 50%;
-}
+        #right {
+            position: relative;
+            width: 30px;
+            height: 200px;
+            background-color: red;
+            float: right;
+        }
 
-#deli,#scoreleft,#scoreright{
-    font-size: 100%;
-    background-image: url("purpleback1.jpg");
-    z-index: 10;
-}
+        #ball {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background-color: gold;
+            border-radius: 50%;
+        }
 
-#goal{
-    font-size: 1000%;
-    transition: 1.5s all;
-    display: inline-block;
-}
-</style>
+        #deli, #scoreleft, #scoreright {
+            font-size: 100%;
+            background-image: url("purpleback1.jpg");
+            z-index: 10;
+        }
+
+        #goal {
+            font-size: 1000%;
+            transition: 1.5s all;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <div id="left"></div>
@@ -84,9 +89,9 @@ var ogoal = document.getElementById('goal');
 var w = window.innerWidth;
 var h = window.innerHeight;
 
-var map = []; // Or you could call it "key"
+var map = []; /* Or you could call it "key"*/
 onkeydown = onkeyup = function(e) {
-    e = e || event; // to deal with IE
+    e = e || event; /* to deal with IE*/
     map[e.keyCode] = e.type == 'keydown';
     /*insert conditional here*/
 }
