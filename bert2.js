@@ -29,10 +29,13 @@ function addBotText(text) {
  
 function botVoice(message) {
     const speech = new SpeechSynthesisUtterance();
-    
+    if (message.includes('yo')) {
+        speech.text = "yo to you back mistro";
+      }
     speech.text = "Sorry, i dont know that one try again maybe";
  
     if (message.includes('how are you')) {
+        
       speech.text = "I am fine, thanks. How are you?";
     }
  
@@ -40,6 +43,7 @@ function botVoice(message) {
       speech.text = "Nice to hear that. How can I assist you today?";
  
     }
+    
     if (message.includes('I')) {
       speech.text = "hi";
     }
@@ -53,7 +57,7 @@ function botVoice(message) {
       }
  
       if (message.includes('sing me a song')) {
-        speech.text = "di do da di da daaaa..... did you like it it was my inpresion of donald trump";
+        speech.text = "di do da di da daaaa..... did you like it it was my impression of donald trump";
       }
  
       if (message.includes('whats your name')) {
@@ -66,9 +70,9 @@ function botVoice(message) {
       if (message.includes('why did you make activity finder')) {
         speech.text = "this website is made for people who are bored stuck inside, actually, we've written this website in lockdown (clarification: coronavirus lockdown 2020), that’s part of the reason we built this in fact so that we can spread ideas to people who have nothing else to do and needs something fun, creative and something that you can play by yourself or with others.  We are competing in a competition called 123 tech.  123tech is about young coders and problem-solvers having the opportunity to make an app or a website. If you were to join, you would contribute to solving a problem in your community by using digital technology";
       }
- 
-      if (message.includes('sup')) {
+  
         speech.text = "owww is suppa ready ";
+      if (message.includes('sup')) {
       }
       if (message.includes("what's up")) {
         speech.text = "the sky is up";
@@ -80,7 +84,7 @@ function botVoice(message) {
  
       if (message.includes('tell me a joke')) {
         speech.text = "ok here we go.... hi!";
-      }
+      } 
       if (message.includes('tell me another joke')) {
         speech.text = "nock nock... whos there? oh right im not an interactive chatbot how sad... boh ho boo hoooooooooo";
       }
@@ -94,20 +98,20 @@ function botVoice(message) {
         speech.text = "to be fun";
       }
       if (message.includes('whats your name')) {
-        speech.text = "my name is bert. bert dose not stand for any acronym if you were wondering";
+        speech.text = "my name is bert. bert does not stand for any acronym if you were wondering";
       }
  
       if (message.includes('what is your name')) {
-        speech.text = "my name is bert. bert dose not stand for any acronym if you were wondering";
+        speech.text = "my name is bert. bert does not stand for any acronym if you were wondering";
       }
       if (message.includes('who are you')) {
-        speech.text = "my name is bert. bert dose not stand for any acronym if you were wondering";
+        speech.text = "my name is bert. bert does not stand for any acronym if you were wondering";
       }
       if (message.includes('how are you')) {
         speech.text = "im am good. thanks";
       }
       if (message.includes('how were you made')) {
-        speech.text = "i was made using visuel stodio code with the programming lunguges javascript, html and css";
+        speech.text = "i was made using visual stuudio code with the programming languages javascript, html and css";
       }
       if (message.includes('I am a pie')) {
         speech.text = "can i eat you";
@@ -129,10 +133,10 @@ function botVoice(message) {
         speech.text = "I am a artificial intelligence";
       }
       if (message.includes('pokemon')) {
-        speech.text = "I like pokemon to";
+        speech.text = "I like pokemon too";
       }
-      if (message.includes('simsons')) {
-        speech.text = "oh I love simsons its my favorite";
+      if (message.includes('simpsons')) {
+        speech.text = "oh I love simpsons its my favorite";
       }
       if (message.includes('help')) {
         speech.text = "I can not help... hehehehehehehehehehehehehehehehehheheheheheheheheheheeehh";
@@ -143,9 +147,7 @@ function botVoice(message) {
       if (message.includes('laugh')) {
         speech.text = "he he ha ha eh eh mi mi mo mo po po sho sho lo lo ao ao aoaoaoaoaoaoaoaoao heheheheheheheheheeheeheheheheheheheheheheheehehehehehehehehehehehehehehehehe";
       }
-      if (message.includes('yo')) {
-        speech.text = "yo to you back mistro";
-      }
+     
   
       if (message.includes('hey')) {
         speech.text = "hewo. me. nameie. is. bert. (hmnib) ";
@@ -256,22 +258,22 @@ function botVoice(message) {
       if (message.includes('rhinoceros')) {
         speech.text = "this is the sound the rhinoceros makes: ofehwiohfqeh98yfsj9ywej8dfoauofiuwenoiHfoahsd;jhfoseyfahoyfoa - I know because my creater is one... I think.... it could be the noise he makes when he sleeps";
       }
-      if (message.includes('cheeta')) {
+      if (message.includes('cheetah')) {
         speech.text = "ti ahi hoooooooo";
       }
       if (message.includes('turtle')) {
         speech.text = "Hello darkness, my old friend I've come to talk with you again Because a vision softly creeping Left its seeds while I was sleeping And the vision that was planted in my brain Still remains Within the sound of silence In restless dreams I walked alone Narrow streets of cobblestone Neath the halo of a street lamp I turned my collar to the cold and damp When my eyes were stabbed by the flash of a neon light That split the night And touched the sound of silence And in the naked light I saw Ten thousand people, maybe more People talking without speaking People hearing without listening People writing songs that voices never share And no one dared Disturb the sound of silence Fools,  said I, You do not know Silence, like a cancer, grows Hear my words that I might teach you Take my arms that I might reach you But my words, like silent raindrops fell And echoed in the wells, of silence And the people bowed and prayed To the neon god they made And the sign flashed out its warning In the words that it was forming And the sign said, The words of the prophets are written on the subway walls And tenement halls And whispered in the sounds of silence";
       }
-      if (message.includes('squrrel')) {
+      if (message.includes('squirrel')) {
         speech.text = "spit spit";
       }
       if (message.includes('horse')) {
-        speech.text = "nahee";
+        speech.text = "neigh";
       }
-      if (message.includes('why are youu running')) {
+      if (message.includes('why are you running')) {
         speech.text = "because you cant";
       }
-      if (message.includes('do you have a sole')) {
+      if (message.includes('do you have a soul')) {
         speech.text = "heheheheheheheheheheheheheheheheheyeyeyeyeyeyeheheheyeyeheheeehheeheheeeheheeehehehheehehehehehehehyeeeyeyyeyyeeyeeeyeeeyeeeyeeyeyeyeyeyeeyeyeeyeeyeey";
       }
       if (message.includes('whats your name')) {
@@ -292,12 +294,87 @@ function botVoice(message) {
       if (message.includes('do you know pi')) {
         speech.text = "yes it is 3.14159265359";
       }
-      if (message.includes('marsh mello')) {
+      if (message.includes('marshmellow')) {
         speech.text = "dose that mean I can eat you?";
       }
       if (message.includes('hows it going')) {
         speech.text = "good";
       }
+    if (message.includes('what  is github')) {
+        speech.text = "github is a site where we store all our code";
+    }
+    if (message.includes('toe jammer')) {
+        speech.text = "no";
+    }
+    if (message.includes'banana')) {
+        speech.text = "BANANA? BANANAAAAAAAAAA";
+    }
+    if (message.includes('window')) {
+        speech.text = "one plus one is window";
+    }
+    if (message.includes('forty two')) {
+        speech.text = "Boring!";
+    }
+    if (message.includes('chocolate')) {
+        speech.text = "Can I eat you?";
+    }
+    if (message.includes('book')) {
+        speech.text = "look at our book review page";
+    }
+    if (message.includes('what is book review')) {
+        speech.text = "it is a  series of reviews on popular children's books that we have compiled.  ";
+    }
+    if (message.includes('broccoli')) {
+        speech.text = "yuck!";
+    }
+    if (message.includes('bunny')) {
+        speech.text = "carrot";
+    }
+    if (message.includes('carrot')) {
+        speech.text = "bunny";
+    }
+    if (message.includes('apple')) {
+        speech.text = "BANANA";
+    }
+    if (message.includes('cupcakes')) {
+        speech.text = "thanks, I'll steal all your cupcakes";
+    }
+    if (message.includes('minecraft')) {
+        speech.text = "minecraft is fun";
+    }
+    if (message.includes('spinach')) {
+        speech.text = "Yuck Yuck YUck";
+    }
+    if (message.includes('brussels sprouts')) {
+        speech.text = "YUCK YUCK YUCK YUCK YUCK YUCK YUCK  YUCK ";
+    }
+   
+    if (message.includes('cookie')) {
+        speech.text = "C is for cookie, it's good enough for me, cookie cookie  cookie starts with c";
+    }
+    if (message.includes('unicorn')) {
+        speech.text = "pink fluffy unicorns dancing on rainbows, pink fluffy unicorns dancing on rainbows, pink fluffy unicorns dancing on rainbows, pink fluffy unicorns dancing on rainbows. ";
+    }
+    if (message.includes('water')) {
+        speech.text = "Did you know that every human who has ever died has consumed water?";
+    }
+    if (message.includes('chainsaw')) {
+        speech.text = "I want a chainsaw so I can learn to juggle! ";
+    }
+    if (message.includes('periodic table')) {
+        speech.text = "Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur Chlorine Argon Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium Iodine Xenon Caesium Barium Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Hafnium Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury Thallium Lead Bismuth Polonium Astatine Radon Francium Radium Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium Nihonium Flerovium Moscovium Livermorium Tennessine Oganesson";
+    }
+    if (message.includes('elements')) {
+        speech.text = "Hydrogen Helium Lithium Beryllium Boron Carbon Nitrogen Oxygen Fluorine Neon Sodium Magnesium Aluminium Silicon Phosphorus Sulfur Chlorine Argon Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium Iodine Xenon Caesium Barium Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Hafnium Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury Thallium Lead Bismuth Polonium Astatine Radon Francium Radium Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium Nihonium Flerovium Moscovium Livermorium Tennessine Oganesson";
+    }
+    if (message.includes('dinosaur')) {
+        speech.text = "roar";
+    }
+    if (message.includes('baby')) {
+        speech.text = "EVIL";
+    }
+   
+
     speech.volume = 3;
     speech.rate = 1;
     speech.pitch = 1;
@@ -309,7 +386,9 @@ function botVoice(message) {
 recorder.onstart = () => {
   console.log('Voice activated');
 };
- 
+
+
+       
 recorder.onresult = (event) => {
   const resultIndex = event.resultIndex;
   const transcript = event.results[resultIndex][0].transcript;
