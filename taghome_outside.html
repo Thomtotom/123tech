@@ -1,139 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-</configuration>
-<!-- what is this ? -->
+﻿<!doctype html>
 <html>
 
 <head>
+    <title>Tag Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="./logo.png">
-    <style>
-       
-a {
-    color: rgb(172, 124, 13);
+    <link rel="stylesheet" href="default.css" />
+    <meta name="description" content="The hub page for tag games" />
 
-  }
-
-
-.button {
-  border-radius: 4px;
-  background-color: #0b0a53;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 267px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
-      body {
-          background-color: #524763;
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          margin: 0;
-        }
-
-        h1{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-  }
-
-  h2{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
-
-  h3{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-
-  h4{
-    text-align: left;
-    text-indent: 30%;
-    text-shadow: 2px 2px 5px black;
-    
-
-  }
-
-  h5{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
-
-  h6{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-
-  }
-
-  p{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-    </style>
 </head>
 <body>
+    <p class="breadcrumb"><a href="af.html">Activity finder</a> / <a href="2_or_more_people.html">2 or more people</a> / <a href="outside_2om.html">Outside</a> / Tag home</p>
+
+    <h1>Tag games</h1>
     <button class="button button"><a href="octopus_tag.html"><span>1. Octopus</span></a></button>
     <button class="button button"><a href="farmerfarmer_tag.html"><span>2. Farmer farmer</span></a></button>
-
-
-
-
-
-
-
     <button class="button button"><a href="tag_tag.html"><span>3. Tag</span></a></button>
     <button class="button button"><a href="chain_tag.html"><span>4. Chain tag</span></a></button>
     <button class="button button"><a href="KO_tag.html"><span>5. KO</span></a></button>
     <button class="button button"><a href="cheat_tag.html"><span>6. Cheat tag</span></a></button>
     <button class="button button"><a href="chaincheat_tag.html"><span>7. Chain cheat</span></a></button>
     <button class="button button"><a href="tornado_tag.html"><span>8. Tornado</span></a></button>
-    <button class="button button"><a href="index.html"><span>BACK</span></a></button>
     <button class="button button"><a href="gohomestayhome_tag.html"><span>9. Go home stay home</span></a></button>
     <button class="button button"><a href="stuckinthemud_tag.html"><span>10. Stuck in the mud</span></a></button>
     <button class="button button"><a href="toilet_tag.html"><span>11. Toilet tag</span></a></button>
@@ -148,13 +35,12 @@ a {
     <button class="button button" onclick="myFunction()">
         Click for random
     </button>
-    <script>
+    <script>function myFunction() {
+            var x = document.getElementById("demo")
+            x.innerHTML = Math.floor((Math.random() * 17) + 1);
+        }</script>
+    <p id="demo"></p>
+    <button class="button button"><a href="index.html"><span>BACK</span></a></button>
 
-        function myFunction() {
-        var x = document.getElementById("demo")
-        x.innerHTML = Math.floor((Math.random() * 17) + 1);
-        }
-    </script>
-    <Font color="white"><p id="demo"></p></Font>
 </body>
 </html>

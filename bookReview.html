@@ -1,319 +1,327 @@
 <!DOCTYPE html>
 <html>
 <head>
- <!-- nav bar html -->
- 
- <link rel="shortcut icon" type="image/png" href="./logo.png">
- <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Allan|Black+Han+Sans|Lemonada&display=swap" rel="stylesheet">
- 
- <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <!-- nav bar html -->
+
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allan|Black+Han+Sans|Lemonada&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+    <meta name="description" content="A bunch of book reviews we have written. We recommend you try to find some of these in your local library, as they are awesome! "  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
 
- 
 
 
 
 
 
-<style>
+
+    <style>
 
 
-    .button {
-        background-color: #5c4e4e;
-        border: none;
-        font-family: 'Allan', cursive;
-        font-size: 20px;
-        text-decoration: none;
-        width: 140px;
-        height: 50px;
-    }
-    .footer {
-        background-color: black;
-        width: 100%;
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        text-align: center;
-    }
+
+
+        .button {
+            background-color: #5c4e4e;
+            border: none;
+            font-family: 'Allan', cursive;
+            font-size: 20px;
+            text-decoration: none;
+            width: 140px;
+            height: 50px;
+        }
+
+        .footer {
+            background-color: black;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            text-align: center;
+        }
 
         .button:hover {
             background-color: rgb(27, 12, 51);
         }
 
-    input {
-        width: 500px;
-        height: 50px;
-        background-image: linear-gradient(rgb(27, 12, 51), black);
-        font-weight: bolder;
-        color: cornsilk;
-        border-radius: 20px, 20px, 20px;
-        border-color: cyan;
-        text-decoration: cyan;
-    }
-/* Style the tab */
-.tab {
-  float: left;
- 
-  background-color: #4ee413;
-  width: 30%;
-  height: 3000px;
-  background-color: #6a5c80;
- 
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
- 
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-  background-color: #6a5c80;
- 
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: rgb(42, 41, 41);
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #0000002f;
-}
-
-/* Style the tab content */
-.tabcontent {
- 
-  padding: 0px 12px;
- 
-  width: 98%;
- 
-  height: 3000px;
-  background-color: #524763;
- 
-}
-
-h1{
-    text-align: left;
-    text-indent: 40%;
-    font-size: 6rem;
-    color: rgb(251, 193, 4);
-    text-shadow: 2px 2px 5px black;
-  }
- 
-  h2{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
- 
-  h3{
-    text-align: left;
-   
-    color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 5px black;
-   
-  }
- 
-  h4{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
- 
-  }
- 
-  h5{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
- 
-  h6{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
- 
-  }
- 
-  p{
-   
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-
-  body{
-    background-color: rgb(3, 3, 36);
-    margin: 0;
-
-
-
-  }
-
-
-
-  .clock{
-    font-size: 1.5rem;
-    color: rgb(224, 195, 30);
- 
- 
- 
-  }
- 
- 
- 
- 
- 
- a {
-  color: rgb(224, 195, 30);
-  text-decoration: none;
- 
- }
- 
- 
-  
-  /* nav bar css */
- 
-  ul {
-        color: rgb(251, 193, 4);
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #5c4e4e;
-        background-attachment: fixed;
-        display: flex;
-        height: 38px;
-        width: 100%;
-        top: 0;
- 
-       
-       
-      }
- 
-      li {
-        float: left;
-      }
- 
-      li a {
-        display: block;
-        padding: 8px;
-      }
- 
- 
-      .nav{
-      position: fixed;
-      overflow-x: auto;
-      }
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-        position: relative;
-        background-color: #fefefe;
-        margin: auto;
-        padding: 0;
-        border: 1px solid #888;
-        width: 80%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        -webkit-animation-name: animatetop;
-        -webkit-animation-duration: 0.4s;
-        animation-name: animatetop;
-        animation-duration: 0.4s
-    }
-
-    /* Add Animation */
-    @-webkit-keyframes animatetop {
-        from {
-            top: -300px;
-            opacity: 0
+        input {
+            width: 400px;
+            height: 50px;
+            background-image: linear-gradient(rgb(27, 12, 51), black);
+            font-weight: bolder;
+            color: cornsilk;
+            border-radius: 20px, 20px, 20px;
+            border-color: cyan;
+            text-decoration: cyan;
+        }
+        /* Style the tab */
+        .tab {
+            float: left;
+            background-color: #4ee413;
+            width: 30%;
+            height: 3000px;
+            background-color: #6a5c80;
         }
 
-        to {
-            top: 0;
-            opacity: 1
+            /* Style the buttons inside the tab */
+            .tab button {
+                display: block;
+                color: black;
+                padding: 22px 16px;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: left;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 17px;
+                background-color: #6a5c80;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: rgb(42, 41, 41);
+                }
+
+                /* Create an active/current "tab button" class */
+                .tab button.active {
+                    background-color: #0000002f;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            padding: 0px 12px;
+            width: 98%;
+            height: 3000px;
+            background-color: #524763;
         }
-    }
 
-    @keyframes animatetop {
-        from {
-            top: -300px;
-            opacity: 0
+        h1, h2, h3, h4, h5, h6, p {
+            text-align: left;
+            margin: 15%;
+            color: white;
+            text-shadow: 2px 2px 5px black;
         }
 
-        to {
-            top: 0;
-            opacity: 1
+
+        body {
+            background-color: rgb(3, 3, 36);
+            margin: 0;
         }
-    }
 
-    /* The Close Button */
-    .close {
-        color: white;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
 
-        .close:hover,
-        .close:focus {
-            color: #000;
+
+        .clock {
+            font-size: 1.5rem;
+            color: rgb(224, 195, 30);
+        }
+
+
+
+
+
+        a {
+            color: rgb(224, 195, 30);
             text-decoration: none;
-            cursor: pointer;
         }
 
-    .modal-header {
-        padding: 2px 16px;
-        background-color: #524763;
-        color: white;
-    }
 
-    .modal-body {
-        padding: 2px 16px;
-        background-color: #524763;
-    }
 
-    .modal-footer {
-        padding: 2px 16px;
-        background-color: #5cb85c;
-        color: white;
-    }
- 
-</style>
+        /* nav bar css */
+
+        ul {
+            color: rgb(251, 193, 4);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #5c4e4e;
+            background-attachment: fixed;
+            display: flex;
+            height: 50px;
+            width: 100%;
+            top: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                padding: 8px;
+            }
+
+
+        .morelinks a {
+            padding: 0px;
+            width: 140px;
+        }
+
+            .morelinks a:hover {
+                background-color: rgb(27, 12, 51);
+            }
+
+        .nav {
+            position: fixed;
+        }
+
+        .more {
+            display: none;
+            width: 140px;
+        }
+
+        .morelinks, .more {
+            background-color: #5c4e4e;
+            display: none;
+            text-align: center;
+        }
+
+
+
+        @media only screen and (max-width: 1260px) and (min-width: 810px) {
+            .a {
+                display: none;
+                padding: 8px;
+            }
+
+            .more {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 810px) and (min-width: 500px) {
+            .a {
+                display: none;
+                padding: 8px;
+            }
+
+            .more {
+                display: block;
+            }
+
+            li img {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .a {
+                display: none;
+                padding: 8px;
+            }
+
+            .more {
+                display: block;
+            }
+
+            li img {
+                display: none;
+            }
+
+            input {
+                width: 100px;
+            }
+        }
+
+        .nav {
+            position: fixed;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #524763;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+            background-color: #524763;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
@@ -322,19 +330,35 @@ h1{
             <img alt="logo" src="acty.png" width="270" height="40">
         </li>
         <li>
-            <input id="myInput" value="Search Activity Finder">
+            <input id="myInput" placeholder="Search Activity Finder">
             <script src="searchcode.js"></script>
 
         </li>
 
-        <li><button class="button"><a href='index.html'>first page</a></button></li>
-        <li><button class="button"><a href='af.html'>Activity finder </a></button></li>
-        <li><button class="button"><a href='AU.html'>About us</a></button></li>
-        <li><button class="button"><a href='DigitalGamePage.html'>Digital game page</a></button></li>
+        <li class="a"><button class="button"><a href='index.html'>first page</a></button></li>
+        <li class="a"><button class="button"><a href='af.html'>Activity finder </a></button></li>
+        <li class="a"><button class="button"><a href='AU.html'>About us</a></button></li>
+        <li class="a"><button class="button"><a href='DigitalGamePage.html'>Digital game page</a></button></li>
+        <li class="more">
+            <div class="button" onclick="togglepurple()">More</div><div class="morelinks">
+                <a href="AU.html">About us</a><br />
+                <a href="af.html">Activity finder</a><br />
+                <a href="index.html">Home</a><br />
+                <a href="DigitalGamePage.html">Game page</a>
+            </div>
+            <script>function togglepurple() {
+
+                    var x = document.getElementsByClassName("morelinks")[0];
+                    if (x.style.display == "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }</script>
+        </li>
 
 
 
-      
 
 
     </ul>

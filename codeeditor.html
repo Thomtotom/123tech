@@ -1,86 +1,114 @@
 <!DOCTYPE html>
 <html>
-<head>	
-    <meta name="viewport" content="width=device-width,initial-size=1.0" />	
-    <link rel="shortcut icon" type="image/png" href="./logo.png">	
-    <title>Code editor</title>	
-    <style>	
-        a {	
-    color: rgb(172, 124, 13);	
+<head>
+    <meta name="viewport" content="width=device-width,initial-size=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <title>Code editor</title>
+    <meta name="description" content="Our custom code editor displays what you want to see inside a small box! It has one special rule, but it works quite well!" />
 
-  }	
-
-
-.button {	
-  border-radius: 4px;	
-  background-color: #0b0a53;	
-  border: none;	
-  color: #FFFFFF;	
-  text-align: center;	
-  font-size: 28px;	
-  padding: 20px;	
-  width: 267px;	
-  height: 60px;	
-  transition: all 0.5s;	
-  cursor: pointer;	
-  margin: 5px;	
-}	
-
-.button span {	
-  cursor: pointer;	
-  display: inline-block;	
-  position: relative;	
-  transition: 0.5s;	
-}	
-
-.button span:after {	
-  content: '\00bb';	
-  position: absolute;	
-  opacity: 0;	
-  top: 0;	
-  right: -20px;	
-  transition: 0.5s;	
-}	
-
-.button:hover span {	
-  padding-right: 25px;	
-}	
-
-.button:hover span:after {	
-  opacity: 1;	
-  right: 0;	
-}	
-
-
-      body {	
-          background-color: #524763;	
-          background-size: 100%;	
-          background-repeat: no-repeat;	
-          background-attachment: fixed;	
-          margin: 0;	
+    <style>
+        .button a{
+            color: rgb(172, 124, 13);
         }
-        </style>
-        </head>
-<body>
 
-<h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
-<p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Rules: do not use element styling (eg p{}) as that will effect everything else. <br>
-Instead of body for styling, use #body. <br>
-No head, html or body tags, just put everything in as usual.<br>
-Don't bother with line breaks. Everything will work fine without them, but do remember to add semicolons (;) at the end of every line of css. 
-    Do not use Document.createElement.<br>
-Do not use anything with id input or body<br>
-</p>
-<input id="input" style="width: 100%; overflow: scroll;">
-<button onclick="run()">Run</button>
-<script>
-function run(){
-var input = document.getElementById("input");
-document.getElementById("body").innerHTML = input.value;
-}
-</script>
-<div id="body" style="border: 2px solid black;"></div>
-    <button class="button button"><a href="index.html">Back</a></button>
+        .breadcrumb a {
+            color: rgb(172, 124, 13);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            border-radius: 4px;
+            background-color: #0b0a53;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 267px;
+            height: 60px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+
+        body {
+            background-color: #524763;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+        }
+
+        #body {
+            background-color: #ffffff;
+        }
+
+        .breadcrumb {
+            background-color: #0b0a53;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <p class="breadcrumb"><a href="af.html">Activity finder</a> / <a href="singleperson_branch.html">By Yourself</a> / <a href="inside_A.html">Inside</a> / <a href="digifun.html">Html css tutorial</a> / Code Editor</p>
+
+    <h1 style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">Code editor</h1>
+    <p style=" text-align: left;	text-indent: 30%;	color: white; text-shadow: 2px 2px 5px black;">
+        Instead of body for styling, use #body. <br>
+
+
+        Do not use anything with id input or body, or class input. <br>
+    </p><table style="width: 100%">
+        <tr>
+            <td>
+                <button onclick="run()">Run</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">
+<textarea id="input" placeholder="type code here" style="width: 100%; min-height: 500px; resize: none;"></textarea>
+            </td>
+            <td style="height: 500px"><div id="body" style="border: 2px solid black;height: 100%;"></div></td>
+        </tr>
+    </table>
+
+
+    <script>function run() {
+            document.getElementById("body").innerHTML = document.getElementById("input").value;
+        }</script>
+    <button class="button button"><a href="index.html"><span>Back</span></a></button>
 </body>
 
 </html>
+

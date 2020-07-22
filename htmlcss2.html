@@ -1,162 +1,60 @@
-<html lang="en">
+﻿<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-                   a {
-    color: rgb(172, 124, 13);
 
-  }
+    <link rel="shortcut icon" type="image/png" href="./logo.png">
+    <link rel="stylesheet" href="default.css" />
+    <meta name="description" content="Some more html to allow links, buttons and fancier styling! " />
+    <title>Html css lesson 2</title>
 
-
-.button {
-  border-radius: 4px;
-  background-color: #0b0a53;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 267px;
-  height: 60px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
-      body {
-          background-color: #524763;
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          margin: 0;
-        }
-
-        h1{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-  }
-
-  h2{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
-
-  h3{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-
-  h4{
-    text-align: left;
-    text-indent: 30%;
-    text-shadow: 2px 2px 5px black;
-    
-
-  }
-
-  h5{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    
-  }
-
-  h6{
-    text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-
-  }
-
-  p{
-    text-align: left;
-    text-indent: 30%;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-   
-  }
-    </style>
 </head>
 <body>
+    <p class="breadcrumb"><a href="af.html">Activity finder</a> / <a href="singleperson_branch.html">By Yourself</a> / <a href="inside_A.html">Inside</a> / <a href="digifun.html">Html Css Basics</a> / Html Css Lesson Two</p>
+
     <h1>html css second lesson!</h1>
     <p>In the last session, we learnt how to do some basic stuff. Now we're going to do buttons and links, and some more css.</p>
 
-<h2>Links</h2>
-<p>Links are defined by the &lt;a> tag. To send to a specific webpage,use this: <br>&lt;a href="=insert link here">Link text&lt;/a></p>
-<h2>Buttons</h2>
-<p>Button are defined by the &lt;button> tag. You can insert an &lt;a> tag so when you click on the button you go to a link like this.  <br>&lt;button>&lt;a href="insert link here">Link text&lt;/a>&lt;/button></p>
-<h2>More css</h2>
-<p>
-There are four different ways to style tags. <br>
-1. element, for example body{}, which we learnt in the previous lesson.<br>
-2. ids, defined with a #, for example #banana{}. Everything in there can be accessed by &lt;p id="banana">&lt;/p><br>
-3. classes, defined with a dot, for example .banana{}. Everything in there can be accessed by &lt;p class="banana">&lt;/p>. it differs from id in that a tag can have multiple classes, seperated by spaces. <br>
+    <h2>Links</h2>
+    <p>Links are defined by the &lt;a> tag. To send to a specific webpage,use this: <br>&lt;a href="=insert link here">Link text&lt;/a></p>
+    <h2>Buttons</h2>
+    <p>Button are defined by the &lt;button> tag. You can insert an &lt;a> tag so when you click on the button you go to a link like this.  <br>&lt;button>&lt;a href="insert link here">Link text&lt;/a>&lt;/button></p>
+    <h2>More css</h2>
+    <p>
+        There are four different ways to style tags. <br>
+        1. element, for example body{}, which we learnt in the previous lesson.<br>
+        2. ids, defined with a #, for example #banana{}. Everything in there can be accessed by &lt;p id="banana">&lt;/p><br>
+        3. classes, defined with a dot, for example .banana{}. Everything in there can be accessed by &lt;p class="banana">&lt;/p>. it differs from id in that a tag can have multiple classes, seperated by spaces. <br>
 
-4. direct styling. use &lt;p style="-insert all css here-">&lt;/p>
-In this example we will be using classes. 
+        4. direct styling. use &lt;p style="-insert all css here-">&lt;/p>
+        In this example we will be using classes.
 
-Create a button tag and give it class="button", like so: &lt;button class="button">HELLO&lt;/button><br>
-Then add this code:
-&lt;style><br><br>
-.button{<br>
-width: 100px;<br>
-height: 100px;<br>
-border-radius: 50%;<br>
-background-color: blue;<br>
-color: orange;<br>
-}<br>
-.button:hover{<br>
-background-color: green;<br>
-color: yellow;<br>
-}<br>
-&lt;/style>
-Explaination:<br>
-width/height define the button's width and height, both as 100 pixels. <br>
-border-radius defines how the borders are rounded. 50% is exactly halfway, making it a perfect circle.<br>
-background-color and color define the button's background color and text color<br>
-:hover means this style will activate when the button is hovered over. 
-<br><br><br>
-One last thing, to  always put in the head tag,<br> &lt;meta name="viewport" content="width=device-width, initial-size="1.0">. This basically makes the text fit to the screen size. 
+        Create a button tag and give it class="button", like so: &lt;button class="button">HELLO&lt;/button><br>
+        Then add this code:
+        &lt;style><br><br>
+        .button{<br>
+        width: 100px;<br>
+        height: 100px;<br>
+        border-radius: 50%;<br>
+        background-color: blue;<br>
+        color: orange;<br>
+        }<br>
+        .button:hover{<br>
+        background-color: green;<br>
+        color: yellow;<br>
+        }<br>
+        &lt;/style>
+        Explaination:<br>
+        width/height define the button's width and height, both as 100 pixels. <br>
+        border-radius defines how the borders are rounded. 50% is exactly halfway, making it a perfect circle.<br>
+        background-color and color define the button's background color and text color<br>
+        :hover means this style will activate when the button is hovered over.
+        <br><br><br>
+        One last thing, to  always put in the head tag,<br> &lt;meta name="viewport" content="width=device-width, initial-size="1.0">. This basically makes the text fit to the screen size.
 
 
-</p>
-            <p>Also try our <a href="codeeditor.html">Code editor</a>, which lets you code. It does have some special rules, and these only apply to this editor. </p>
+    </p>
+    <p>Also try our <a href="codeeditor.html">Code editor</a>, which lets you code. It does have some special rules, and these only apply to this editor. </p>
 
     <button class="button button"><a href="digifun.html">Back</a></button>
 </body>

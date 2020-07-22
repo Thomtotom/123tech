@@ -1,404 +1,213 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-</configuration>
+﻿<!doctype html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width,initial-size=1.0" />
     <link rel="shortcut icon" type="image/png" href="./logo.png" />
-    <title></title>
-    <style>
-        a {
-        color: rgb(172, 124, 13);
+    <title>Daily activity</title>
+    <link rel="stylesheet" href="default.css" />
+    <meta name="description" content="Activty of the day, repeats every 2 months. " />
 
-        }
-
-
-        .button {
-        border-radius: 4px;
-        background-color: #0b0a53;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 28px;
-        padding: 20px;
-        width: 267px;
-        height: 60px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        }
-
-        .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-        }
-
-        .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-        }
-
-        .button:hover span {
-        padding-right: 25px;
-        }
-
-        .button:hover span:after {
-        opacity: 1;
-        right: 0;
-        }
-
-
-        body {
-        background-color: #524763;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        margin: 0;
-        }
-
-        h1{
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-        }
-
-        h2{
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-
-        }
-
-        h3{
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-
-        }
-
-        h4{
-        text-align: left;
-        text-indent: 30%;
-        text-shadow: 2px 2px 5px black;
-
-
-        }
-
-        h5{
-        text-align: left;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-
-        }
-
-        h6{
-        text-align: left;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-
-
-        }
-
-        p{
-        text-align: left;
-        text-indent: 30%;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-
-        }
-        #leapday{
-        width: device-width;
-        display: none;
-        background-image: url(29.png);
-        }
-        #anzac{
-        width: device-width;
-        display: none;
-        background-image: url(anzac.png);
-        }
-        #chinesenew{
-        width: device-width;
-        display: none;
-        background-image: url(chinesenewyear.png);
-
-        }
-        #christmas{
-        width: device-width;
-        display: none
-        background-image: url(christmas.png);
-        }
-        #christmaseve{
-        width: device-width;
-        display: none;
-        background-image: url(christmas_eve.png);
-        }
-        #diwali{
-        width: device-width;
-        display: none;
-        background-image: url(diwali.png);
-        }
-        #fathersday{
-        width: device-width;
-        display: none;
-        background-image: url(fathersday.png);
-        }
-        #friday13{
-        width: device-width;
-        display: none;
-        background-image: url(friday13.png);
-        }
-        #halloween{
-        width: device-width;
-        display: none;
-        background-image: url(halloween.png);
-        }
-        #mothersday{
-        width: device-width;
-        display: none;
-        background-image: url(mothersday.png);
-        }
-        #4july{
-        width: device-width;
-        display: none;
-        background-image: url(newyearfireworks.png);
-        }
-        #newyear{
-        width: device-width;
-        display: none;
-        background-image: url(newyearfireworks);
-        }
-        #newyearseve{
-        width: device-width;
-        display: none;
-        background-image: url(newyearfireworks.png);
-        }
-        #piday{
-        width: device-width;
-        display: none;
-        background-image: url(piday.png);
-        }
-        #starwars{
-        width: device-width;
-        display: none;
-        background-image: url(starwarsday.png);
-        }
-        #RIP{
-        width: device-width;
-        display: none;
-        background-image: url(tombstone.png);
-        }
-        #valentine{
-        width: device-width;
-        display: none;
-        background-image: url(valentine.png);
-        }
-        #waiitangi{
-        width: device-width;
-        display: none;
-        background-image: url(waitangi.png);
-        }
-    </style>
 </head>
-<body>
+<body onload="banana()">
     <script>
-        var date = new Date();
+        
+        function banana() {
+            var date = new Date();
         var day = date.getDate();
         var month = date.getMonth();
-        var weekday = date.getDay();
-        function banana(){
-        if (day == 1) {
-        if (month == 1) {
-        document.getElementById("newyear").style.display = "block";
-        }
-        if (month == 4) {
-        document.getElementById("RIP").style.display = "block";
-        }
-        document.getElementById("link").href = "canasta.html";
-        }
-
-        if (day == 2) {
-        document.getElementById("link").href = "makeakite_outside1.html";
-        }
-        if (day == 3) {
-        document.getElementById("link").href =  "taghome_outside.html";
-        }
-        if (day == 4) {
-        if (month == 5) {
-        document.getElementById("starwars").style.display = "block";
-        }
-        if (month == 7) {
-        document.getElementById("4july").style.display = "block";
-        }
-        document.getElementById("link").href = "origami_home.html";
-        }
-        if (day == 5) {
-
-        document.getElementById("link").href = "anagram.html"
-        }
-        if (day == 6) {
-        if (month == 9) {
-        document.getElementById("fathersday").style.display = "block";
-        }
-        if (month == 2) {
-        document.getElementById("waitangi").style.display = "block";
-        }
-        document.getElementById("link").href = "circleball.html"
-        }
-        if (day == 7) {
-        document.getElementById("link").href = "dragon.html";
-        }
-        if (day == 8) {
-        document.getElementById("link").href = "makeakite_outside1.html"
-        }
-        if (day == 9) {
-        if (month == 5){
-        document.getElementById("mothersday").style.display = "block";
-        }
-        document.getElementById("link").href = "fill-in.html";
-        }
-        if (day == 10) {
-        document.getElementById("link").href = "makeyourownboardgame.html";
-        }
-        if (day == 11) {
-        document.getElementById("link").href = "origami_home.html"
-        }
-        if (day == 12) {
-        if (month == 2) {
-        document.getElementById("chinesenew").style.display = "block";
-        }
-        if (month == 11) {
-        document.getElementById("diwali").style.display = "block";
-        }
-        document.getElementById("link").href = "garden_outside1.html";
-        }
-        if (day == 13) {
-        if (month == 11) {
-        document.getElementById("diwali").style.display = "block";
-        }
-        if (weekday == 5) {
-        document.getElementById("friday13").style.display = "block";
-        }
-        document.getElementById("link").href = "skipping_outside1.html";
-        }
-        if (day == 14) {
-        if (month == 11) {
-        document.getElementById("diwali").style.display = "block";
-        }
-        if (month == 3) {
-        document.getElementById("piday").style.display = "block";
-        }
-        if (month == 2) {
-        document.getElementById("valentine").style.display = "block";
-        }
-        document.getElementById("link").href = "taghome_outside.html";
-        }
-        if (day == 15) {
-        if (month == 11) {
-        document.getElementById("diwali").style.display = "block";
-        }
-        document.getElementById("link").href = "knitting.html";
-        }
-        if (day == 16) {
-        if (month == 11) {
-        document.getElementById("diwali").style.display = "block";
-        }
-        document.getElementById("link").href = "riddle.html";
-        }
-        if (day == 17) {
-        document.getElementById("link").href = "sudoku.html";
-        }
-        if (day == 18) {
-        document.getElementById("link").href = "interestinglogicpuzzles.html";
-        }
-        if (day == 19) {
-        document.getElementById("link").href = "dragon.html";
-        }
-        if (day == 20) {
-        document.getElementById("link").href = "countdown.html";
-        }
-        if (day == 21) {
-        document.getElementById("link").href = "makeaboat_outside1.html";
-        }
-        if (day == 22) {
-        document.getElementById("link").href = "skipping_2om.html";
-        }
-        if (day == 23) {
-        document.getElementById("link").href = "makeyourownboardgame.html";
-        }
-        if (day == 24) {
-        document.getElementById("link").href = "mathsquiz.html";
-        if (month == 12) {
-        document.getElementById("christmaseve").style.display = "block";
-        }
-        }
-        if (day == 25) {
-        if (month == 4) {
-        document.getElementById("anzac").style.display = "block";
-        }
-        if (month == 12) {
-        document.getElementById("christmas").style.display = "block";
-        }
-        document.getElementById("link").href = "billypuzzle.html";
-        }
-        if (day == 26) {
-        document.getElementById("link").href = "ginrummy.html";
-        }
-        if (day == 27) {
-        document.getElementById("link").href = "lastcard.html";
-        }
-        if (day == 28) {
-        document.getElementById("link").href = "makeaboat_outside1.html";
-        }
-        if (day == 29) {
-        if (month == 2) {
-        document.getElementById("leapday").style.display = "block";
-        }
-        document.getElementById("link").href = "canasta.html";
-        }
-        if (day == 30) {
-
-        document.getElementById("link").href = "au.html";
-        }
-        if (day == 31) {
-        if (month == 10){
-        document.getElementById("halloween").style.display = "block";
-        }
-        if (month == 12) {
-        document.getElementById("newyearseve").style.display = "block";
-        }
-        document.getElementById("link").href = "lastcard.html";
-        }
+            if (month == 1 || month == 3 || month == 5 || month == 7 || month == 9 || month == 11) {
+                if (day == 1) {
+                    window.location.href = "riddle.html"
+                }
+                if (day == 2) {
+                    window.location.href = "circleball.html"
+                }
+                if (day == 3) {
+                    window.location.href = "snake.html"
+                }
+                if (day == 4) {
+                    window.location.href = "stacky.html"
+                }
+                if (day == 5) {
+                    window.location.href = "htmlcss1.html"
+                }
+                if (day == 6) {
+                    window.location.href = "codeeditor.html"
+                }
+                if (day == 7) {
+                    window.location.href = "skipping_2om.html"
+                }
+                if (day == 8) {
+                    window.location.href = "octopus_tag.html"
+                }
+                if (day == 9) {
+                    window.location.href = "shootergame.html"
+                }
+                if (day == 10) {
+                    window.location.href = "countdown.html"
+                }
+                if (day == 11) {
+                    window.location.href = "mathsquiz.html"
+                }
+                if (day == 12) {
+                    window.location.href = "hospital_tag.html"
+                }
+                if (day == 13) {
+                    window.location.href = "origami_1.html"
+                }
+                if (day == 14) {
+                    window.location.href = "KO_tag.html"
+                }
+                if (day == 15) {
+                    window.location.href = "ddg_tag.html"
+                }
+                if (day == 16) {
+                    window.location.href = "manhunt_tag.html"
+                }
+                if (day == 17) {
+                    window.location.href = "skipping_outside1.html"
+                }
+                if (day == 18) {
+                    window.location.href = "dragon.html"
+                }
+                if (day == 19) {
+                    window.location.href = "box_tag.html"
+                }
+                if (day == 20) {
+                    window.location.href = "deadants_tag.html"
+                }
+                if (day == 21) {
+                    window.location.href = "htmlcss2.html"
+                }
+                if (day == 22) {
+                    window.location.href = "gohomestayhome_tag.html"
+                }
+                if (day == 23) {
+                    window.location.href = "rebus.html"
+                }
+                if (day == 24) {
+                    window.location.href = "origami_2.html"
+                }
+                if (day == 25) {
+                    window.location.href = "anagram.html"
+                }
+                if (day == 26) {
+                    window.location.href = "boxes.html"
+                }
+                if (day == 27) {
+                    window.location.href = "stuckinthemud_tag.html"
+                }
+                if (day == 28) {
+                    window.location.href = "ginrummy.html"
+                }
+                if (day == 29) {
+                    window.location.href = "ping.html"
+                }
+                if (day == 30) {
+                    window.location.href = "origami_3.html"
+                }
+                if (day == 31) {
+                    window.location.href = "hulahoop.html"
+                }
+            } else {
+                if (day == 1) {
+                    window.location.href = "snake.html"
+                }
+                if (day == 2) {
+                    window.location.href = "rebus.html"
+                }
+                if (day == 3) {
+                    window.location.href = "SMASHYBOOM.html"
+                }
+                if (day == 4) {
+                    window.location.href = "farmerfarmer_tag.html"
+                }
+                if (day == 5) {
+                    window.location.href = "interestinglogicpuzzles.html"
+                }
+                if (day == 6) {
+                    window.location.href = "kite_outside1.html"
+                }
+                if (day == 7) {
+                    window.location.href = "billypuzzle.html"
+                }
+                if (day == 8) {
+                    window.location.href = "shootergame.html"
+                }
+                if (day == 9) {
+                    window.location.href = "lastcard.html"
+                }
+                if (day == 10) {
+                    window.location.href = "sudoku.html"
+                }
+                if (day == 11) {
+                    window.location.href = "buttonclicker.html"
+                }
+                if (day == 12) {
+                    window.location.href = "garden_outside1.html"
+                }
+                if (day == 13) {
+                    window.location.href = "passion.html"
+                }
+                if (day == 14) {
+                    window.location.href = "canasta.html"
+                }
+                if (day == 15) {
+                    window.location.href = "tag_tag.html"
+                }
+                if (day == 16) {
+                    window.location.href = "knitting.html"
+                }
+                if (day == 17) {
+                    window.location.href = "makeyourownboardgame.html"
+                }
+                if (day == 18) {
+                    window.location.href = "chain_tag.html"
+                }
+                if (day == 19) {
+                    window.location.href = "fill-in.html"
+                }
+                if (day == 20) {
+                    window.location.href = "toilet_tag.html"
+                }
+                if (day == 21) {
+                    window.location.href = "bert.html"
+                }
+                if (day == 22) {
+                    window.location.href = "tornado_tag.html"
+                }
+                if (day == 23) {
+                    window.location.href = "chainreaction.html"
+                }
+                if (day == 24) {
+                    window.location.href = "stacky.html"
+                }
+                if (day == 25) {
+                    window.location.href = "legoobject.html"
+                }
+                if (day == 26) {
+                    window.location.href = "ping.html"
+                }
+                if (day == 27) {
+                    window.location.href = "chaincheat_tag.html"
+                }
+                if (day == 28) {
+                    window.location.href = "freezeframe.html"
+                }
+                if (day == 29) {
+                    window.location.href = "buttonclicker.html"
+                }
+                if (day == 30) {
+                    window.location.href = "ultimate_tag.html"
+                }
+                if (day == 31) {
+                    window.location.href = "makeaboat_outside1.html"
+                }
+            }
+            
         }
     </script>
     <button class="button" onclick="banana()">Click to activate</button>
-    <a id="link">Activity of the day</a>
-    <div id="leapday">Leap day</div>
-    <div id="anzac">Anzac Day</div>
-    <div id="chinesenew">Happy Chinese New Year!</div>
-    <div id="christmas">Merry Christmas!</div>
-    <div id="christmas eve">It's Christmas tomorrow!</div>
-    <div id="diwali">Diwali</div>
-    <div id="fathersday">Happy Father's day</div>
-    <div id="friday13">It's Friday 13!</div>
-    <div id="halloween">Happy Halloween!</div>
-    <div id="mothersday">Happy Mother's day!</div>
-    <div id="newyear">Happy New year!</div>
-    <div id="newyearseve">Happy New Year's Eve!</div>
-    <div id="4july">4th july!</div>
-    <div id="piday">Pi Day!</div>
-    <div id="starwars">Happy star wars day! May The Fourth Be With You!</div>
-    <div id="valentine">Happy Valentine's day</div>
-    <div id="waitangi">Waitangi day</div>
-    <div id="RIP">Sorry, this website has died. A moment of silence for our fallen friend...<br /><br /><br />Please attend the funeral ceremony. Rest In Peace, activity finder. </div>
-    <button class="button button"><a href="tbc.html">Back</a></button>
+       <button class="button button"><a href="index.html"><span>Back</span></a></button>
 </body>
 </html>
