@@ -1,6 +1,7 @@
-﻿a {
+a {
     color: rgb(172, 124, 13);
     text-decoration: none;
+    background-color: #0b0a53;
 }
 a:hover{
     text-decoration: underline;
@@ -63,4 +64,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .breadcrumb {
     background-color: #0b0a53;
+}
+img:before{
+    content:"<span style='background-color: white'>";
+}
+img:after{
+    content:"</span>";
 }
